@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>测试页面</title>
+    <url>/2024/06/23/%E6%B5%8B%E8%AF%95%E9%A1%B5%E9%9D%A2/</url>
+    <content><![CDATA[
+# 这是一个一级标题
+
+## 这是一个二级标题1
+
+### 这是一个三级标题1-1
+
+哈哈哈哈哈哈哈哈
+
+```python
+insert sb
+print 'sb'
+```
+
+
+
+### 这是一个三级标题1-2
+
+哈哈哈哈哈哈哈哈
+
+## 这是一个二级标题2
+
+| 1    | 1    | 1    |
+| ---- | ---- | ---- |
+| 1    | 1    | 1    |
+| 1    | 1    | 1    |
+| 1    | 1    | 1    |
+
+
+
+![s17](测试页面/s17.jpg)]]></content>
+      <categories>
+        <category>神界原罪2</category>
+      </categories>
+      <tags>
+        <tag>神界原罪2攻略</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2024/06/22/hello-world/</url>
+    <content><![CDATA[Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
+
+## Quick Start
+
+### Create a new post
+
+``` bash
+$ hexo new "My New Post"
+```
+
+More info: [Writing](https://hexo.io/docs/writing.html)
+
+### Run server
+
+``` bash
+$ hexo server
+```
+
+More info: [Server](https://hexo.io/docs/server.html)
+
+### Generate static files
+
+``` bash
+$ hexo generate
+```
+
+More info: [Generating](https://hexo.io/docs/generating.html)
+
+### Deploy to remote sites
+
+``` bash
+$ hexo deploy
+```
+
+More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
+]]></content>
+  </entry>
+  <entry>
+    <title>绿维珑四神器攻略</title>
+    <url>/2024/06/25/%E7%BB%BF%E7%BB%B4%E7%8F%91%E5%9B%9B%E7%A5%9E%E5%99%A8%E6%94%BB%E7%95%A5/</url>
+    <content><![CDATA[
+# 绿维珑四神器获取攻略
+
+
+
+## 第一套：船长套装
+
+##### step 1
+
+出欢乐堡以后大概在这个位置触发任务【被诅咒的线】，对地上的''奇怪的骸骨断肢''说服，它就会指路，此时将其拿上
+
+![A-01](绿维珑四神器攻略/A-01.png)
+
+![A-02](绿维珑四神器攻略/A-02.png)
+
+##### step 2
+
+在秘源之王的藏宝库，通过后来到藏宝库核心，拿走船长的灵魂之瓶
+
+![A-03](绿维珑四神器攻略/A-03.png)
+
+![A-04](绿维珑四神器攻略/A-04.png)
+
+##### step3
+
+除了藏宝库后沿着河道走到如图所示的位置，有一个’被封印的箱子‘，对其释放 [祝福] 解开封印，释放船长，此时有两条路可以走：
+
+![A-06](绿维珑四神器攻略/A-06.png)
+
+选择前两个是与船长合作，后三个是威胁或妥协
+
+###### —第一条路：合作
+
+  1.与船长对话，依次选择将手臂和封魂罐都交给船长，此时会得到船长的     衣服，打开箱子打开日志。
+
+  2.来到废弃营地的东边，在此地能发现埋着一个箱子，挖出来后解锁，里 面有船长的靴子
+
+![A-07](绿维珑四神器攻略/A-07.png)
+
+  3.位于冰龙营地的正北方，有一处洞穴[船长的隐匿处]，进入后与其中魔法门对话，选择日记内容：”愿巨浪带走吾等“，门会解锁，船长的帽子就在房间中，拿走帽子触发与船长的战斗
+
+![A-08](绿维珑四神器攻略/A-08.png)
+
+![A-09](绿维珑四神器攻略/A-09.png)
+
+###### —第二条路：威胁或妥协
+
+1. 选择后触发战斗，此时船长召唤五个六级骷髅敌人，打败后在箱子中拿上日记
+2. 位于[虚空沼泽废弃营地传送点]正东方，与[喝醉的骷髅海盗]对话说服，获得船长具体位置，此时地图上会标出地点[禁湾]
+
+![A-10](绿维珑四神器攻略/A-10.png)
+
+3.进入船长隐匿处，同样的步骤后进入房间，可以选择当场将封魂罐摔碎获得套装，也可以选择开战后获得。
+
+4.返回喝醉的骷髅海盗处，触发最后一场战斗。]]></content>
+      <categories>
+        <category>神界原罪2</category>
+      </categories>
+      <tags>
+        <tag>神界原罪2攻略</tag>
+      </tags>
+  </entry>
+</search>
