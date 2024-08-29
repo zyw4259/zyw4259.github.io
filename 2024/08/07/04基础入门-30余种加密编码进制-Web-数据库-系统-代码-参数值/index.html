@@ -1,0 +1,372 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>04基础入门-30余种加密编码进制&amp;Web&amp;数据库&amp;系统&amp;代码&amp;参数值 | zyw4259</title><noscript>开启JavaScript才能访问本站哦~</noscript><link rel="icon" href="/img/test1.png"><!-- index.css--><link rel="stylesheet" href="/css/index.css?v=1.12.1"><!-- inject head--><link rel="canonical" href="http://example.com/2024/08/07/04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6-Web-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81-%E5%8F%82%E6%95%B0%E5%80%BC/"><link rel="stylesheet" href="https://cdn2.codesign.qq.com/icons/P39qb4LKMJRyy0w/latest/iconfont.css"><!-- aplayer--><!-- swiper--><!-- fancybox ui--><!-- katex--><!-- Open Graph--><meta name="description" content="一.存储密码加密-Web&amp;amp;数据库&amp;amp;系统MD5 SHA1 NTLM AES DES RC4 MD5 值是 32 或 16 位位由数字”0-9”和字母”a-f”所组成的字符串，大小写不敏感，不可逆，解密采用枚举碰撞（尝试生成很多的加密或对应明文的字符去枚举） md5在线解密平台：htt"><!-- pwa--><meta name="apple-mobile-web-app-capable" content="zyw4259"><meta name="theme-color" content="var(--efu-main)"><meta name="apple-mobile-web-app-status-bar-style" content="var(--efu-main)"><link rel="bookmark" href="/img/test1.png"><link rel="apple-touch-icon" href="/img/test1.png" sizes="180x180"><script>console.log(
+    "%c Program: Hexo %c Theme: Solitude %c Version: v1.12.1",
+    "border-radius:5px 0 0 5px;padding: 5px 10px;color:white;background:#ff3842;",
+    "padding: 5px 10px;color:white;background:#3e9f50;",
+    "padding: 5px 10px;color:white;background:#0084ff;border-radius:0 5px 5px 0",
+)
+</script><script>(()=>{
+        const saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+    
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+    
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        };
+        window.utils = {
+            saveToLocal: saveToLocal,
+            getCSS: (url, id = false) => new Promise((resolve, reject) => {
+              const link = document.createElement('link')
+              link.rel = 'stylesheet'
+              link.href = url
+              if (id) link.id = id
+              link.onerror = reject
+              link.onload = link.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                link.onload = link.onreadystatechange = null
+                resolve()
+              }
+              document.head.appendChild(link)
+            }),
+            getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+              const script = document.createElement('script')
+              script.src = url
+              script.async = true
+              script.onerror = reject
+              script.onload = script.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                script.onload = script.onreadystatechange = null
+                resolve()
+              }
+    
+              Object.keys(attr).forEach(key => {
+                script.setAttribute(key, attr[key])
+              })
+    
+              document.head.appendChild(script)
+            }),
+            addGlobalFn: (key, fn, name = false, parent = window) => {
+                const globalFn = parent.globalFn || {}
+                const keyObj = globalFn[key] || {}
+        
+                if (name && keyObj[name]) return
+        
+                name = name || Object.keys(keyObj).length
+                keyObj[name] = fn
+                globalFn[key] = keyObj
+                parent.globalFn = globalFn
+            },
+        }
+    })()</script><!-- global head--><script>const GLOBAL_CONFIG = {
+    root: '/',
+    algolia: undefined,
+    localsearch: {"preload":false,"path":"/search.xml"},
+    runtime: '2023-04-20 00:00:00',
+    lazyload: {
+        enable: false,
+        error: '/img/error_load.avif'
+    },
+    copyright: {"limit":50,"author":"作者: zyw4259","link":"链接: ","source":"来源: zyw4259","info":"著作权归作者所有。 商业转载请联系作者获得授权，非商业转载请注明出处。"},
+    highlight: {
+        enable: true,
+        limit: 200,
+        expand: true,
+        copy: true,
+        syntax: 'highlight.js'
+    },
+    randomlink: false,
+    lang: {"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"day":"天前","hour":"小时前","just":"刚刚","min":"分钟前","month":"个月前"},"day":" 天","f12":"开发者模式已打开，请遵循GPL协议。","totalk":"无需删除空行，直接输入评论即可","search":{"empty":"找不到你查询的内容：${query}","hit":"找到 ${hits} 条结果，用时 ${time} 毫秒","placeholder":"输入关键词快速查找","count":"共 <b>${count}</b> 条结果。"},"barrage":{"title":"热评"}},
+    aside: {
+        sayhello: {
+            morning: '现在是早晨',
+            noon: '现在是中午',
+            afternoon: '现在是下午',
+            night: '现在是晚上',
+            goodnight: '晚安',
+        },
+        sayhello2: [],
+        sayhello3: {
+            prefix: '好久不见，',
+            back: '欢迎再次回来，',
+        },
+    },
+    covercolor: {
+        enable: false
+    },
+    comment: {"avatar":"https://cravatar.cn","commentBarrage":true},
+    lightbox: 'null',
+    post_ai: false,
+    right_menu: false,
+};</script><!-- page-config head--><script id="config-diff">var PAGE_CONFIG = {
+    is_post: true,
+    is_page: false,
+    is_home: false,
+    page: '',
+    toc: true,
+    comment: true,
+    ai_text: false
+}</script><meta name="generator" content="Hexo 7.2.0"></head><body id="body"><!-- universe--><!-- loading--><!-- console--><div id="console"><div class="close-btn" onclick="sco.hideConsole()"><i class="solitude st-close-fill"></i></div><div class="button-group"><div class="console-btn-item"><span class="darkmode_switchbutton" onclick="sco.switchDarkMode()" title="昼夜切换"><i class="solitude st-moon-clear-fill"></i></span></div><div class="console-btn-item" id="consoleHideAside"><span class="asideSwitch" onclick="sco.switchHideAside()" title="边栏显示控制"><i class="solitude st-side-bar-fill"></i></span></div><div class="console-btn-item on" id="consoleCommentBarrage" onclick="sco.switchCommentBarrage()"><span class="commentBarrage"><i class="solitude st-chat-fill"></i></span></div></div><div class="console-mask" onclick="sco.hideConsole()"></div></div><!-- sidebar--><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">20</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a></div></div></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><span class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()"><i class="solitude st-moon-clear-fill"></i><span>显示模式</span></span></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude" title="Solitude"><img class="nolazyload back-menu-item-icon" src="/img/pwa/favicon.ico" alt="Solitude"><span class="back-menu-item-text">Solitude</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.flaticon.com/" title="这是测试用-顶上左侧菜单"><img class="nolazyload back-menu-item-icon" src="/img/test1.png" alt="这是测试用-顶上左侧菜单"><span class="back-menu-item-text">这是测试用-顶上左侧菜单</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  st-folder-fill"></i><span>文章列表</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  st-checkbox-multiple-blank-fill"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  st-price-tag-fill"></i><span>全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>友链</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/moments/"><i class="solitude  st-wifi-fill"></i><span>友链鱼塘</span></a></li><li><a class="site-page child" href="/links/"><i class="solitude  st-group-fill"></i><span>友情链接</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>我的</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/equipment/"><i class="solitude  st-299110_check_sign_icon"></i><span>装备</span></a></li><li><a class="site-page child" href="/tlink/"><i class="solitude  st-tools-fill"></i><span>工具箱</span></a></li><li><a class="site-page child" href="/music/"><i class="solitude  st-disc-fill"></i><span>音乐馆</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>关于</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="solitude  st-contacts-fill"></i><span>关于本站</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-widget card-tags card-archives card-webinfo card-allinfo"><div class="card-tag-cloud"><a href="/tags/%E7%A5%9E%E7%95%8C%E5%8E%9F%E7%BD%AA2%E6%94%BB%E7%95%A5/">神界原罪2攻略<sup>1</sup></a></div></div></div></div><!-- keyboard--><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><div class="back-home-button" tabindex="-1"><i class="back-home-button-icon solitude st-more-fill"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude" title="Solitude"><img class="nolazyload back-menu-item-icon" src="/img/pwa/favicon.ico" alt="Solitude"><span class="back-menu-item-text">Solitude</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.flaticon.com/" title="这是测试用-顶上左侧菜单"><img class="nolazyload back-menu-item-icon" src="/img/test1.png" alt="这是测试用-顶上左侧菜单"><span class="back-menu-item-text">这是测试用-顶上左侧菜单</span></a></div></div></div></div><a id="site-name" href="/" title="返回博客主页"><span class="title">Zyw's Blog</span></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">04基础入门-30余种加密编码进制&amp;Web&amp;数据库&amp;系统&amp;代码&amp;参数值</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  st-folder-fill"></i><span>文章列表</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  st-checkbox-multiple-blank-fill"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  st-price-tag-fill"></i><span>全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>友链</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/moments/"><i class="solitude  st-wifi-fill"></i><span>友链鱼塘</span></a></li><li><a class="site-page child" href="/links/"><i class="solitude  st-group-fill"></i><span>友情链接</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>我的</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/equipment/"><i class="solitude  st-299110_check_sign_icon"></i><span>装备</span></a></li><li><a class="site-page child" href="/tlink/"><i class="solitude  st-tools-fill"></i><span>工具箱</span></a></li><li><a class="site-page child" href="/music/"><i class="solitude  st-disc-fill"></i><span>音乐馆</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>关于</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="solitude  st-contacts-fill"></i><span>关于本站</span></a></li></ul></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索"><i class="solitude st-search-line"></i></a></div><div class="nav-button" id="nav-totop" onclick="sco.toTop()"><a class="totopbtn"><i class="solitude st-arrow-up-line"></i><span id="percent">0</span></a></div><div id="toggle-menu"><a class="site-page"><i class="solitude st-menu-line"></i></a></div></div></div></nav><div class="coverdiv" id="coverdiv"><img class="nolazyload" id="post-cover" src="/img/WA/WA04.png" alt="04基础入门-30余种加密编码进制&amp;Web&amp;数据库&amp;系统&amp;代码&amp;参数值"></div><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original" title="该文章为原创文章，注意版权协议">原创</a><span class="post-meta-categories"><a class="post-meta-categories" href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">网络安全</a></span><div class="tag_share"><div class="post-meta__tag-list"></div></div></div></div><h1 class="post-title">04基础入门-30余种加密编码进制&amp;Web&amp;数据库&amp;系统&amp;代码&amp;参数值</h1><div id="post-meta"><div class="meta-secondline"><span class="post-meta-date" title="发布于 2024-08-07 13:56:45"><i class="post-meta-icon solitude st-calendar-todo-fill"></i><time datetime="2024-08-07T05:56:45.000Z">2024-08-07T05:56:45.000Z</time></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h3 id="一-存储密码加密-Web-数据库-系统"><a href="#一-存储密码加密-Web-数据库-系统" class="headerlink" title="一.存储密码加密-Web&amp;数据库&amp;系统"></a>一.存储密码加密-Web&amp;数据库&amp;系统</h3><p>MD5 SHA1 NTLM AES DES RC4</p>
+<ul>
+<li><p>MD5 值是 32 或 16 位位由数字”0-9”和字母”a-f”所组成的字符串，大小写不敏感，不可逆，解密采用枚举碰撞（尝试生成很多的加密或对应明文的字符去枚举）</p>
+<p>md5在线解密平台：<a target="_blank" rel="noopener" href="https://cmd5.com/">https://cmd5.com/</a></p>
+</li>
+<li><p>SHA1 这种加密的密文特征跟 MD5 差不多，只不过位数是 40</p>
+</li>
+<li><p>NTLM 这种加密是 Windows 的哈希密码，标准通讯安全协议</p>
+</li>
+<li><p>AES,DES,RC4 这些都是非对称性加密算法，引入密钥，密文特征与 Base64 类似</p>
+</li>
+</ul>
+<p>应用场景：各类应用密文，自定义算法，代码分析，CTF 安全比赛等</p>
+<p><strong>识别算法编码类型（只是大概猜）：</strong></p>
+<p><strong>1.看位数</strong></p>
+<p><strong>2.看密文的特征（数字，字母，大小写，符号等）</strong></p>
+<p><strong>3.看当前密文存在的地方（WEB，数据库，操作系统等应用）</strong></p>
+<p>​							</p>
+<h3 id="二-传输数据编码"><a href="#二-传输数据编码" class="headerlink" title="二.传输数据编码"></a>二.传输数据编码</h3><p>BASE64 URL HEX ASCII</p>
+<ul>
+<li><p>BASE64 值是由数字”0-9”和字母”a-f”所组成的字符串,大小写敏感,<strong>结尾通常有符号&#x3D;</strong></p>
+</li>
+<li><p>URL 编码是由数字”0-9”和字母”a-f”所组成的字符串,大小写敏感,<strong>通常以%数字字母间隔</strong></p>
+</li>
+<li><p>HEX 编码是计算机中数据的一种表示方法,将数据进行十六进制转换,它由 0-9,A-F,组成</p>
+</li>
+<li><p>ASCII 编码是将 128 个字符进行进制数来表示,常见 ASCII 码表大小规则：0<del>9&lt;A</del>Z&lt;a~z</p>
+</li>
+</ul>
+<p>举例：</p>
+<p>个人博客-URL 解码</p>
+<p>国外 WEB-BASE64 解码</p>
+<p>搜狐视频-BASE64 解码</p>
+<p>应用场景：参数传递(如注入影响)，后期 WAF 绕过干扰写法应用，视频地址还原等</p>
+<p>​							</p>
+<h3 id="三-代码特性加密-JS-PHP-NET-JAVA"><a href="#三-代码特性加密-JS-PHP-NET-JAVA" class="headerlink" title="三.代码特性加密-JS&amp;PHP&amp;NET&amp;JAVA"></a>三.代码特性加密-JS&amp;PHP&amp;NET&amp;JAVA</h3><h4 id="1-JS-前端代码加密"><a href="#1-JS-前端代码加密" class="headerlink" title="1.JS 前端代码加密"></a>1.JS 前端代码加密</h4><p>JS 颜文字 jother JSFUCK</p>
+<ul>
+<li><p>颜文字特征：一堆颜文字构成的 js 代码，在 F12 中可直接解密执行</p>
+</li>
+<li><p>jother 特征：只用! + ( ) [ ] { }这八个字符就能完成对任意字符串的编码。也可在 F12 中解密执行</p>
+</li>
+<li><p>JSFUCK 特征：与 jother 很像，只是少了{ }</p>
+<p>​</p>
+</li>
+</ul>
+<p>				</p>
+<h4 id="2-后端代码加密"><a href="#2-后端代码加密" class="headerlink" title="2.后端代码加密"></a>2.后端代码加密</h4><p>PHP .NET JAVA</p>
+<ul>
+<li><p>PHP：乱码，头部有信息</p>
+</li>
+<li><p>.NET：DLL 封装代码文件</p>
+</li>
+<li><p>JAVA：JAR&amp;CLASS 文件</p>
+</li>
+</ul>
+<p>举例：Zend ILSpy IDEA</p>
+<p>应用场景：版权代码加密，开发特性，CTF 比赛，绕过waf等</p>
+<p>​				</p>
+<h4 id="3-数据库密文加密"><a href="#3-数据库密文加密" class="headerlink" title="3.数据库密文加密"></a>3.数据库密文加密</h4><p>MYSQL MSSQL 等</p>
+<p>​					</p>
+<h3 id="四-数据显示编码-字符串数据显示编码"><a href="#四-数据显示编码-字符串数据显示编码" class="headerlink" title="四.数据显示编码-字符串数据显示编码"></a>四.数据显示编码-字符串数据显示编码</h3><p>数据显示编码：</p>
+<p>UTF-8 GBK2312 等</p>
+<p>识别算法编码类型：</p>
+<p>看密文位数</p>
+<p>2、看密文的特征（数字，字母，大小写，符号等）</p>
+<p>3、看当前密文存在的地方（Web，数据库，操作系统等应用）</p>
+<p>​										</p>
+<h3 id="五-实际案例"><a href="#五-实际案例" class="headerlink" title="五.实际案例"></a>五.实际案例</h3><h4 id="1-Web-ZZCMS-密文-MD5"><a href="#1-Web-ZZCMS-密文-MD5" class="headerlink" title="1.Web-ZZCMS-密文-MD5"></a>1.Web-ZZCMS-密文-MD5</h4><p>注册一个账号，看看密码的加密，可以看到是32位而且是应用在WEB上，大致猜测是MD5</p>
+<style>.gdwzwacxduwe{zoom:200%;}</style><img src="/2024/08/07/04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6-Web-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81-%E5%8F%82%E6%95%B0%E5%80%BC/image-20240807142924769.png" class="gdwzwacxduwe" alt="image-20240807142924769">
+
+<p>​					</p>
+<h4 id="2-Web-Discuz-密文-MD5-Salt"><a href="#2-Web-Discuz-密文-MD5-Salt" class="headerlink" title="2.Web-Discuz-密文-MD5&amp;Salt"></a>2.Web-Discuz-密文-MD5&amp;Salt</h4><p>discuz的加密是MD5和Salt值结合</p>
+<img src="/2024/08/07/04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6-Web-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81-%E5%8F%82%E6%95%B0%E5%80%BC/image-20240807144118832.png" class="" title="image-20240807144118832">
+
+<p>这种MD5和Salt结合的，解密在密文后面加冒号:然后跟上盐值，如图</p>
+<style>.oflgezpvssxt{zoom:200%;}</style><img src="/2024/08/07/04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6-Web-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81-%E5%8F%82%E6%95%B0%E5%80%BC/image-20240807144157714.png" class="oflgezpvssxt" alt="image-20240807144157714">
+
+<p>​					</p>
+<h4 id="3-系统-Windows-密文-NTLM-HASH"><a href="#3-系统-Windows-密文-NTLM-HASH" class="headerlink" title="3.系统-Windows-密文-NTLM&amp;HASH"></a>3.系统-Windows-密文-NTLM&amp;HASH</h4><img src="/2024/08/07/04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6-Web-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81-%E5%8F%82%E6%95%B0%E5%80%BC/image-20240807144933377.png" class="" title="image-20240807144933377">
+
+<img src="/2024/08/07/04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6-Web-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81-%E5%8F%82%E6%95%B0%E5%80%BC/image-20240807145033828.png" class="" title="image-20240807145033828">
+
+<p>​					</p>
+<h4 id="4-综合-参数-密文传输-AES-BASE64"><a href="#4-综合-参数-密文传输-AES-BASE64" class="headerlink" title="4.综合-参数-密文传输-AES&amp;BASE64"></a>4.综合-参数-密文传输-AES&amp;BASE64</h4><img src="/2024/08/07/04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6-Web-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81-%E5%8F%82%E6%95%B0%E5%80%BC/image-20240807150409199.png" class="" title="image-20240807150409199">
+
+<p>下图可见mcrypt_module_open，百度上搜索知道这个函数是AES加密，里面函数值128对应数据块，后面CBC对应AES加密模式，下面mcrypt_generic_init函数里面的第二个值是密码，第三个数值是偏移量（不知道的就上网搜），下面有两个base64_decode，也就是进行了两次base64解码</p>
+<style>.ilcgsjxwrcpt{zoom:200%;}</style><img src="/2024/08/07/04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6-Web-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81-%E5%8F%82%E6%95%B0%E5%80%BC/image-20240807150431806.png" class="ilcgsjxwrcpt" alt="image-20240807150431806">
+
+<img src="/2024/08/07/04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6-Web-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81-%E5%8F%82%E6%95%B0%E5%80%BC/image-20240807150528757.png" class="" title="image-20240807150528757">
+
+<p>所以，要解码两次，具体操作：</p>
+<img src="/2024/08/07/04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6-Web-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81-%E5%8F%82%E6%95%B0%E5%80%BC/image-20240807150924861.png" class="" title="image-20240807150924861">
+
+<style>.jbaighztfikc{zoom:200%;}</style><img src="/2024/08/07/04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6-Web-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81-%E5%8F%82%E6%95%B0%E5%80%BC/image-20240807150939764.png" class="jbaighztfikc" alt="image-20240807150939764">
+
+<p>​							</p>
+<h4 id="5-代码-解密-解密反编译-Zend-Dll-Ja"><a href="#5-代码-解密-解密反编译-Zend-Dll-Ja" class="headerlink" title="5. 代码-解密-解密反编译-Zend&amp;Dll&amp;Ja"></a>5. 代码-解密-解密反编译-Zend&amp;Dll&amp;Ja</h4><p>可以用IlSpy来解密dll</p>
+<img src="/2024/08/07/04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6-Web-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81-%E5%8F%82%E6%95%B0%E5%80%BC/image-20240807162851585.png" class="" title="image-20240807162851585">
+
+<p>​							</p>
+<h4 id="6-CTF-赛题-buuoj-single-dog-JS-颜文字"><a href="#6-CTF-赛题-buuoj-single-dog-JS-颜文字" class="headerlink" title="6.CTF 赛题-buuoj-single dog-JS 颜文字"></a>6.CTF 赛题-buuoj-single dog-JS 颜文字</h4><p>下载试题</p>
+<img src="/2024/08/07/04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6-Web-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81-%E5%8F%82%E6%95%B0%E5%80%BC/image-20240807163106971.png" class="" title="image-20240807163106971">
+
+<p>解读，找到两个文件</p>
+<img src="/2024/08/07/04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6-Web-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81-%E5%8F%82%E6%95%B0%E5%80%BC/image-20240807163148213.png" class="" title="image-20240807163148213">
+
+<p>解压出来，很显然是JS颜文字</p>
+<img src="/2024/08/07/04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6-Web-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81-%E5%8F%82%E6%95%B0%E5%80%BC/image-20240807163241299.png" class="" title="image-20240807163241299">
+
+<p>可以这个网站破译：<a target="_blank" rel="noopener" href="http://www.hiencode.com/">http://www.hiencode.com/</a></p>
+<img src="/2024/08/07/04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6-Web-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81-%E5%8F%82%E6%95%B0%E5%80%BC/image-20240807163535937.png" class="" title="image-20240807163535937">
+
+<p>​					</p>
+<h4 id="7-CTF-赛题-xuenixiang-Jsfuck-JSFUCK"><a href="#7-CTF-赛题-xuenixiang-Jsfuck-JSFUCK" class="headerlink" title="7.CTF 赛题-xuenixiang-Jsfuck-JSFUCK"></a>7.CTF 赛题-xuenixiang-Jsfuck-JSFUCK</h4><p>略</p>
+<p>​							</p>
+<h3 id="六-补充点和网站"><a href="#六-补充点和网站" class="headerlink" title="六.补充点和网站"></a>六.补充点和网站</h3><h4 id="补充点："><a href="#补充点：" class="headerlink" title="#补充点："></a>#补充点：</h4><p>1.常见加密编码进制等算法解析</p>
+<p>MD5，SHA，ASC，进制，时间戳，URL，BASE64，Unescape，AES，DES 等</p>
+<p>2.常见加密编码形式算法解析</p>
+<p>直接加密，带 salt，带密码，带偏移，带位数，带模式，带干扰，自定义组合等</p>
+<p>3.常见解密解码方式（针对）</p>
+<p>枚举，自定义逆向算法，可逆向</p>
+<p>4.常见加密解码算法的特性</p>
+<p>长度位数，字符规律，代码分析，搜索获取等</p>
+<p>​						</p>
+<h4 id="拓展补充参考资料（重要）："><a href="#拓展补充参考资料（重要）：" class="headerlink" title="#拓展补充参考资料（重要）："></a>#拓展补充参考资料（重要）：</h4><p><a target="_blank" rel="noopener" href="https://www.cmd5.com/">https://www.cmd5.com</a>     破解加密工具</p>
+<p><a target="_blank" rel="noopener" href="http://tmxk.org/jother">http://tmxk.org/jother</a>      </p>
+<p><a target="_blank" rel="noopener" href="http://www.jsfuck.com/">http://www.jsfuck.com</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.hiencode.com/">http://www.hiencode.com</a>    ctf在线工具</p>
+<p><a target="_blank" rel="noopener" href="http://tool.chacuo.net/cryptaes">http://tool.chacuo.net/cryptaes</a></p>
+<p><a target="_blank" rel="noopener" href="https://utf-8.jp/public/aaencode.html">https://utf-8.jp/public/aaencode.html</a></p>
+<p>1.30 余种加密编码类型的密文特征分析（建议收藏）</p>
+<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzAwNDcxMjI2MA==&mid=2247484455&idx=1&sn=e1b4324ddcf7d6123be30d9a5613e17b&chksm=9b26f60cac517f1a920cf3b73b3212a645aeef78882c47957b9f3c2135cb7ce051c73fe77bb2&mpshare=1&scene=23&srcid=1111auAYWmr1N0NAs9Wp2hGz&sharer_sharetime=1605145141579&sharer_shareid=5051b3eddbbe2cb698aedf9452370026#rd">https://mp.weixin.qq.com/s?__biz=MzAwNDcxMjI2MA==&amp;mid=2247484455&amp;idx=1&amp;sn=e1b4324ddcf7d6123be30d9a5613e17b&amp;chksm=9b26f60cac517f1a920cf3b73b3212a645aeef78882c47957b9f3c2135cb7ce051c73fe77bb2&amp;mpshare=1&amp;scene=23&amp;srcid=1111auAYWmr1N0NAs9Wp2hGz&amp;sharer_sharetime=1605145141579&amp;sharer_shareid=5051b3eddbbe2cb698aedf9452370026#rd</a></p>
+<p>2.CTF 中常见密码题解密网站总结（建议收藏）</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41638851/article/details/100526839">https://blog.csdn.net/qq_41638851/article/details/100526839</a></p>
+<p>3.CTF 密码学常见加密解密总结（建议收藏）</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_40837276/article/details/83080460">https://blog.csdn.net/qq_40837276/article/details/83080460</a></p>
+<p>​						</p>
+<h3 id="课后梳理："><a href="#课后梳理：" class="headerlink" title="课后梳理："></a>课后梳理：</h3><p>了解储存密码加密方式、比传输数据编码方式、代码加密方式并能够识别</p>
+<p>会在上面的基础上充分利用网站解码</p>
+</article><div class="post-copyright"><div class="post-copyright__author_group"><a class="post-copyright__author_img" href="/about/"><img class="post-copyright__author_img_front" src="/img/headimg.jpg# 显示头像，不填写默认显示site_icon"></a><div class="post-copyright__author_name">zyw4259</div><div class="post-copyright__author_desc"></div></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div id="quit-box" onclick="RemoveRewardMask()"></div></div></div><div class="social-share"><a class="social-share-ico icon-qq" target="_blank" rel="noopener" href="https://connect.qq.com/widget/shareqq/index.html?url=http%3A%2F%2Fexample.com%2F2024%2F08%2F07%2F04%25E5%259F%25BA%25E7%25A1%2580%25E5%2585%25A5%25E9%2597%25A8-30%25E4%25BD%2599%25E7%25A7%258D%25E5%258A%25A0%25E5%25AF%2586%25E7%25BC%2596%25E7%25A0%2581%25E8%25BF%259B%25E5%2588%25B6-Web-%25E6%2595%25B0%25E6%258D%25AE%25E5%25BA%2593-%25E7%25B3%25BB%25E7%25BB%259F-%25E4%25BB%25A3%25E7%25A0%2581-%25E5%258F%2582%25E6%2595%25B0%25E5%2580%25BC%2F&amp;title=04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6%26Web%26%E6%95%B0%E6%8D%AE%E5%BA%93%26%E7%B3%BB%E7%BB%9F%26%E4%BB%A3%E7%A0%81%26%E5%8F%82%E6%95%B0%E5%80%BC&amp;desc=undefined&amp;summary=undefined&amp;site=04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6%26Web%26%E6%95%B0%E6%8D%AE%E5%BA%93%26%E7%B3%BB%E7%BB%9F%26%E4%BB%A3%E7%A0%81%26%E5%8F%82%E6%95%B0%E5%80%BC&amp;pics=%2Fimg%2FWA%2FWA04.png" title="分享到QQ"><i class="solitude st-qq-fill"></i></a><a class="social-share-ico icon-weibo" target="_blank" rel="noopener" href="http://service.weibo.com/share/share.php?url=http%3A%2F%2Fexample.com%2F2024%2F08%2F07%2F04%25E5%259F%25BA%25E7%25A1%2580%25E5%2585%25A5%25E9%2597%25A8-30%25E4%25BD%2599%25E7%25A7%258D%25E5%258A%25A0%25E5%25AF%2586%25E7%25BC%2596%25E7%25A0%2581%25E8%25BF%259B%25E5%2588%25B6-Web-%25E6%2595%25B0%25E6%258D%25AE%25E5%25BA%2593-%25E7%25B3%25BB%25E7%25BB%259F-%25E4%25BB%25A3%25E7%25A0%2581-%25E5%258F%2582%25E6%2595%25B0%25E5%2580%25BC%2F&amp;title=04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6%26Web%26%E6%95%B0%E6%8D%AE%E5%BA%93%26%E7%B3%BB%E7%BB%9F%26%E4%BB%A3%E7%A0%81%26%E5%8F%82%E6%95%B0%E5%80%BC&amp;pic=%2Fimg%2FWA%2FWA04.png" title="分享到微博"><i class="solitude st-weibo-fill"></i></a><a class="social-share-ico icon-twitter" target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fexample.com%2F2024%2F08%2F07%2F04%25E5%259F%25BA%25E7%25A1%2580%25E5%2585%25A5%25E9%2597%25A8-30%25E4%25BD%2599%25E7%25A7%258D%25E5%258A%25A0%25E5%25AF%2586%25E7%25BC%2596%25E7%25A0%2581%25E8%25BF%259B%25E5%2588%25B6-Web-%25E6%2595%25B0%25E6%258D%25AE%25E5%25BA%2593-%25E7%25B3%25BB%25E7%25BB%259F-%25E4%25BB%25A3%25E7%25A0%2581-%25E5%258F%2582%25E6%2595%25B0%25E5%2580%25BC%2F&amp;text=04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6%26Web%26%E6%95%B0%E6%8D%AE%E5%BA%93%26%E7%B3%BB%E7%BB%9F%26%E4%BB%A3%E7%A0%81%26%E5%8F%82%E6%95%B0%E5%80%BC" title="分享到Twitter"><i class="solitude st-twitter-x-fill"></i></a><a class="social-share-ico icon-facebook" target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fexample.com%2F2024%2F08%2F07%2F04%25E5%259F%25BA%25E7%25A1%2580%25E5%2585%25A5%25E9%2597%25A8-30%25E4%25BD%2599%25E7%25A7%258D%25E5%258A%25A0%25E5%25AF%2586%25E7%25BC%2596%25E7%25A0%2581%25E8%25BF%259B%25E5%2588%25B6-Web-%25E6%2595%25B0%25E6%258D%25AE%25E5%25BA%2593-%25E7%25B3%25BB%25E7%25BB%259F-%25E4%25BB%25A3%25E7%25A0%2581-%25E5%258F%2582%25E6%2595%25B0%25E5%2580%25BC%2F" title="分享到Facebook"><i class="solitude st-facebook-fill"></i></a><a class="social-share-ico icon-telegram" target="_blank" rel="noopener" href="https://t.me/share/url?url=http%3A%2F%2Fexample.com%2F2024%2F08%2F07%2F04%25E5%259F%25BA%25E7%25A1%2580%25E5%2585%25A5%25E9%2597%25A8-30%25E4%25BD%2599%25E7%25A7%258D%25E5%258A%25A0%25E5%25AF%2586%25E7%25BC%2596%25E7%25A0%2581%25E8%25BF%259B%25E5%2588%25B6-Web-%25E6%2595%25B0%25E6%258D%25AE%25E5%25BA%2593-%25E7%25B3%25BB%25E7%25BB%259F-%25E4%25BB%25A3%25E7%25A0%2581-%25E5%258F%2582%25E6%2595%25B0%25E5%2580%25BC%2F&amp;text=04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6%26Web%26%E6%95%B0%E6%8D%AE%E5%BA%93%26%E7%B3%BB%E7%BB%9F%26%E4%BB%A3%E7%A0%81%26%E5%8F%82%E6%95%B0%E5%80%BC" title="分享到Telegram"><i class="solitude st-telegram-fill"></i></a></div><div class="post-copyright__notice"><span class="post-copyright-info">本文是原创文章，采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>协议，完整转载请注明来自<a href="/">zyw4259</a></span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"></div></div></div><nav class="needEndHide pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/08/07/05%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-%E8%B5%84%E4%BA%A7%E6%9E%B6%E6%9E%84-%E7%AB%AF%E5%8F%A3-%E5%BA%94%E7%94%A8-CDN-WAF-%E7%AB%99%E5%BA%93%E5%88%86%E7%A6%BB-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">05基础入门-资产架构&amp;端口&amp;应用&amp;CDN&amp;WAF&amp;站库分离&amp;负载均衡</div></div></a></div><div class="next-post pull-right"><a href="/2024/08/06/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-%E6%8A%93%E5%8C%85-%E5%B0%81%E5%8C%85-%E5%8D%8F%E8%AE%AE-APP-%E5%B0%8F%E7%A8%8B%E5%BA%8F-PC%E5%BA%94%E7%94%A8-WEB%E5%BA%94%E7%94%A8/"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">03基础入门-抓包&amp;封包&amp;协议&amp;APP&amp;小程序&amp;PC应用&amp;WEB应用</div></div></a></div></nav><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="solitude st-chat-fill"></i><span> 评论</span></div></div><div class="comment-wrap"><div class="vcomment" id="vcomment"></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><div class="author-info__top-group"><div class="author-info__sayhi" id="author-info__sayhi" onclick="sco.changeSayHelloText()">sayhello.morning</div></div></div><div class="avatar-img-group"><img class="avatar-img" alt="头像" src="/img/headimg.jpg"></div><div class="author-info__description_group"><div class="author-info__description">这里有各种游戏攻略</div><div class="author-info__description2">还有日常笔记</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/about/"><div class="author-info__name">zyw4259</div><div class="author-info__desc"></div></a><div class="card-info-social-icons is-center"><a class="social-icon" target="_blank" rel="noopener" href="https://github.com/zyw4259" title="Github"><i class="solitude  st-github-line"></i></a><a class="social-icon" target="_blank" rel="noopener" href="https://space.bilibili.com/188610189" title="Bilibili"><i class="solitude  st-bilibili-line"></i></a></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="solitude st-menu-line"></i><span>文章目录</span></div><div class="toc-content" id="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80-%E5%AD%98%E5%82%A8%E5%AF%86%E7%A0%81%E5%8A%A0%E5%AF%86-Web-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F"><span class="toc-text">一.存储密码加密-Web&amp;数据库&amp;系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C-%E4%BC%A0%E8%BE%93%E6%95%B0%E6%8D%AE%E7%BC%96%E7%A0%81"><span class="toc-text">二.传输数据编码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89-%E4%BB%A3%E7%A0%81%E7%89%B9%E6%80%A7%E5%8A%A0%E5%AF%86-JS-PHP-NET-JAVA"><span class="toc-text">三.代码特性加密-JS&amp;PHP&amp;NET&amp;JAVA</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-JS-%E5%89%8D%E7%AB%AF%E4%BB%A3%E7%A0%81%E5%8A%A0%E5%AF%86"><span class="toc-text">1.JS 前端代码加密</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%90%8E%E7%AB%AF%E4%BB%A3%E7%A0%81%E5%8A%A0%E5%AF%86"><span class="toc-text">2.后端代码加密</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AF%86%E6%96%87%E5%8A%A0%E5%AF%86"><span class="toc-text">3.数据库密文加密</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B-%E6%95%B0%E6%8D%AE%E6%98%BE%E7%A4%BA%E7%BC%96%E7%A0%81-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%95%B0%E6%8D%AE%E6%98%BE%E7%A4%BA%E7%BC%96%E7%A0%81"><span class="toc-text">四.数据显示编码-字符串数据显示编码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94-%E5%AE%9E%E9%99%85%E6%A1%88%E4%BE%8B"><span class="toc-text">五.实际案例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-Web-ZZCMS-%E5%AF%86%E6%96%87-MD5"><span class="toc-text">1.Web-ZZCMS-密文-MD5</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-Web-Discuz-%E5%AF%86%E6%96%87-MD5-Salt"><span class="toc-text">2.Web-Discuz-密文-MD5&amp;Salt</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E7%B3%BB%E7%BB%9F-Windows-%E5%AF%86%E6%96%87-NTLM-HASH"><span class="toc-text">3.系统-Windows-密文-NTLM&amp;HASH</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E7%BB%BC%E5%90%88-%E5%8F%82%E6%95%B0-%E5%AF%86%E6%96%87%E4%BC%A0%E8%BE%93-AES-BASE64"><span class="toc-text">4.综合-参数-密文传输-AES&amp;BASE64</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E4%BB%A3%E7%A0%81-%E8%A7%A3%E5%AF%86-%E8%A7%A3%E5%AF%86%E5%8F%8D%E7%BC%96%E8%AF%91-Zend-Dll-Ja"><span class="toc-text">5. 代码-解密-解密反编译-Zend&amp;Dll&amp;Ja</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-CTF-%E8%B5%9B%E9%A2%98-buuoj-single-dog-JS-%E9%A2%9C%E6%96%87%E5%AD%97"><span class="toc-text">6.CTF 赛题-buuoj-single dog-JS 颜文字</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-CTF-%E8%B5%9B%E9%A2%98-xuenixiang-Jsfuck-JSFUCK"><span class="toc-text">7.CTF 赛题-xuenixiang-Jsfuck-JSFUCK</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD-%E8%A1%A5%E5%85%85%E7%82%B9%E5%92%8C%E7%BD%91%E7%AB%99"><span class="toc-text">六.补充点和网站</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%A5%E5%85%85%E7%82%B9%EF%BC%9A"><span class="toc-text">#补充点：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8B%93%E5%B1%95%E8%A1%A5%E5%85%85%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99%EF%BC%88%E9%87%8D%E8%A6%81%EF%BC%89%EF%BC%9A"><span class="toc-text">#拓展补充参考资料（重要）：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%BE%E5%90%8E%E6%A2%B3%E7%90%86%EF%BC%9A"><span class="toc-text">课后梳理：</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="solitude st-map-line"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/08/09/06%E4%BF%A1%E6%81%AF%E6%89%93%E7%82%B9-Web-%E6%9E%B6%E6%9E%84%E7%AF%87-%E5%9F%9F%E5%90%8D-%E8%AF%AD%E8%A8%80-%E4%B8%AD%E9%97%B4%E4%BB%B6-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E6%BA%90%E7%A0%81%E8%8E%B7%E5%8F%96/" title="06信息打点-Web 架构篇&amp;域名&amp;语言&amp;中间件&amp;数据库&amp;系统&amp;源码获取"><img alt="06信息打点-Web 架构篇&amp;域名&amp;语言&amp;中间件&amp;数据库&amp;系统&amp;源码获取" src="/img/default.avif"></a><div class="content"><a class="title" href="/2024/08/09/06%E4%BF%A1%E6%81%AF%E6%89%93%E7%82%B9-Web-%E6%9E%B6%E6%9E%84%E7%AF%87-%E5%9F%9F%E5%90%8D-%E8%AF%AD%E8%A8%80-%E4%B8%AD%E9%97%B4%E4%BB%B6-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E6%BA%90%E7%A0%81%E8%8E%B7%E5%8F%96/" title="06信息打点-Web 架构篇&amp;域名&amp;语言&amp;中间件&amp;数据库&amp;系统&amp;源码获取">06信息打点-Web 架构篇&amp;域名&amp;语言&amp;中间件&amp;数据库&amp;系统&amp;源码获取</a><a class="article-recent_post_categories" href="/2024/08/09/06%E4%BF%A1%E6%81%AF%E6%89%93%E7%82%B9-Web-%E6%9E%B6%E6%9E%84%E7%AF%87-%E5%9F%9F%E5%90%8D-%E8%AF%AD%E8%A8%80-%E4%B8%AD%E9%97%B4%E4%BB%B6-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E6%BA%90%E7%A0%81%E8%8E%B7%E5%8F%96/">网络安全</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/08/07/05%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-%E8%B5%84%E4%BA%A7%E6%9E%B6%E6%9E%84-%E7%AB%AF%E5%8F%A3-%E5%BA%94%E7%94%A8-CDN-WAF-%E7%AB%99%E5%BA%93%E5%88%86%E7%A6%BB-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/" title="05基础入门-资产架构&amp;端口&amp;应用&amp;CDN&amp;WAF&amp;站库分离&amp;负载均衡"><img alt="05基础入门-资产架构&amp;端口&amp;应用&amp;CDN&amp;WAF&amp;站库分离&amp;负载均衡" src="/img/WA/WA05.png"></a><div class="content"><a class="title" href="/2024/08/07/05%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-%E8%B5%84%E4%BA%A7%E6%9E%B6%E6%9E%84-%E7%AB%AF%E5%8F%A3-%E5%BA%94%E7%94%A8-CDN-WAF-%E7%AB%99%E5%BA%93%E5%88%86%E7%A6%BB-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/" title="05基础入门-资产架构&amp;端口&amp;应用&amp;CDN&amp;WAF&amp;站库分离&amp;负载均衡">05基础入门-资产架构&amp;端口&amp;应用&amp;CDN&amp;WAF&amp;站库分离&amp;负载均衡</a><a class="article-recent_post_categories" href="/2024/08/07/05%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-%E8%B5%84%E4%BA%A7%E6%9E%B6%E6%9E%84-%E7%AB%AF%E5%8F%A3-%E5%BA%94%E7%94%A8-CDN-WAF-%E7%AB%99%E5%BA%93%E5%88%86%E7%A6%BB-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/">网络安全</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/08/07/04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6-Web-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81-%E5%8F%82%E6%95%B0%E5%80%BC/" title="04基础入门-30余种加密编码进制&amp;Web&amp;数据库&amp;系统&amp;代码&amp;参数值"><img alt="04基础入门-30余种加密编码进制&amp;Web&amp;数据库&amp;系统&amp;代码&amp;参数值" src="/img/WA/WA04.png"></a><div class="content"><a class="title" href="/2024/08/07/04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6-Web-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81-%E5%8F%82%E6%95%B0%E5%80%BC/" title="04基础入门-30余种加密编码进制&amp;Web&amp;数据库&amp;系统&amp;代码&amp;参数值">04基础入门-30余种加密编码进制&amp;Web&amp;数据库&amp;系统&amp;代码&amp;参数值</a><a class="article-recent_post_categories" href="/2024/08/07/04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6-Web-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81-%E5%8F%82%E6%95%B0%E5%80%BC/">网络安全</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/08/06/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-%E6%8A%93%E5%8C%85-%E5%B0%81%E5%8C%85-%E5%8D%8F%E8%AE%AE-APP-%E5%B0%8F%E7%A8%8B%E5%BA%8F-PC%E5%BA%94%E7%94%A8-WEB%E5%BA%94%E7%94%A8/" title="03基础入门-抓包&amp;封包&amp;协议&amp;APP&amp;小程序&amp;PC应用&amp;WEB应用"><img alt="03基础入门-抓包&amp;封包&amp;协议&amp;APP&amp;小程序&amp;PC应用&amp;WEB应用" src="/img/WA/WA03.png"></a><div class="content"><a class="title" href="/2024/08/06/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-%E6%8A%93%E5%8C%85-%E5%B0%81%E5%8C%85-%E5%8D%8F%E8%AE%AE-APP-%E5%B0%8F%E7%A8%8B%E5%BA%8F-PC%E5%BA%94%E7%94%A8-WEB%E5%BA%94%E7%94%A8/" title="03基础入门-抓包&amp;封包&amp;协议&amp;APP&amp;小程序&amp;PC应用&amp;WEB应用">03基础入门-抓包&amp;封包&amp;协议&amp;APP&amp;小程序&amp;PC应用&amp;WEB应用</a><a class="article-recent_post_categories" href="/2024/08/06/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-%E6%8A%93%E5%8C%85-%E5%B0%81%E5%8C%85-%E5%8D%8F%E8%AE%AE-APP-%E5%B0%8F%E7%A8%8B%E5%BA%8F-PC%E5%BA%94%E7%94%A8-WEB%E5%BA%94%E7%94%A8/">网络安全</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/08/05/%E7%BD%91%E5%AE%89-Web%E5%BA%94%E7%94%A8-%E6%9E%B6%E6%9E%84%E6%90%AD%E5%BB%BA-%E6%BC%8F%E6%B4%9E-Http%E6%95%B0%E6%8D%AE%E5%8C%85-%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="02基础入门-Web应用&amp;架构搭建&amp;漏洞&amp;Http数据包&amp;代理服务器"><img alt="02基础入门-Web应用&amp;架构搭建&amp;漏洞&amp;Http数据包&amp;代理服务器" src="/img/WA/WA02.png"></a><div class="content"><a class="title" href="/2024/08/05/%E7%BD%91%E5%AE%89-Web%E5%BA%94%E7%94%A8-%E6%9E%B6%E6%9E%84%E6%90%AD%E5%BB%BA-%E6%BC%8F%E6%B4%9E-Http%E6%95%B0%E6%8D%AE%E5%8C%85-%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="02基础入门-Web应用&amp;架构搭建&amp;漏洞&amp;Http数据包&amp;代理服务器">02基础入门-Web应用&amp;架构搭建&amp;漏洞&amp;Http数据包&amp;代理服务器</a><a class="article-recent_post_categories" href="/2024/08/05/%E7%BD%91%E5%AE%89-Web%E5%BA%94%E7%94%A8-%E6%9E%B6%E6%9E%84%E6%90%AD%E5%BB%BA-%E6%BC%8F%E6%B4%9E-Http%E6%95%B0%E6%8D%AE%E5%8C%85-%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8/">网络安全</a></div></div></div></div></div></div></main><footer id="footer"><div id="st-footer-bar"><div class="footer-logo"><span>Zyw's Blog</span></div><div class="footer-bar-description">来自zyw4259的的文章</div><a class="footer-bar-link" href="/about/">了解更多</a></div><div id="footer_deal"></div><div id="st-footer"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2023 - 2024 By&nbsp;<a class="footer-bar-link" href="/">zyw4259</a></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/zyw4259/zyw4259.github.io" alt="相关支持">相关支持</a><a class="footer-bar-link cc" href="/%E6%88%91%E6%98%AF%E8%B5%B5%E5%93%88%E5%93%88" aria-label="copyright"><i class="solitude st-copyright-line"></i><i class="solitude st-creative-commons-by-line"></i><i class="solitude st-creative-commons-nc-line"></i><i class="solitude st-creative-commons-nd-line"></i></a></div></div></div><div class="comment-barrage needEndHide"></div></footer></div><!-- right_menu--><!-- inject body--><div><script src="/js/utils.js?v=1.12.1"></script><script src="/js/main.js?v=1.12.1"></script><script src="/js/third_party/waterfall.min.js?v=1.12.1"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/pjax/0.2.8/pjax.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/node-snackbar/0.1.16/snackbar.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js"></script><div class="js-pjax"><script>(() => {
+    const initValine = () => {
+        const valine = new Valine({
+            el: '#vcomment',
+            appId: 'zR0EmUaByxzQLODvzgRpBR5F-MdYXbMMI',
+            appKey: 'PCjrrGXSHYRvDFkwHEGwCrho',
+            avatar: '',
+            serverURLs: 'https://zr0emuab.api.lncldglobal.com',
+            emojiMaps: "",
+            path: window.location.pathname,
+            visitor: true,
+            ...null
+        })
+        GLOBAL_CONFIG.lightbox && utils.lightbox(document.querySelectorAll('#comment .vcontent img:not(.vemoji)'))
+        sco.owoBig({body: '.vwrap', item: '.vemojis i'})
+    }
+    const loadValine = async () => {
+        if (typeof Valine === 'function') setTimeout(initValine, 0)
+        else {
+            await utils.getScript('https://cdnjs.cloudflare.com/ajax/libs/valine/1.5.1/Valine.min.js').then(initValine)
+        }
+        true && barrageValine()
+    }
+    if ('Valine' === 'Valine' || false) {
+        if (false) utils.loadComment(document.getElementById('vcomment'), loadValine)
+        else loadValine()
+    } else {
+        window.loadTwoComment = loadValine
+    }
+})()
+</script><script>async function barrageValine() {
+    const url = new URL('https://zr0emuab.api.lncldglobal.com/1.1/classes/Comment')
+    const params = {
+        url: window.location.pathname,
+        order: '-createdAt'
+    }
+    Object.entries(params).forEach(([key, value]) => url.searchParams.append(key, value))
+    await fetch(url, {
+        method: "GET",
+        headers: {
+            "X-LC-Id": "zR0EmUaByxzQLODvzgRpBR5F-MdYXbMMI",
+            "X-LC-Key": "PCjrrGXSHYRvDFkwHEGwCrho",
+            "Content-Type": "application/json"
+        },
+    }).then(async res => {
+        if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`)
+        const data = await res.json()
+        const init = () =>
+            initializeCommentBarrage(data.results
+                .filter(item => item.url === window.location.pathname)
+                .map(item => ({
+                    content: item.comment,
+                    nick: item.nick,
+                    mailMd5: md5(item.mail),
+                    id: item.objectId
+                })))
+        if (typeof md5 === "undefined") await utils.getScript('https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.19.0/js/md5.min.js')
+        if (typeof initializeCommentBarrage === "undefined") await utils.getScript('/js/third_party/barrage.min.js?v=1.12.1').then(init)
+        else init()
+    }).catch(error => console.error("An error occurred while fetching comments: ", error))
+}</script></div></div><!-- pjax--><script>const pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: ['title','#body-wrap','#site-config','meta[name="description"]','.js-pjax','meta[property^="og:"]','#config-diff'],
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+})
+
+document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+})
+
+document.addEventListener('pjax:complete', () => {
+    window.refreshFn()
+
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+        const newScript = document.createElement('script')
+        const content = item.text || item.textContent || item.innerHTML || ""
+        Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+        newScript.appendChild(document.createTextNode(content))
+        item.parentNode.replaceChild(newScript, item)
+    })
+
+    GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+})
+
+document.addEventListener('pjax:error', (e) => {
+    if (e.request.status === 404) {
+        pjax.loadUrl('/404.html')
+    }
+})</script><!-- theme--><script>initTheme = () => {
+    const cachedMode = utils.saveToLocal.get('theme');
+    if (cachedMode === undefined)
+        document.documentElement.setAttribute('data-theme', 'dark');
+    else
+        document.documentElement.setAttribute('data-theme', cachedMode);
+    typeof rm === 'object' && rm.mode(cachedMode === undefined || cachedMode === 'dark')
+}
+initTheme()</script><!-- google adsense--><!-- search--><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="solitude st-close-fill"></i></button></nav><div class="search-wrap"><div class="search-box"><input class="search-box-input" id="search-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="输入关键词快速查找"></div><div id="search-results"><div id="search-hits"></div></div><div id="search-pagination"></div><div id="search-tips"></div></div></div><div id="search-mask"></div></div><script src="/js/search/local.js?v=1.12.1"></script><!-- Tianli-Talk--><!-- music--></body></html><script>const posts=["2024/08/09/06信息打点-Web-架构篇-域名-语言-中间件-数据库-系统-源码获取/","2024/08/07/05基础入门-资产架构-端口-应用-CDN-WAF-站库分离-负载均衡/","2024/08/07/04基础入门-30余种加密编码进制-Web-数据库-系统-代码-参数值/","2024/08/06/基础入门-抓包-封包-协议-APP-小程序-PC应用-WEB应用/","2024/08/05/网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/","2024/08/05/基础课程/","2024/07/29/Lua基础语法/","2024/07/17/文明6mod制作-8/","2024/07/17/文明6mod制作-7/","2024/07/17/文明6mod制作-6/","2024/07/17/文明6mod制作-4/","2024/07/16/文明6mod制作-3/","2024/07/16/文明6mod制作-2/","2024/07/16/文明6mod制作-1/","2024/07/11/利用SD实现换脸/","2024/07/10/AI绘画提示词和参数设置/","2024/07/10/文明6区域规划/","2024/07/10/pve打法-小马流/","2024/07/10/hexo文章图片无法显示问题解决方案1/","2024/06/25/绿维珑四神器攻略/"];function toRandomPost(){ pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]); }</script>

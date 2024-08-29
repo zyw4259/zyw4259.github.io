@@ -1,0 +1,367 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>文明6mod制作(6)：模型制作 | zyw4259</title><noscript>开启JavaScript才能访问本站哦~</noscript><link rel="icon" href="/img/test1.png"><!-- index.css--><link rel="stylesheet" href="/css/index.css?v=1.12.1"><!-- inject head--><link rel="canonical" href="http://example.com/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/"><link rel="stylesheet" href="https://cdn2.codesign.qq.com/icons/P39qb4LKMJRyy0w/latest/iconfont.css"><!-- aplayer--><!-- swiper--><!-- fancybox ui--><!-- katex--><!-- Open Graph--><meta name="description" content="前言本教程使用游戏自带的模型制作，若是自己建模请移步mod制作（7） 改良设施模型先打开ModBuddy新建一个空白模板，再新建一个xml文件，可以用最新发布的辅助工具来帮忙，点击创建新文明 右上角选择新建改良设施 在里面编辑了基本的参数后生成xml文件，全部复制，粘贴到刚刚ModBuddy"><!-- pwa--><meta name="apple-mobile-web-app-capable" content="zyw4259"><meta name="theme-color" content="var(--efu-main)"><meta name="apple-mobile-web-app-status-bar-style" content="var(--efu-main)"><link rel="bookmark" href="/img/test1.png"><link rel="apple-touch-icon" href="/img/test1.png" sizes="180x180"><script>console.log(
+    "%c Program: Hexo %c Theme: Solitude %c Version: v1.12.1",
+    "border-radius:5px 0 0 5px;padding: 5px 10px;color:white;background:#ff3842;",
+    "padding: 5px 10px;color:white;background:#3e9f50;",
+    "padding: 5px 10px;color:white;background:#0084ff;border-radius:0 5px 5px 0",
+)
+</script><script>(()=>{
+        const saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+    
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+    
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        };
+        window.utils = {
+            saveToLocal: saveToLocal,
+            getCSS: (url, id = false) => new Promise((resolve, reject) => {
+              const link = document.createElement('link')
+              link.rel = 'stylesheet'
+              link.href = url
+              if (id) link.id = id
+              link.onerror = reject
+              link.onload = link.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                link.onload = link.onreadystatechange = null
+                resolve()
+              }
+              document.head.appendChild(link)
+            }),
+            getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+              const script = document.createElement('script')
+              script.src = url
+              script.async = true
+              script.onerror = reject
+              script.onload = script.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                script.onload = script.onreadystatechange = null
+                resolve()
+              }
+    
+              Object.keys(attr).forEach(key => {
+                script.setAttribute(key, attr[key])
+              })
+    
+              document.head.appendChild(script)
+            }),
+            addGlobalFn: (key, fn, name = false, parent = window) => {
+                const globalFn = parent.globalFn || {}
+                const keyObj = globalFn[key] || {}
+        
+                if (name && keyObj[name]) return
+        
+                name = name || Object.keys(keyObj).length
+                keyObj[name] = fn
+                globalFn[key] = keyObj
+                parent.globalFn = globalFn
+            },
+        }
+    })()</script><!-- global head--><script>const GLOBAL_CONFIG = {
+    root: '/',
+    algolia: undefined,
+    localsearch: {"preload":false,"path":"/search.xml"},
+    runtime: '2023-04-20 00:00:00',
+    lazyload: {
+        enable: false,
+        error: '/img/error_load.avif'
+    },
+    copyright: {"limit":50,"author":"作者: zyw4259","link":"链接: ","source":"来源: zyw4259","info":"著作权归作者所有。 商业转载请联系作者获得授权，非商业转载请注明出处。"},
+    highlight: {
+        enable: true,
+        limit: 200,
+        expand: true,
+        copy: true,
+        syntax: 'highlight.js'
+    },
+    randomlink: false,
+    lang: {"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"day":"天前","hour":"小时前","just":"刚刚","min":"分钟前","month":"个月前"},"day":" 天","f12":"开发者模式已打开，请遵循GPL协议。","totalk":"无需删除空行，直接输入评论即可","search":{"empty":"找不到你查询的内容：${query}","hit":"找到 ${hits} 条结果，用时 ${time} 毫秒","placeholder":"输入关键词快速查找","count":"共 <b>${count}</b> 条结果。"},"barrage":{"title":"热评"}},
+    aside: {
+        sayhello: {
+            morning: '现在是早晨',
+            noon: '现在是中午',
+            afternoon: '现在是下午',
+            night: '现在是晚上',
+            goodnight: '晚安',
+        },
+        sayhello2: [],
+        sayhello3: {
+            prefix: '好久不见，',
+            back: '欢迎再次回来，',
+        },
+    },
+    covercolor: {
+        enable: false
+    },
+    comment: {"avatar":"https://cravatar.cn","commentBarrage":true},
+    lightbox: 'null',
+    post_ai: false,
+    right_menu: false,
+};</script><!-- page-config head--><script id="config-diff">var PAGE_CONFIG = {
+    is_post: true,
+    is_page: false,
+    is_home: false,
+    page: '',
+    toc: true,
+    comment: true,
+    ai_text: false
+}</script><meta name="generator" content="Hexo 7.2.0"></head><body id="body"><!-- universe--><!-- loading--><!-- console--><div id="console"><div class="close-btn" onclick="sco.hideConsole()"><i class="solitude st-close-fill"></i></div><div class="button-group"><div class="console-btn-item"><span class="darkmode_switchbutton" onclick="sco.switchDarkMode()" title="昼夜切换"><i class="solitude st-moon-clear-fill"></i></span></div><div class="console-btn-item" id="consoleHideAside"><span class="asideSwitch" onclick="sco.switchHideAside()" title="边栏显示控制"><i class="solitude st-side-bar-fill"></i></span></div><div class="console-btn-item on" id="consoleCommentBarrage" onclick="sco.switchCommentBarrage()"><span class="commentBarrage"><i class="solitude st-chat-fill"></i></span></div></div><div class="console-mask" onclick="sco.hideConsole()"></div></div><!-- sidebar--><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">20</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a></div></div></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><span class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()"><i class="solitude st-moon-clear-fill"></i><span>显示模式</span></span></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude" title="Solitude"><img class="nolazyload back-menu-item-icon" src="/img/pwa/favicon.ico" alt="Solitude"><span class="back-menu-item-text">Solitude</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.flaticon.com/" title="这是测试用-顶上左侧菜单"><img class="nolazyload back-menu-item-icon" src="/img/test1.png" alt="这是测试用-顶上左侧菜单"><span class="back-menu-item-text">这是测试用-顶上左侧菜单</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  st-folder-fill"></i><span>文章列表</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  st-checkbox-multiple-blank-fill"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  st-price-tag-fill"></i><span>全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>友链</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/moments/"><i class="solitude  st-wifi-fill"></i><span>友链鱼塘</span></a></li><li><a class="site-page child" href="/links/"><i class="solitude  st-group-fill"></i><span>友情链接</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>我的</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/equipment/"><i class="solitude  st-299110_check_sign_icon"></i><span>装备</span></a></li><li><a class="site-page child" href="/tlink/"><i class="solitude  st-tools-fill"></i><span>工具箱</span></a></li><li><a class="site-page child" href="/music/"><i class="solitude  st-disc-fill"></i><span>音乐馆</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>关于</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="solitude  st-contacts-fill"></i><span>关于本站</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-widget card-tags card-archives card-webinfo card-allinfo"><div class="card-tag-cloud"><a href="/tags/%E7%A5%9E%E7%95%8C%E5%8E%9F%E7%BD%AA2%E6%94%BB%E7%95%A5/">神界原罪2攻略<sup>1</sup></a></div></div></div></div><!-- keyboard--><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><div class="back-home-button" tabindex="-1"><i class="back-home-button-icon solitude st-more-fill"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude" title="Solitude"><img class="nolazyload back-menu-item-icon" src="/img/pwa/favicon.ico" alt="Solitude"><span class="back-menu-item-text">Solitude</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.flaticon.com/" title="这是测试用-顶上左侧菜单"><img class="nolazyload back-menu-item-icon" src="/img/test1.png" alt="这是测试用-顶上左侧菜单"><span class="back-menu-item-text">这是测试用-顶上左侧菜单</span></a></div></div></div></div><a id="site-name" href="/" title="返回博客主页"><span class="title">Zyw's Blog</span></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">文明6mod制作(6)：模型制作</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文库</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  st-folder-fill"></i><span>文章列表</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  st-checkbox-multiple-blank-fill"></i><span>全部分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  st-price-tag-fill"></i><span>全部标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>友链</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/moments/"><i class="solitude  st-wifi-fill"></i><span>友链鱼塘</span></a></li><li><a class="site-page child" href="/links/"><i class="solitude  st-group-fill"></i><span>友情链接</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>我的</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/equipment/"><i class="solitude  st-299110_check_sign_icon"></i><span>装备</span></a></li><li><a class="site-page child" href="/tlink/"><i class="solitude  st-tools-fill"></i><span>工具箱</span></a></li><li><a class="site-page child" href="/music/"><i class="solitude  st-disc-fill"></i><span>音乐馆</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>关于</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="solitude  st-contacts-fill"></i><span>关于本站</span></a></li></ul></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索"><i class="solitude st-search-line"></i></a></div><div class="nav-button" id="nav-totop" onclick="sco.toTop()"><a class="totopbtn"><i class="solitude st-arrow-up-line"></i><span id="percent">0</span></a></div><div id="toggle-menu"><a class="site-page"><i class="solitude st-menu-line"></i></a></div></div></div></nav><div class="coverdiv" id="coverdiv"><img class="nolazyload" id="post-cover" src="/img/default.avif" alt="文明6mod制作(6)：模型制作"></div><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original" title="该文章为原创文章，注意版权协议">原创</a><span class="post-meta-categories"><a class="post-meta-categories" href="/categories/mod%E5%88%B6%E4%BD%9C/">mod制作</a></span><div class="tag_share"><div class="post-meta__tag-list"></div></div></div></div><h1 class="post-title">文明6mod制作(6)：模型制作</h1><div id="post-meta"><div class="meta-secondline"><span class="post-meta-date" title="发布于 2024-07-17 16:35:43"><i class="post-meta-icon solitude st-calendar-todo-fill"></i><time datetime="2024-07-17T08:35:43.000Z">2024-07-17T08:35:43.000Z</time></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>本教程使用游戏自带的模型制作，若是自己建模请移步mod制作（7）</p>
+<h4 id="改良设施模型"><a href="#改良设施模型" class="headerlink" title="改良设施模型"></a>改良设施模型</h4><p>先打开ModBuddy新建一个空白模板，再新建一个xml文件，可以用最新发布的辅助工具来帮忙，点击创建新文明</p>
+<img src="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/image-20240717163948993.png" class="" title="image-20240717163948993">
+
+<p>右上角选择新建改良设施</p>
+<img src="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/image-20240717164012740.png" class="" title="image-20240717164012740">
+
+<p>在里面编辑了基本的参数后生成xml文件，全部复制，粘贴到刚刚ModBuddy生成的xml文件里面</p>
+<img src="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/image-20240717164141735.png" class="" title="image-20240717164141735">
+
+<p>在这个项目里面创建一个Artdefs文件夹</p>
+<img src="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/image-20240717164208568.png" class="" title="image-20240717164208568">
+
+<p>接着打开AssetEditor，新建一个artdef文件，模板选择改良设施（Improvements)，在Improvements添加一个元素（相当于添加一个改良设施），Name设为改良设施的变量名</p>
+<img src="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/image-20240717164352157.png" class="" title="image-20240717164352157">
+
+<ul>
+<li><p>strategic view是战略视图（包括正常状态和被掠夺的状态）</p>
+<img src="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/image-20240717164849808.png" class="" title="image-20240717164849808">
+
+<p>如果没有数据包那么XrefName是空的，可以去游戏根目录\Base\ArtDefs\Improvements.artdef，进入文件后记得全部折叠方便看，在RootCollections里可以看到两个Element，一个是所有的改良设施，一个是建造状态。展开第一个Element，其中包含的Element每一个都对应了一种改良设施</p>
+<img src="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/image-20240717165010445.png" class="" title="image-20240717165010445">
+
+<p>展开其中一个Element后，可以看到几个内容，展开战略视图后看到两个Element，需要的就是这两个，可以作为外部引用名</p>
+<img src="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/image-20240717165226487.png" class="" title="image-20240717165226487">
+</li>
+<li><p>landmark是模型的定义，添加一个element，名字随便取，这里有一个外部引用（Xref），它引用的是Landmark.artdef文件里包好的模型</p>
+<img src="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/image-20240717165459366.png" class="" title="image-20240717165459366">选好后保存文件到Artdefs文件夹下，文件名为Improvements.artdef
+
+<p>导入到ModBuddy项目的Artdefs文件夹中</p>
+<p>值得注意的是，文件中有些地方为空，如果遇到这种问题导致闪退又找不到原因，可以尝试模范（2）的做法，将游戏文件中Element标签整个部分和该文件特定位置替换</p>
+</li>
+</ul>
+<p><strong>注意每次加入一个artdef或者xlp文件或者在属性里修改名称和ID后，都必须重新生成Mod.Art.xml文件，因为该文件就是用来记录这些信息的</strong></p>
+<p>重新生成的过程可以借助辅助工具</p>
+<p>最后来设置加载过程，在In-Game Actions中添加两个步骤，第一个是UpdateArt（模型文件)，第二个是Updatedatabase（数据文件）</p>
+<img src="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/image-20240717170812509.png" class="" title="image-20240717170812509">
+
+<p>最后重新构建即可</p>
+<h4 id="人物模型"><a href="#人物模型" class="headerlink" title="人物模型"></a>人物模型</h4><style>.vehqyitktfvg{zoom:200%;}</style><img src="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/image-20240717173523451.png" class="vehqyitktfvg" alt="image-20240717173523451">
+
+<p>在（2）已经做出了一个新的单位的基础上，打开AssetEditor，新建artdef文件，模板选择Units</p>
+<img src="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/image-20240717175008698.png" class="" title="image-20240717175008698">
+
+<ol>
+<li><p>在Units下面新建一个单位，把单位变量名复制到Name里</p>
+<p>Formation是编队的方式（一定要填，对应UnitFormationsTypes里面的内容）</p>
+<p>下面三项同理</p>
+<img src="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/image-20240717180315346.png" class="" title="image-20240717180315346">
+
+<p>接下来看Members，需要几个不同的模型就添加几个元素，三个选项分别是缩放规模、数量、模型</p>
+<img src="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/image-20240717180440606.png" class="" title="image-20240717180440606">
+
+<p>接下来的Audio可以不用设置，是点击单位时的音效，保存为Units.artdef就完成了第一个节点的制作</p>
+</li>
+<li><p>自行组装一个新的成员模型，需要在第二个节点，也就是UnitMemberTypes标签里完成</p>
+<p>在UnitMemberTypes下新建一个成员，随便取名，写好前四个对应的</p>
+<p>Movement对应UnitMovementTypes里的内容</p>
+<p>MemberCombat的内容</p>
+<p>两个VFX对应VFX.artdef文件中MaterialTypes里的内容，是视觉特效材质</p>
+<img src="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/image-20240717181129766.png" class="" title="image-20240717181129766">
+
+<p>接下来给刚刚创建的元素下面的每一个元素都添加一个子元素，直到无法添加为止，最底下是Bins，引用的就是第三个二级节点中的零部件</p>
+<img src="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/image-20240717181342652.png" class="" title="image-20240717181342652">
+
+<p>接下来到第三个二级节点去找一个想要的零部件和它的组名，官方把所有零部件放在了 游戏根目录\Base\ArtDefs\Unit_Bins.artdef，用AssetEditor打开会更清晰</p>
+<img src="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/image-20240717181714884.png" class="" title="image-20240717181714884">
+
+<p>现在在Bodies中为该成员添加一个身体，引用方法是零件名＋组名，中间用斜杠隔开</p>
+<img src="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/image-20240717181831851.png" class="" title="image-20240717181831851">
+
+<p>接下来给部件取个名字</p>
+<img src="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/image-20240717181909266.png" class="" title="image-20240717181909266">
+
+<p>Point指的是接触点，Tint是颜色（对应UnitTintTypes里的内容），常见接触点如下：</p>
+<img src="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/image-20240717182021804.png" class="" title="image-20240717182021804">
+
+<p>左边第二个是Cultures，是指定文化，可以设为Any</p>
+<p> 接下来将设置好的这个成员送到第一个节点的Members中：</p>
+<img src="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/image-20240717182420292.png" class="" title="image-20240717182420292">
+
+<p>接下来来组装剩余部分：</p>
+<ul>
+<li><p>传统方法用AssetEditor打开游戏根目录\Base\ArtDefs\Units.artdef，随便仿照一个成员的官方写法构建这个成员的剩余部分</p>
+</li>
+<li><p>现在用另一种方式使用零部件，将自带的游戏模型化为己用，保存为自己的ast文件，先在UnitAttachmentBins节点下添加一个新零件，命名为Armor</p>
+<img src="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/image-20240717182654071.png" class="" title="image-20240717182654071">
+
+<p>在这个下面连续创建子元素至无法创建为止，最底下的Assets就是外部引用的ast文件</p>
+<img src="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/image-20240717182853769.png" class="" title="image-20240717182853769"></li>
+</ul>
+<p>​		点击左上角菜单栏上的File，点击Open Entity，选中Asset，搜索栏里输入armor就可以</p>
+<p>​		找到armor对应的模型，双击打开就能看到预览，如果看不到就在菜单栏Window勾选		Asset Previewer</p>
+<p>​		<img src="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/image-20240717183011818.png" class="" title="image-20240717183011818"></p>
+<p>​		预览窗口中用alt+鼠标左键旋转视角，alt+中键拖动视角，鼠标滚轮缩放</p>
+<p>​		右边是接触点，可以点击右边相应接触点的那个位置，在相应接触点添加零件，但是在这		里面改动都是无效的，只是预览，记住相应的模型后等下就可以添加到成员里面</p>
+<p>​		<style>.dptqktwllkqs{zoom:200%;}</style><img src="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/image-20240717183326664.png" class="dptqktwllkqs" alt="image-20240717183326664"></p>
+<p>​		</p>
+<p>​		左上角File，保存为自己的ast文件，然后才能修改</p>
+<p>​		如果觉得不合适，可以自行添加接触点，可以移动，具体如下：</p>
+<img src="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/image-20240717183912792.png" class="" title="image-20240717183912792">
+
+<p>​		单位成员的动画更取决于盔甲，选择左侧Behaviors选项卡，通常有正常行为和死亡行为</p>
+<p>​		死亡行为如下：</p>
+<img src="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/image-20240717184308060.png" class="" title="image-20240717184308060">
+
+<p>​		 右下角打开Animation动画选项卡，选择一个To State，再点击Play即可查看动画效果</p>
+<img src="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/image-20240717184518166.png" class="" title="image-20240717184518166">
+
+<p>​		正常行为可以随便选择一个单位的行为，但必须检查有没有攻击动作</p>
+<p>​		保存这个ast文件后，还要用xlp文件导入进来，创建一个xlp文件，PackageName和文件		名一样，XLP Class选择Unit，点击添加，选择刚刚常见的ast文件并且保存</p>
+<img src="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/image-20240717185003630.png" class="" title="image-20240717185003630">
+
+<img src="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/image-20240717185044210.png" class="" title="image-20240717185044210">
+
+<p>然后就可以在UnitAttachmentBins里面选择它了</p>
+<img src="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/image-20240717185140957.png" class="" title="image-20240717185140957">
+
+<p>文化改为Any，Group里面的组名也改一下，在UnitMemberTypes的成员下面添加一个零件，命名为Armor，接触点是Root，把刚才的零件名和组名放到这来即可</p>
+<img src="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/image-20240717185348636.png" class="" title="image-20240717185348636">
+
+<p><strong>至于骑手</strong>要稍微麻烦一点，先把骑手的名称改一下，IsAttachment勾上</p>
+<img src="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/image-20240717185522622.png" class="" title="image-20240717185522622">
+
+<p>接着在Variations下面添加一匹马</p>
+<img src="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/image-20240717185609623.png" class="" title="image-20240717185609623">
+
+<img src="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/image-20240717185650296.png" class="" title="image-20240717185650296">
+
+<img src="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/image-20240717185717326.png" class="" title="image-20240717185717326">
+
+<p>还需要加一个骑手，仿照官方写法即可</p>
+<img src="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/image-20240717185900991.png" class="" title="image-20240717185900991"></li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author_group"><a class="post-copyright__author_img" href="/about/"><img class="post-copyright__author_img_front" src="/img/headimg.jpg# 显示头像，不填写默认显示site_icon"></a><div class="post-copyright__author_name">zyw4259</div><div class="post-copyright__author_desc"></div></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div id="quit-box" onclick="RemoveRewardMask()"></div></div></div><div class="social-share"><a class="social-share-ico icon-qq" target="_blank" rel="noopener" href="https://connect.qq.com/widget/shareqq/index.html?url=http%3A%2F%2Fexample.com%2F2024%2F07%2F17%2F%25E6%2596%2587%25E6%2598%258E6mod%25E5%2588%25B6%25E4%25BD%259C-6%2F&amp;title=%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C(6)%EF%BC%9A%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C&amp;desc=undefined&amp;summary=undefined&amp;site=%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C(6)%EF%BC%9A%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C&amp;pics=%2Fimg%2Fdefault.avif" title="分享到QQ"><i class="solitude st-qq-fill"></i></a><a class="social-share-ico icon-weibo" target="_blank" rel="noopener" href="http://service.weibo.com/share/share.php?url=http%3A%2F%2Fexample.com%2F2024%2F07%2F17%2F%25E6%2596%2587%25E6%2598%258E6mod%25E5%2588%25B6%25E4%25BD%259C-6%2F&amp;title=%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C(6)%EF%BC%9A%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C&amp;pic=%2Fimg%2Fdefault.avif" title="分享到微博"><i class="solitude st-weibo-fill"></i></a><a class="social-share-ico icon-twitter" target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fexample.com%2F2024%2F07%2F17%2F%25E6%2596%2587%25E6%2598%258E6mod%25E5%2588%25B6%25E4%25BD%259C-6%2F&amp;text=%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C(6)%EF%BC%9A%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C" title="分享到Twitter"><i class="solitude st-twitter-x-fill"></i></a><a class="social-share-ico icon-facebook" target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fexample.com%2F2024%2F07%2F17%2F%25E6%2596%2587%25E6%2598%258E6mod%25E5%2588%25B6%25E4%25BD%259C-6%2F" title="分享到Facebook"><i class="solitude st-facebook-fill"></i></a><a class="social-share-ico icon-telegram" target="_blank" rel="noopener" href="https://t.me/share/url?url=http%3A%2F%2Fexample.com%2F2024%2F07%2F17%2F%25E6%2596%2587%25E6%2598%258E6mod%25E5%2588%25B6%25E4%25BD%259C-6%2F&amp;text=%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C(6)%EF%BC%9A%E6%A8%A1%E5%9E%8B%E5%88%B6%E4%BD%9C" title="分享到Telegram"><i class="solitude st-telegram-fill"></i></a></div><div class="post-copyright__notice"><span class="post-copyright-info">本文是原创文章，采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>协议，完整转载请注明来自<a href="/">zyw4259</a></span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"></div></div></div><nav class="needEndHide pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-7/"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">文明6mod制作(7)：用Blender制作游戏3D模型</div></div></a></div><div class="next-post pull-right"><a href="/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-4/"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">文明6mod制作(4)：自制修改器Modifier</div></div></a></div></nav><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="solitude st-chat-fill"></i><span> 评论</span></div></div><div class="comment-wrap"><div class="vcomment" id="vcomment"></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><div class="author-info__top-group"><div class="author-info__sayhi" id="author-info__sayhi" onclick="sco.changeSayHelloText()">sayhello.morning</div></div></div><div class="avatar-img-group"><img class="avatar-img" alt="头像" src="/img/headimg.jpg"></div><div class="author-info__description_group"><div class="author-info__description">这里有各种游戏攻略</div><div class="author-info__description2">还有日常笔记</div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/about/"><div class="author-info__name">zyw4259</div><div class="author-info__desc"></div></a><div class="card-info-social-icons is-center"><a class="social-icon" target="_blank" rel="noopener" href="https://github.com/zyw4259" title="Github"><i class="solitude  st-github-line"></i></a><a class="social-icon" target="_blank" rel="noopener" href="https://space.bilibili.com/188610189" title="Bilibili"><i class="solitude  st-bilibili-line"></i></a></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="solitude st-menu-line"></i><span>文章目录</span></div><div class="toc-content" id="toc-content"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%94%B9%E8%89%AF%E8%AE%BE%E6%96%BD%E6%A8%A1%E5%9E%8B"><span class="toc-text">改良设施模型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%BA%E7%89%A9%E6%A8%A1%E5%9E%8B"><span class="toc-text">人物模型</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="solitude st-map-line"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/08/09/06%E4%BF%A1%E6%81%AF%E6%89%93%E7%82%B9-Web-%E6%9E%B6%E6%9E%84%E7%AF%87-%E5%9F%9F%E5%90%8D-%E8%AF%AD%E8%A8%80-%E4%B8%AD%E9%97%B4%E4%BB%B6-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E6%BA%90%E7%A0%81%E8%8E%B7%E5%8F%96/" title="06信息打点-Web 架构篇&amp;域名&amp;语言&amp;中间件&amp;数据库&amp;系统&amp;源码获取"><img alt="06信息打点-Web 架构篇&amp;域名&amp;语言&amp;中间件&amp;数据库&amp;系统&amp;源码获取" src="/img/default.avif"></a><div class="content"><a class="title" href="/2024/08/09/06%E4%BF%A1%E6%81%AF%E6%89%93%E7%82%B9-Web-%E6%9E%B6%E6%9E%84%E7%AF%87-%E5%9F%9F%E5%90%8D-%E8%AF%AD%E8%A8%80-%E4%B8%AD%E9%97%B4%E4%BB%B6-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E6%BA%90%E7%A0%81%E8%8E%B7%E5%8F%96/" title="06信息打点-Web 架构篇&amp;域名&amp;语言&amp;中间件&amp;数据库&amp;系统&amp;源码获取">06信息打点-Web 架构篇&amp;域名&amp;语言&amp;中间件&amp;数据库&amp;系统&amp;源码获取</a><a class="article-recent_post_categories" href="/2024/08/09/06%E4%BF%A1%E6%81%AF%E6%89%93%E7%82%B9-Web-%E6%9E%B6%E6%9E%84%E7%AF%87-%E5%9F%9F%E5%90%8D-%E8%AF%AD%E8%A8%80-%E4%B8%AD%E9%97%B4%E4%BB%B6-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E6%BA%90%E7%A0%81%E8%8E%B7%E5%8F%96/">网络安全</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/08/07/05%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-%E8%B5%84%E4%BA%A7%E6%9E%B6%E6%9E%84-%E7%AB%AF%E5%8F%A3-%E5%BA%94%E7%94%A8-CDN-WAF-%E7%AB%99%E5%BA%93%E5%88%86%E7%A6%BB-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/" title="05基础入门-资产架构&amp;端口&amp;应用&amp;CDN&amp;WAF&amp;站库分离&amp;负载均衡"><img alt="05基础入门-资产架构&amp;端口&amp;应用&amp;CDN&amp;WAF&amp;站库分离&amp;负载均衡" src="/img/WA/WA05.png"></a><div class="content"><a class="title" href="/2024/08/07/05%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-%E8%B5%84%E4%BA%A7%E6%9E%B6%E6%9E%84-%E7%AB%AF%E5%8F%A3-%E5%BA%94%E7%94%A8-CDN-WAF-%E7%AB%99%E5%BA%93%E5%88%86%E7%A6%BB-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/" title="05基础入门-资产架构&amp;端口&amp;应用&amp;CDN&amp;WAF&amp;站库分离&amp;负载均衡">05基础入门-资产架构&amp;端口&amp;应用&amp;CDN&amp;WAF&amp;站库分离&amp;负载均衡</a><a class="article-recent_post_categories" href="/2024/08/07/05%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-%E8%B5%84%E4%BA%A7%E6%9E%B6%E6%9E%84-%E7%AB%AF%E5%8F%A3-%E5%BA%94%E7%94%A8-CDN-WAF-%E7%AB%99%E5%BA%93%E5%88%86%E7%A6%BB-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/">网络安全</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/08/07/04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6-Web-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81-%E5%8F%82%E6%95%B0%E5%80%BC/" title="04基础入门-30余种加密编码进制&amp;Web&amp;数据库&amp;系统&amp;代码&amp;参数值"><img alt="04基础入门-30余种加密编码进制&amp;Web&amp;数据库&amp;系统&amp;代码&amp;参数值" src="/img/WA/WA04.png"></a><div class="content"><a class="title" href="/2024/08/07/04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6-Web-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81-%E5%8F%82%E6%95%B0%E5%80%BC/" title="04基础入门-30余种加密编码进制&amp;Web&amp;数据库&amp;系统&amp;代码&amp;参数值">04基础入门-30余种加密编码进制&amp;Web&amp;数据库&amp;系统&amp;代码&amp;参数值</a><a class="article-recent_post_categories" href="/2024/08/07/04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6-Web-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81-%E5%8F%82%E6%95%B0%E5%80%BC/">网络安全</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/08/06/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-%E6%8A%93%E5%8C%85-%E5%B0%81%E5%8C%85-%E5%8D%8F%E8%AE%AE-APP-%E5%B0%8F%E7%A8%8B%E5%BA%8F-PC%E5%BA%94%E7%94%A8-WEB%E5%BA%94%E7%94%A8/" title="03基础入门-抓包&amp;封包&amp;协议&amp;APP&amp;小程序&amp;PC应用&amp;WEB应用"><img alt="03基础入门-抓包&amp;封包&amp;协议&amp;APP&amp;小程序&amp;PC应用&amp;WEB应用" src="/img/WA/WA03.png"></a><div class="content"><a class="title" href="/2024/08/06/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-%E6%8A%93%E5%8C%85-%E5%B0%81%E5%8C%85-%E5%8D%8F%E8%AE%AE-APP-%E5%B0%8F%E7%A8%8B%E5%BA%8F-PC%E5%BA%94%E7%94%A8-WEB%E5%BA%94%E7%94%A8/" title="03基础入门-抓包&amp;封包&amp;协议&amp;APP&amp;小程序&amp;PC应用&amp;WEB应用">03基础入门-抓包&amp;封包&amp;协议&amp;APP&amp;小程序&amp;PC应用&amp;WEB应用</a><a class="article-recent_post_categories" href="/2024/08/06/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-%E6%8A%93%E5%8C%85-%E5%B0%81%E5%8C%85-%E5%8D%8F%E8%AE%AE-APP-%E5%B0%8F%E7%A8%8B%E5%BA%8F-PC%E5%BA%94%E7%94%A8-WEB%E5%BA%94%E7%94%A8/">网络安全</a></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/08/05/%E7%BD%91%E5%AE%89-Web%E5%BA%94%E7%94%A8-%E6%9E%B6%E6%9E%84%E6%90%AD%E5%BB%BA-%E6%BC%8F%E6%B4%9E-Http%E6%95%B0%E6%8D%AE%E5%8C%85-%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="02基础入门-Web应用&amp;架构搭建&amp;漏洞&amp;Http数据包&amp;代理服务器"><img alt="02基础入门-Web应用&amp;架构搭建&amp;漏洞&amp;Http数据包&amp;代理服务器" src="/img/WA/WA02.png"></a><div class="content"><a class="title" href="/2024/08/05/%E7%BD%91%E5%AE%89-Web%E5%BA%94%E7%94%A8-%E6%9E%B6%E6%9E%84%E6%90%AD%E5%BB%BA-%E6%BC%8F%E6%B4%9E-Http%E6%95%B0%E6%8D%AE%E5%8C%85-%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="02基础入门-Web应用&amp;架构搭建&amp;漏洞&amp;Http数据包&amp;代理服务器">02基础入门-Web应用&amp;架构搭建&amp;漏洞&amp;Http数据包&amp;代理服务器</a><a class="article-recent_post_categories" href="/2024/08/05/%E7%BD%91%E5%AE%89-Web%E5%BA%94%E7%94%A8-%E6%9E%B6%E6%9E%84%E6%90%AD%E5%BB%BA-%E6%BC%8F%E6%B4%9E-Http%E6%95%B0%E6%8D%AE%E5%8C%85-%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8/">网络安全</a></div></div></div></div></div></div></main><footer id="footer"><div id="st-footer-bar"><div class="footer-logo"><span>Zyw's Blog</span></div><div class="footer-bar-description">来自zyw4259的的文章</div><a class="footer-bar-link" href="/about/">了解更多</a></div><div id="footer_deal"></div><div id="st-footer"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2023 - 2024 By&nbsp;<a class="footer-bar-link" href="/">zyw4259</a></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/zyw4259/zyw4259.github.io" alt="相关支持">相关支持</a><a class="footer-bar-link cc" href="/%E6%88%91%E6%98%AF%E8%B5%B5%E5%93%88%E5%93%88" aria-label="copyright"><i class="solitude st-copyright-line"></i><i class="solitude st-creative-commons-by-line"></i><i class="solitude st-creative-commons-nc-line"></i><i class="solitude st-creative-commons-nd-line"></i></a></div></div></div><div class="comment-barrage needEndHide"></div></footer></div><!-- right_menu--><!-- inject body--><div><script src="/js/utils.js?v=1.12.1"></script><script src="/js/main.js?v=1.12.1"></script><script src="/js/third_party/waterfall.min.js?v=1.12.1"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/pjax/0.2.8/pjax.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/node-snackbar/0.1.16/snackbar.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js"></script><div class="js-pjax"><script>(() => {
+    const initValine = () => {
+        const valine = new Valine({
+            el: '#vcomment',
+            appId: 'zR0EmUaByxzQLODvzgRpBR5F-MdYXbMMI',
+            appKey: 'PCjrrGXSHYRvDFkwHEGwCrho',
+            avatar: '',
+            serverURLs: 'https://zr0emuab.api.lncldglobal.com',
+            emojiMaps: "",
+            path: window.location.pathname,
+            visitor: true,
+            ...null
+        })
+        GLOBAL_CONFIG.lightbox && utils.lightbox(document.querySelectorAll('#comment .vcontent img:not(.vemoji)'))
+        sco.owoBig({body: '.vwrap', item: '.vemojis i'})
+    }
+    const loadValine = async () => {
+        if (typeof Valine === 'function') setTimeout(initValine, 0)
+        else {
+            await utils.getScript('https://cdnjs.cloudflare.com/ajax/libs/valine/1.5.1/Valine.min.js').then(initValine)
+        }
+        true && barrageValine()
+    }
+    if ('Valine' === 'Valine' || false) {
+        if (false) utils.loadComment(document.getElementById('vcomment'), loadValine)
+        else loadValine()
+    } else {
+        window.loadTwoComment = loadValine
+    }
+})()
+</script><script>async function barrageValine() {
+    const url = new URL('https://zr0emuab.api.lncldglobal.com/1.1/classes/Comment')
+    const params = {
+        url: window.location.pathname,
+        order: '-createdAt'
+    }
+    Object.entries(params).forEach(([key, value]) => url.searchParams.append(key, value))
+    await fetch(url, {
+        method: "GET",
+        headers: {
+            "X-LC-Id": "zR0EmUaByxzQLODvzgRpBR5F-MdYXbMMI",
+            "X-LC-Key": "PCjrrGXSHYRvDFkwHEGwCrho",
+            "Content-Type": "application/json"
+        },
+    }).then(async res => {
+        if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`)
+        const data = await res.json()
+        const init = () =>
+            initializeCommentBarrage(data.results
+                .filter(item => item.url === window.location.pathname)
+                .map(item => ({
+                    content: item.comment,
+                    nick: item.nick,
+                    mailMd5: md5(item.mail),
+                    id: item.objectId
+                })))
+        if (typeof md5 === "undefined") await utils.getScript('https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.19.0/js/md5.min.js')
+        if (typeof initializeCommentBarrage === "undefined") await utils.getScript('/js/third_party/barrage.min.js?v=1.12.1').then(init)
+        else init()
+    }).catch(error => console.error("An error occurred while fetching comments: ", error))
+}</script></div></div><!-- pjax--><script>const pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: ['title','#body-wrap','#site-config','meta[name="description"]','.js-pjax','meta[property^="og:"]','#config-diff'],
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+})
+
+document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+})
+
+document.addEventListener('pjax:complete', () => {
+    window.refreshFn()
+
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+        const newScript = document.createElement('script')
+        const content = item.text || item.textContent || item.innerHTML || ""
+        Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+        newScript.appendChild(document.createTextNode(content))
+        item.parentNode.replaceChild(newScript, item)
+    })
+
+    GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+})
+
+document.addEventListener('pjax:error', (e) => {
+    if (e.request.status === 404) {
+        pjax.loadUrl('/404.html')
+    }
+})</script><!-- theme--><script>initTheme = () => {
+    const cachedMode = utils.saveToLocal.get('theme');
+    if (cachedMode === undefined)
+        document.documentElement.setAttribute('data-theme', 'dark');
+    else
+        document.documentElement.setAttribute('data-theme', cachedMode);
+    typeof rm === 'object' && rm.mode(cachedMode === undefined || cachedMode === 'dark')
+}
+initTheme()</script><!-- google adsense--><!-- search--><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><button class="search-close-button"><i class="solitude st-close-fill"></i></button></nav><div class="search-wrap"><div class="search-box"><input class="search-box-input" id="search-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="输入关键词快速查找"></div><div id="search-results"><div id="search-hits"></div></div><div id="search-pagination"></div><div id="search-tips"></div></div></div><div id="search-mask"></div></div><script src="/js/search/local.js?v=1.12.1"></script><!-- Tianli-Talk--><!-- music--></body></html><script>const posts=["2024/08/09/06信息打点-Web-架构篇-域名-语言-中间件-数据库-系统-源码获取/","2024/08/07/05基础入门-资产架构-端口-应用-CDN-WAF-站库分离-负载均衡/","2024/08/07/04基础入门-30余种加密编码进制-Web-数据库-系统-代码-参数值/","2024/08/06/基础入门-抓包-封包-协议-APP-小程序-PC应用-WEB应用/","2024/08/05/网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/","2024/08/05/基础课程/","2024/07/29/Lua基础语法/","2024/07/17/文明6mod制作-8/","2024/07/17/文明6mod制作-7/","2024/07/17/文明6mod制作-6/","2024/07/17/文明6mod制作-4/","2024/07/16/文明6mod制作-3/","2024/07/16/文明6mod制作-2/","2024/07/16/文明6mod制作-1/","2024/07/11/利用SD实现换脸/","2024/07/10/AI绘画提示词和参数设置/","2024/07/10/文明6区域规划/","2024/07/10/pve打法-小马流/","2024/07/10/hexo文章图片无法显示问题解决方案1/","2024/06/25/绿维珑四神器攻略/"];function toRandomPost(){ pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]); }</script>

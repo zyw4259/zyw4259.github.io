@@ -1,87 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2024/06/22/hello-world/</url>
-    <content><![CDATA[Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
-
-## Quick Start
-
-### Create a new post
-
-``` bash
-$ hexo new "My New Post"
-```
-
-More info: [Writing](https://hexo.io/docs/writing.html)
-
-### Run server
-
-``` bash
-$ hexo server
-```
-
-More info: [Server](https://hexo.io/docs/server.html)
-
-### Generate static files
-
-``` bash
-$ hexo generate
-```
-
-More info: [Generating](https://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-``` bash
-$ hexo deploy
-```
-
-More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
-]]></content>
-  </entry>
-  <entry>
-    <title>测试页面</title>
-    <url>/2024/06/23/%E6%B5%8B%E8%AF%95%E9%A1%B5%E9%9D%A2/</url>
-    <content><![CDATA[
-# 这是一个一级标题
-
-## 这是一个二级标题1
-
-### 这是一个三级标题1-1
-
-哈哈哈哈哈哈哈哈
-
-```python
-insert sb
-print 'sb'
-```
-
-
-
-### 这是一个三级标题1-2
-
-哈哈哈哈哈哈哈哈
-
-## 这是一个二级标题2
-
-| 1    | 1    | 1    |
-| ---- | ---- | ---- |
-| 1    | 1    | 1    |
-| 1    | 1    | 1    |
-| 1    | 1    | 1    |
-
-
-
-![s17](测试页面/s17.jpg)]]></content>
-      <categories>
-        <category>神界原罪2</category>
-      </categories>
-      <tags>
-        <tag>神界原罪2攻略</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>绿维珑四神器攻略</title>
     <url>/2024/06/25/%E7%BB%BF%E7%BB%B4%E7%8F%91%E5%9B%9B%E7%A5%9E%E5%99%A8%E6%94%BB%E7%95%A5/</url>
     <content><![CDATA[
@@ -110,6 +29,8 @@ print 'sb'
 #### step3
 
 除了藏宝库后沿着河道走到如图所示的位置，有一个’被封印的箱子‘，对其释放 [祝福] 解开封印，释放船长，此时有两条路可以走：
+
+
 
 ![A-06](绿维珑四神器攻略/A-06.png)
 
@@ -145,5 +66,2855 @@ print 'sb'
       <tags>
         <tag>神界原罪2攻略</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>hexo文章图片无法显示问题解决方案1</title>
+    <url>/2024/07/10/hexo%E6%96%87%E7%AB%A0%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%881/</url>
+    <content><![CDATA[
+### Step1:
+
+配置 [Typora](https://so.csdn.net/so/search?q=Typora&spm=1001.2101.3001.7020) 偏好设置，如下图更改，此操作将图片文件保存路径: ./${filename} 即保存到与 当前正在编辑的文件名相同的同级文件夹下![A-01](hexo文章图片无法显示问题解决方案1/A-01.png)
+
+### Step2:
+
+修改_config.yml中的post_asset_folder，false 改为 true，这样修改后，每次 ‘hexo new page’ 生成新文章，都会在文章文件同级目录创建一个与文章文件名同名的文件夹，我们就在这里存放此文章的图片。
+
+### Step3:
+
+安装插件hexo-asset-img：
+
+```
+npm install hexo-asset-img --save
+hexo cl
+hexo g
+hexo s
+```
+
+]]></content>
+      <categories>
+        <category>hexo相关问题</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>pve打法:小马流</title>
+    <url>/2024/07/10/pve%E6%89%93%E6%B3%95-%E5%B0%8F%E9%A9%AC%E6%B5%81/</url>
+    <content><![CDATA[
+# 				pve打法——小马流
+
+适用：战狂文明如斯基泰、大哥伦比亚或者舍弃前期科技宗教发展的快节奏文明
+
+不适用：重要发教文明如俄罗斯、男拜占庭
+
+#### 科技与市政走向
+
+科技：畜牧业——采矿业——箭术——骑马
+
+ <img src="pve打法-小马流/image-20240710154839025.png" alt="image-20240710154839025" style="zoom: 50%;" />
+
+市政：对外贸易——技艺——帝国初期——国家劳动力——军事传统<img src="pve打法-小马流/image-20240710154944433.png" alt="image-20240710154944433" style="zoom: 50%;" />
+
+#### 总督：马格努斯——给养保障——黑市商人
+
+<img src="pve打法-小马流/image-20240710155303902.png" alt="image-20240710155303902" style="zoom:80%;" />
+
+#### 开局坐城优先：选树多的地方方便砍树
+
+
+
+#### 万神殿：宗教移民或者天空之神
+
+
+
+#### 开局注意事项：
+
+两座城造纪念碑，出国家劳动力后砍树出市政广场，点出黑市商人
+
+蛮族优先用投石兵清理
+
+军事传统和骑马点出来后换【演习】政策卡
+
+远古时代进黄金压忠诚度
+
+
+
+#### 进攻注意事项：
+
+砍树出小马，抢夺建造者，爆出数量足够多的小马，优先打没有城墙的
+
+占领后将马格努斯派遣至新城市砍树出新骑兵
+
+掠夺学院出投石兵
+
+
+
+]]></content>
+      <categories>
+        <category>文明6</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>文明6区域规划</title>
+    <url>/2024/07/10/%E6%96%87%E6%98%8E6%E5%8C%BA%E5%9F%9F%E8%A7%84%E5%88%92/</url>
+    <content><![CDATA[
+#### 一.区域生产力造价逻辑计算
+
+<img src="文明6区域规划/image-20240710193719968.png" alt="image-20240710193719968" style="zoom:80%;" />
+
+注意：当一座区域的地基拍下后，其所需的生产力会固定，即区域锁锤
+
+科文的进度会影响区域生产力造价，但锁锤后就固定了
+
+###### →其中六折区的逻辑遵循如下:
+
+<img src="文明6区域规划/image-20240710194141353.png" alt="image-20240710194141353" style="zoom:67%;" />
+
+<img src="文明6区域规划/image-20240710194212569.png" alt="image-20240710194212569" style="zoom: 80%;" />
+
+六折区域的本质是希望区域多样，基于这个六折规律：
+
+1.开局造的前两个区域尽量要统一
+
+2.解锁区域的科文要适当放慢
+
+3.由于数值判定滞后，区域建造完成后再造下一个更好
+
+4.可以以以圣地、学院学院、市政广场的2+1+1+1模式为例建造：
+
+<img src="文明6区域规划/image-20240710195139453.png" alt="image-20240710195139453" style="zoom:67%;" />
+
+
+
+#### 二.区域加成位点总结（优先）
+
+1.学院：山脉、地热裂缝、礁石
+
+2.圣地：自然奇观、山脉
+
+3.剧院广场：奇观、娱乐中心、水上乐园（建议捆绑建造）
+
+4.商业中心：加成最高的单元格即可 （河流旁）
+
+5.港口：靠市中心、海洋资源
+
+6.工业区：丘陵、森林、水渠、战略资源
+
+其中两座城市以上的规划可以用市政广场来加成
+
+一点建议：工业区注重生产力和电力辐射，建在城市群中间一点，战略资源旁边，尽量让其吃到水渠（堤坝）加成
+
+
+
+#### 三.铺城的两种思路：
+
+1.精铺：尽量让区域间互相配合，城市位置紧密，能快速领先科文，需要多打城或补铺来弥补资源不足(PVP首选)
+
+2.爆铺：尽量运用位点来加成区域，能圈更多资源，占地多
+
+→爆铺玩法建议开局双狗＋1移民，后面造一个工人+买一个工人，后面市政广场造祠堂，后面砍树造移民即可（记得挂殖民政策卡，最好再配合马格努斯砍树，点个给养保障）]]></content>
+      <categories>
+        <category>文明6</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>AI绘画提示词和参数设置</title>
+    <url>/2024/07/10/AI%E7%BB%98%E7%94%BB%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%92%8C%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE/</url>
+    <content><![CDATA[
+#### 一. 提示词基本语法
+
+**提示词类别：**内容型提示词（控制画面内容） & 标准化提示词（控制画质和画风）
+
+![img](AI绘画提示词和参数设置/1.png)
+
+**提示词权重：**控制提示词呈现的优先级的增减
+
+![image-20240710224110055](AI绘画提示词和参数设置/image-20240710224110055.png)
+
+**进阶提示词语法：**混合、迁移与迭代
+
+![image-20240710224124946](AI绘画提示词和参数设置/image-20240710224124946.png)
+
+**如何书写提示词？**你可以参考这样一个“通用模版”——
+
+![image-20240710224145291](AI绘画提示词和参数设置/image-20240710224145291.png)
+
+
+
+#### 二. 三大书写提示词的方法
+
+**翻译大法**
+
+借助翻译软件，直接将自己的自然语言转化为提示词
+
+-Google翻译：https://translate.google.com.hk/
+
+-有道翻译：https://fanyi.youdao.com/
+
+建议：先描绘一个具体场景，后面再慢慢往上补词条
+
+**借助工具**
+
+利用提示词工具，以“选取”的方式完成提示词撰写
+
+-一个工具箱：http://www.atoolbox.net/Tool.php?Id=1101
+
+![image-20240710224317847](AI绘画提示词和参数设置/image-20240710224317847.png)
+
+-AI词语加速器：https://ai.dawnmark.cn/
+
+![image-20240710224424339](AI绘画提示词和参数设置/image-20240710224424339.png)
+
+**抄作业**
+
+参考一些模型网站的例图与提示词记录网站的成品
+
+OpenArt：https://openart.ai/
+
+ArtHubAi：https://arthub.ai/
+
+AIGODLIKE：https://www.aigodlike.com/
+
+AI画廊：[https://www.aigallery.top/](https://www.aigallery.top/aigjz?c2=15&c3&c4&t)
+
+词图PromptTool：https://prompttool.com/ 
+
+
+
+#### 三. 出图参数详解
+
+**1.采样步数**：理论上越多越清晰，在20-35即可
+
+**2.采样方法：**采样时提供的方法，带+的是改进过的算法
+
+**3.分辨率：**一般在1000左右很清晰了，过高容易出错
+
+**4.提示词相关性：**一般7-12是安全数值
+
+**5.生成批次和数量：**批量生产以供挑选，一般调高生成批次
+
+]]></content>
+      <categories>
+        <category>Stable Diffusion</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>利用SD实现换脸</title>
+    <url>/2024/07/11/%E5%88%A9%E7%94%A8SD%E5%AE%9E%E7%8E%B0%E6%8D%A2%E8%84%B8/</url>
+    <content><![CDATA[
+# 利用StableDiffusion实现AI换脸功能
+
+#### ①下载并安装VisualStudio2022
+
+网址:  https://visualstudio.microsoft.com/zh-hans/downloads/
+
+![image-20240711174526046](利用SD实现换脸/image-20240711174526046.png)
+
+#### ②在webui中安装reactor插件
+
+<img src="利用SD实现换脸/image-20240711174821825.png" alt="image-20240711174821825" style="zoom: 200%;" />
+
+#### ③在文生图中用Reactor上传一次图片，点生成，以创建基础模型文件
+
+<img src="利用SD实现换脸/image-20240711175109845.png" alt="image-20240711175109845" style="zoom: 200%;" />
+
+这个步骤在后台看下载进度，最好开梯子，不然很慢会失败
+
+#### ④文生图中换脸方法
+
+<img src="利用SD实现换脸/image-20240711180336994.png" alt="image-20240711180336994" style="zoom:200%;" />
+
+#### ⑤现有照片换脸——图生图
+
+将要换脸的图片放在此处
+
+<img src="利用SD实现换脸/image-20240711214842302.png" alt="image-20240711214842302" style="zoom: 200%;" />
+
+将尺寸调成和要换脸的图片一个尺寸，将重绘幅度调成0
+
+<img src="利用SD实现换脸/image-20240711214939707.png" alt="image-20240711214939707" style="zoom: 200%;" />
+
+ReActor操作如前
+
+<img src="利用SD实现换脸/image-20240711215015690.png" alt="image-20240711215015690" style="zoom: 200%;" />
+
+点击生成即可完成换脸
+
+#### ⑥安装使用过程报错经验以及解决方案
+
+安装过程需要用到梯子，否则很多模型文件会下载失败，也不会有任何提示，导致使用过程失败.
+
+（暂时搁置）
+
+具体问题联系QQ：2710804436，有偿远程解决]]></content>
+      <categories>
+        <category>Stable Diffusion</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>文明6mod制作(1)：做一个简单的mod</title>
+    <url>/2024/07/16/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-1/</url>
+    <content><![CDATA[
+#### 准备步骤：
+
+在steam库——工具中，找到Sid Meier's Civilization VI Development Assets和Sid Meier's Civilization VI Development Tools下载安装
+
+![image-20240716220650592](文明6mod制作-1/image-20240716220650592.png)
+
+进入Sid Meier's Civilization VI Development Tools，选择ModBuddy，如果没有Visual Studio此处会自动下载
+
+第一次用需要设置路径，依次点击：
+
+![image-20240716220838074](文明6mod制作-1/image-20240716220838074.png)
+
+这里可以看到四个路径，第一个是存档和MOD路径，一般在文档/MyGames里面
+
+第二个是游戏路径，填到根目录
+
+第三个是刚下载的开发工具路径
+
+第四个是刚刚那个Assests的路径
+
+![image-20240716221028470](文明6mod制作-1/image-20240716221028470.png)
+
+#### 试着新建一个工程
+
+点击左上角FILE——New——Project新建一个工程
+
+有以下几种模版，分别是建筑、文明和领袖、政策、宗教、空模板，此处以Empty Mod空模板演示，名字Name可以随便取
+
+![image-20240716221154068](文明6mod制作-1/image-20240716221154068.png)
+
+![image-20240716221319744](文明6mod制作-1/image-20240716221319744.png)
+
+接下来自己新建一个
+
+![image-20240716221417048](文明6mod制作-1/image-20240716221417048.png)
+
+选择XML文件，文件名改成自己容易识别的名字，不要有中文或者特殊字符，然后点Add
+
+![image-20240716221457373](文明6mod制作-1/image-20240716221457373.png)
+
+现在做一个替换文本的mod，先找到游戏定义文本的文件夹，在游戏目录/Base/Assets/Text/Vanilla_zh_Hans_CN.xml里（记得使用文本编辑器如Notepad++)
+
+将需要修改的地方复制
+
+![image-20240716221717509](文明6mod制作-1/image-20240716221717509.png)
+
+![image-20240716221734687](文明6mod制作-1/image-20240716221734687.png)
+
+将蹴球场改为足球场
+
+接下来设置MOD属性，在MOD项目名上鼠标右键，选择属性Properties
+
+![image-20240716221836751](文明6mod制作-1/image-20240716221836751.png)
+
+其中内容根据自己意愿填写
+
+<img src="文明6mod制作-1/image-20240716221900098.png" alt="image-20240716221900098" style="zoom:150%;" />
+
+填完后点In-Game Actions，点Addaction，随便改个ID，要修改文本所以Type选择UpdateText，然后点右边Add，选择File是修改的项目，点OK即可，具体如图：
+
+<img src="文明6mod制作-1/image-20240716222157064.png" alt="image-20240716222157064" style="zoom:200%;" />
+
+最后一步选到GameData1，点击菜单栏里的BUILD——Build Solution即可，进游戏就可以看到了.]]></content>
+      <categories>
+        <category>mod制作</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>文明6mod制作(2)：创建人物单位</title>
+    <url>/2024/07/16/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-2/</url>
+    <content><![CDATA[
+#### 前言
+
+文明6MOD相关文件类型
+
+![image-20240716222643220](文明6mod制作-2/image-20240716222643220.png)
+
+#### 开始创建
+
+先创建一个工程，选New Unit为模板
+
+![image-20240716222724079](文明6mod制作-2/image-20240716222724079.png)
+
+生成的GettingStarted没用，可以删掉，其中几个真正要改的文件作用分别如下：
+
+![image-20240716222856825](文明6mod制作-2/image-20240716222856825.png)
+
+##### 1.设置单位基础参数
+
+现在修改最基础的参数设置，即NewUnit_Gameplay.xml，打开游戏根目录/Base/Assets/Gameplay/Data/Units.xml文件，这个文件包含了游戏中所有单位的参数，搜索archer找到弓箭手的：
+
+![image-20240716223154244](文明6mod制作-2/image-20240716223154244.png)
+
+先写标签第一项，Type=后面写自己想要的名字并且记住
+
+![image-20240716223317619](文明6mod制作-2/image-20240716223317619.png)
+
+再写第二项，AI类型，找到弓箭手的三个AI类型，第二项格式如下图2书写
+
+![image-20240716223415368](文明6mod制作-2/image-20240716223415368.png)
+
+![image-20240716223540161](文明6mod制作-2/image-20240716223540161.png)
+
+再看第三项，是单位替换，如果不想替换游戏原有单位那么可以跳过，同上理如下写即可
+
+![image-20240716223654852](文明6mod制作-2/image-20240716223654852.png)
+
+第四项是单位类型，弓箭手是远程，如下写
+
+![image-20240716223737891](文明6mod制作-2/image-20240716223737891.png)
+
+第五项写最关键的Units标签，这里设置了各种重要参数，包括花费生产力，每回合维护费用等，具体如下，如果是某个文明独有，还得加上 TraitType，注意到Name是以LOC_开头，描述则在Name后面加上__DESCRIPTION
+
+<img src="文明6mod制作-2/image-20240716224441928.png" alt="image-20240716224441928" style="zoom:200%;" />
+
+写的格式如下：
+
+![image-20240716224718922](文明6mod制作-2/image-20240716224718922.png)
+
+下一个改升级，弓箭手升弩手，格式如下
+
+![image-20240716224844965](文明6mod制作-2/image-20240716224844965.png)
+
+##### 2.设置文本
+
+文件就写完了，接下来定义这两个文本，打开NewUnit_Text.xml，做如下修改，其中①改成刚刚的Name，②改成刚刚的Descirption，复制一份英语的源代码，③改一份Language是简体中文的（即zh_Hans_CN），具体如下：
+
+![image-20240716225149452](文明6mod制作-2/image-20240716225149452.png)
+
+##### 3.设置图标
+
+接下来设置图标，可以用游戏设置的也可以用自带的，如果用自带的就打开游戏根目录\Base\Assets\UI\Icons\Incons_Units.xml，IconDefinitions标签下定义了游戏中全部单位的图标，设置格式如图①，注意Name必须是ICON_开头加上单位名称
+
+②定义了游戏右下角单位的头像，可以在游戏根目录\Base\Assets\UI\Icons\Incons_UnitPortraits.xml中找到，修改格式如图②，注意头像必须是ICON\_单位名称_PORTRAIT
+
+![image-20240716231018394](文明6mod制作-2/image-20240716231018394.png)
+
+其中①由于弓箭手是29位所以Index后面是29，位次具体如下，注意从0开始数
+
+![image-20240716231113459](文明6mod制作-2/image-20240716231113459.png)
+
+##### 4.设置模型
+
+先找到在m_RootCollections标签下，m_CollectionName为Units的这个区域，在下面的Element标签中折叠两个地方，一个m_Fields和一个m_ChildCollections，这两个地方是定义单位模型的部分，也就是需要被修改或者替换的部分
+
+![image-20240716233420560](文明6mod制作-2/image-20240716233420560.png)
+
+依然用弓箭手的替换，打开游戏根目录\Base\ArtDefs\Units.artdef，先搜索UNIT_ARCHER找到弓箭手的位置，往上翻，找到最近的m_ChildCollections标签将它折叠，再往上找到m_Fields标签，同样折叠，将弓箭手所在的那个Element标签里面的全部内容复制下来，粘贴到Mod中的Units.artdef文件相应的地方，最后把名称改成相应的单位名称即可
+
+![image-20240716233616727](文明6mod制作-2/image-20240716233616727.png)
+
+![image-20240716233809283](文明6mod制作-2/image-20240716233809283.png)
+
+即可完成
+
+#### 加载MOD信息
+
+同（1）中打开属性页面，操作同样，值得一提，第二第三个不怎么用，第四个FrontEnd Actions是指游戏一启动就要加载的内容，第五个是选好文明领袖点击开始游玩后才加载的内容
+
+![image-20240716233938912](文明6mod制作-2/image-20240716233938912.png)
+
+最后点击构建即可.]]></content>
+      <categories>
+        <category>mod制作</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>文明6mod制作(3)：创建一个文明</title>
+    <url>/2024/07/16/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-3/</url>
+    <content><![CDATA[
+#### 准备工作
+
+![image-20240717111349793](文明6mod制作-3/image-20240717111349793.png)
+
+注意使用Photoshop生成DDS文件作为游戏图标，去英伟达官网下载一个DDS插件，图标也可以在游戏目录中找到，具体操作流程:
+
+先导入准备好的素材，然后选择尺寸，从大到小：256-128-80-50-38-32
+
+![image-20240717111750584](文明6mod制作-3/image-20240717111750584.png)
+
+另存为DDS文件，
+
+![image-20240717111856383](文明6mod制作-3/image-20240717111856383.png)
+
+压缩方式选择8.8.8.8 ARGB 32bpp  无符号，选无MIP贴图，保存
+
+![image-20240717111951904](文明6mod制作-3/image-20240717111951904.png)
+
+可以使用Hemmelfort大佬制作的mod辅助工具简化这些步骤，制作不同尺寸的照片：
+
+![image-20240717112136395](文明6mod制作-3/image-20240717112136395.png)
+
+设置名称，图标代码也可以写好：
+
+![image-20240717112218225](文明6mod制作-3/image-20240717112218225.png)
+
+领袖界面（建议）：
+
+![image-20240717112250463](文明6mod制作-3/image-20240717112250463.png)
+
+要做的准备概览：
+
+![image-20240717112342742](文明6mod制作-3/image-20240717112342742.png)
+
+​           
+
+#### 开始制作
+
+##### 1.导入图标和图片
+
+打开ModBuddy新建一个空白模板，打开工具栏上的Asset Editor
+
+![image-20240717112807159](文明6mod制作-3/image-20240717112807159.png)
+
+在Asset Editor左上角点击File——New，选择XLP
+
+![image-20240717112912725](文明6mod制作-3/image-20240717112912725.png)
+
+在XLP CLASS这里选择UI Texture，上面Packagename随便取个名字
+
+![image-20240717113102889](文明6mod制作-3/image-20240717113102889.png)
+
+点击添加按钮，再点击+Add Source File... 把所有图像导入进来（除了外交界面的前景图），再点import即可
+
+![image-20240717113153783](文明6mod制作-3/image-20240717113153783.png)
+
+点击菜单栏另存为，保存这些XLP文件到XLPs目录下，文件名建议与刚才的Package Name一致
+
+![image-20240717113417144](文明6mod制作-3/image-20240717113417144.png)
+
+##### 2.准备基础文件
+
+原理如下：
+
+![image-20240717113646222](文明6mod制作-3/image-20240717113646222.png)
+
+目前要用的XML文件是这几个，前面文件名可以随便取
+
+![image-20240717113743618](文明6mod制作-3/image-20240717113743618.png)
+
+在ModBuddy的空模板下一个一个创建这些文件
+
+![image-20240717113831680](文明6mod制作-3/image-20240717113831680.png)
+
+![image-20240717113851727](文明6mod制作-3/image-20240717113851727.png)
+
+![image-20240717113906107](文明6mod制作-3/image-20240717113906107.png)
+
+在教程（2）中制作的单位可以原代码复制到xxx_Units.xml中，但由于是特色单位，在Units标签后面还要加上Trait_Type：
+
+![image-20240717114048406](文明6mod制作-3/image-20240717114048406.png)
+
+##### 3.制做特色建筑
+
+参照游戏中建筑来写，在\Base\Assets\Gameplay\Data\Buildings.xml中找到实例，和上一个教程中制作人物差不多
+
+先定义一个建筑，变量名以Building_开头
+
+![image-20240717114330465](文明6mod制作-3/image-20240717114330465.png)
+
+再设置参数
+
+![image-20240717114500578](文明6mod制作-3/image-20240717114500578.png)
+
+##### 4.制作领袖
+
+以\Base\Assets\Gameplay\Data\Leaders.xml中的为例，也是一样的方法，官方怎么写怎么抄：
+
+![image-20240717114710419](文明6mod制作-3/image-20240717114710419.png)
+
+##### 5.创建文明
+
+创建巫师文明，这是新建一个文明需要的基本信息：
+
+![image-20240717114747104](文明6mod制作-3/image-20240717114747104.png)	
+
+点开xxx_Civilization.xml，其中Types标签下的三行，第一行定义了巫师文明的变量名，一般以CIVILIZATION_开头 加上文明的名称
+
+第二行和第三行是特色单位和建筑 即之前的TraitType定义的
+
+（**注意：最新报错，这里最好再加上一行文明的TRAIT**）
+
+![image-20240717115024122](文明6mod制作-3/image-20240717115024122.png)
+
+Civilizations标签下是基本参数
+
+- Name是名称，Description是描述文本
+
+- StartingCivilizationLevelType指的是是一个国家而不是城邦，具体数值：CIVILIZATION_LEVEL_TRIBE（部落，野蛮人）CIVILIZATION_LEVEL_CITY_STATE（城邦）CIVILIZATION_LEVEL_FULL_CIV（完整国家）
+
+- RandomCityNameDepth默认为10
+
+- Ethnicity指的是种族，具体数值：ETHNICITY_ASIAN（亚洲）ETHNICITY_AFRICAN（非洲）ETHNICITY_MEDIT（地中海）ETHNICITY_SOUTHAM（南美）ETHNICITY_EURO（欧洲）
+
+![image-20240717115612896](文明6mod制作-3/image-20240717115612896.png)
+
+CivilizationLeaders标签指定文明的领袖，其中LeaderType填领袖，CapitalName是首都名称：
+
+![image-20240717115813548](文明6mod制作-3/image-20240717115813548.png)
+
+接下来是TraitType的定义，文本没有格式要求，CivilizationTraits使TraitType成为这个文明的专属对象
+
+![image-20240717120044048](文明6mod制作-3/image-20240717120044048.png)
+
+接下来是城市名和市民的名字，城市名最好多一点
+
+![image-20240717120134801](文明6mod制作-3/image-20240717120134801.png)
+
+接下来是颜色，分为主要颜色和次要颜色，四个数字分别是红/绿/蓝/透明度，大小从0-255，也可以使用游戏自带的颜色（如COLOR_PLAYER_WHITE_TEXT）
+
+![image-20240717120253516](文明6mod制作-3/image-20240717120253516.png)
+
+后面是定义加载界面和外交界面的图（这里不是外交界面的前景图）
+
+![image-20240717120449396](文明6mod制作-3/image-20240717120449396.png)
+
+##### 6.修改配置文件
+
+打开xxx_Config.xml，这个文件定义了这个文明在文明选择界面显示的内容，可以参考DLC中阿兹特克文明的写法：\DLC\Aztec_Montezuma\Data\Aztec_Montezuma_ConfigData.xml
+
+第一行<?xml .......>是xml文件的标准形式
+
+第二行GameInfo和GameData一样，次级标签是Players和PlayerItems
+
+先看Players标签，里面有两个Row标签，唯一不同的是第二个标签多了一个Domain说明这个Mod支持用于DLC《迭起兴衰》中，如果没有Domain或者Domain为StandardPlayers说明这个Mod支持原版游戏，其中内容解释如下：
+
+![image-20240717121915711](文明6mod制作-3/image-20240717121915711.png)
+
+![image-20240717121745343](文明6mod制作-3/image-20240717121745343.png)
+
+接下来是PlayerItems，是特殊单位的预览，想写几项都可以
+
+![image-20240717122040078](文明6mod制作-3/image-20240717122040078.png)
+
+##### 7.定义文本
+
+打开xxx_Text.xml，把刚才所有的文本，也就是LOC_开头的变量全部添加到定义文本的文件中 ，大致如下写：
+
+![image-20240717122409376](文明6mod制作-3/image-20240717122409376.png)
+
+##### 8.定义图标/图片/背景音乐
+
+同样是xxx_Text.xml，使用自定义图标必须先建立一个画册（图画集），可以用Hemmelfort大佬制作的工具快速生成
+
+先新建一个Arfdefs文件夹：
+
+![image-20240717123610392](文明6mod制作-3/image-20240717123610392.png)
+
+接下来导入做好的模型
+
+模型名字必须与游戏原名字一致，比如单位是Units.artdef 特色建筑是Buildings.artdeft
+
+人物模型参考（2），接下来做建筑模型
+
+打开AssetEditor 点击左上角File——New 新建一个ArtDef
+
+![image-20240717131003824](文明6mod制作-3/image-20240717131003824.png)
+
+在模板中选Buildings模板
+
+![image-20240717131032653](文明6mod制作-3/image-20240717131032653.png)
+
+鼠标右键选择添加Add Element，相当于添加一个新建筑
+
+![image-20240717131124785](文明6mod制作-3/image-20240717131124785.png)
+
+名字随便写一个等会改，点击保存 目录为Artdefs文件夹，**文件名必须是Buildings**
+
+![image-20240717131252272](文明6mod制作-3/image-20240717131252272.png)
+
+接着在ModBuddy中导入
+
+![image-20240717131353853](文明6mod制作-3/image-20240717131353853.png)
+
+接下来和（2）的方法一样，以竞技场的模型为例，打开游戏源文件，找到竞技场的部分（BUILDING_ARENA）往上折叠m_ChildCollections和m_Fileds，复制竞技场所在的Element标签
+
+![image-20240717131548335](文明6mod制作-3/image-20240717131548335.png)
+
+粘贴到自己的文件对应的地方，再把名字改为你的建筑的变量名即可
+
+![image-20240717131622048](文明6mod制作-3/image-20240717131622048.png)
+
+外交界面前景图无法通关XLM文件修改，但是可以通过artdef和xlp文件来定义
+
+现在AssetEditor中新建xlp
+
+![image-20240717131839765](文明6mod制作-3/image-20240717131839765.png)
+
+XLP Class为：LeaderFallback
+
+Package Name为：LeaderFallbacks
+
+然后选外交前景图点import
+
+![image-20240717131955215](文明6mod制作-3/image-20240717131955215.png)
+
+保存为LeaderFallbacks.xlp
+
+然后再创建一个artdef文件
+
+![image-20240717132101088](文明6mod制作-3/image-20240717132101088.png)
+
+选择的模板是LeaderFallback，添加一个Element，名字改为我们的领袖的变量名
+
+在下面子项Animations新建元素（如果不弹出BLP Entry，就再添加一项并删除），将其名字设为DEFAULT，在BLP Entry中选择我们的图片，如果这里没有我们的图片那就暂时选别的领袖
+
+最后保存文件为FallbackLeaders.artdef
+
+![image-20240717132425336](文明6mod制作-3/image-20240717132425336.png)
+
+在ModBuddy中的Artdefs那里导入，将里面这个EntryName设置成我们图片的名字
+
+![image-20240717132705021](文明6mod制作-3/image-20240717132705021.png)
+
+游戏背景音乐可以通过artdef来实现，新建artdef文件，然后选择模板Civilizations，新建元素，把名称改为文明变量名，下面的Audio也新建一个元素，名字设为Entry，XrefName设为Egypt（以埃及的音乐为例，如果要用其他文明的音乐，可以参考\Base\ArtDefs\Civilizations.artdef），然后将这个文件保存为Civilizations.artdef，最后导入到工程里即可
+
+##### 9.编写ModArt文件
+
+这个文件记录了所有artdef文件和xlp文件的信息
+
+使用工具点击第三项，点击打开MOD目录（就是项目名称的那个目录），软件就会自动获取项目相关资料包括名称ID，点击生成，自动生成一个ModArt文件（同时备份先前的）
+
+![image-20240717133431919](文明6mod制作-3/image-20240717133431919.png)
+
+##### 10.设置分阶段加载
+
+回到ModBuddy，右键工程，点击属性(Properties)，选择FrontEnd Actions，现在设置进游戏就加载配置文件config，点击Add Action
+
+后面的ID是用来记录在游戏日志中的（如果MOD出错就可以查看日志看看哪一步出问题了）
+
+Type类型选择UpdateDatabase
+
+然后Add，选择xxx_Config.xml
+
+![image-20240717133824225](文明6mod制作-3/image-20240717133824225.png)
+
+![image-20240717134007363](文明6mod制作-3/image-20240717134007363.png)
+
+然后是文本文件，Type选择UpdateText，点Add，选择xxx_Text.xml
+
+![image-20240717134112289](文明6mod制作-3/image-20240717134112289.png)
+
+然后是图标文件，Type选UpdateIcons，操作同上，后面art也一样（但是点Add后要选择Mod Art Dependency File）
+
+![image-20240717134157942](文明6mod制作-3/image-20240717134157942.png)
+
+![image-20240717134216010](文明6mod制作-3/image-20240717134216010.png)
+
+接下来的In-Game Actions也差不多，唯一不同的是更新数据库的部分，按照下图依次加载文明、领袖、单位、建筑即可
+
+<img src="文明6mod制作-3/image-20240717134527959.png" alt="image-20240717134527959" style="zoom:200%;" />
+
+其他三个和上面一样（注意是选择xxx_Text等，而不是Artdefs下面的），按照下图
+
+![image-20240717134635322](文明6mod制作-3/image-20240717134635322.png)
+
+最后Rebuild即可]]></content>
+      <categories>
+        <category>mod制作</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>文明6mod制作(4)：自制修改器Modifier</title>
+    <url>/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-4/</url>
+    <content><![CDATA[
+#### 前言准备
+
+这次主要运用SQL语言写MOD，只需要掌握SQL添加数据库的方法即可，只有三个英文单词INSERT INTO VALUES
+
+写法示例：
+
+<img src="文明6mod制作-4/image-20240717135327976.png" alt="image-20240717135327976" style="zoom:80%;" />
+
+假设这样一个成绩表，要往里面添加学生信息，可以这么写：
+
+```
+INSERT INTO 成绩表 (学号, 姓名, 分数) VALUES
+(03, 小华, 95), 
+(04, 小黑, 100);
+```
+
+以上代码成绩表后面括号是表头用逗号加一个空格隔开，下面括号内是添加的信息，多个信息用逗号隔开，结束这条语句用分号
+
+#### 文明6修改器结结构
+
+![image-20240717135907768](文明6mod制作-4/image-20240717135907768.png)
+
+比如金字塔可以修改建造者使用次数，那么这个修改器发起者就是金字塔(BUILDING_PYRAMIDS)，修改类型是调节建造者的使用次数(MODIFIER_PLAYER_UNITS_ADJUSTER_BUILDER_CHARGES)，修改的参数是次数Amount = 1
+
+总结：修改器三步骤：
+
+1.谁要改（谁拥有的修改器）
+
+2.改什么
+
+3.改多少
+
+每一步都对应一个特定的表，只有第二三步是确定的，第一步的表取决于发起者
+
+<img src="文明6mod制作-4/image-20240717140312939.png" alt="image-20240717140312939" style="zoom:80%;" />
+
+第一步表中每一个对应修改器：
+
+![image-20240717140348849](文明6mod制作-4/image-20240717140348849.png)
+
+以纪念碑为例，若要给它加上金字塔的功能
+
+- 第一步：由于纪念碑是建筑，建筑拥有的修改器要添加到表BuildingModifiers中，这个表的表头分别是BuildingType和ModifierId，前者对应纪念碑本身(BUILDING_MONUMENT)，后者是修改器的名字（可以随便取）
+
+- 第二步：给这个修改器指定一个修改类型，这个表的表头主要是ModifierId和ModifierType，前者是刚刚给修改器取的名字，后者是游戏自带的修改类型
+
+- 第三步：这个表有三个表头，分别是ModifierId、Name、Value，分别是修改器的名字、修改的参数名、修改的参数值 
+
+具体如下：
+
+![image-20240717141032547](文明6mod制作-4/image-20240717141032547.png)
+
+总结如下:
+
+<img src="文明6mod制作-4/image-20240717141142459.png" alt="image-20240717141142459" style="zoom:250%;" />
+
+​         
+
+#### 查找参数以及推荐软件
+
+为了做出更多功能，有必要熟悉游戏中各种自带的修改器，推荐以下软件：
+
+​     
+
+- https://sqlitestudio.pl  用于查看游戏数据库中的数据，具体操作如下：
+
+  点击工具栏上的Add a database，数据类型选择SQLite 3，文件选择文档\My Games\Sid Meier's Civilization VI\Cache\DebugGameplay.sqlite，然后点ok
+
+  ![image-20240717141935048](文明6mod制作-4/image-20240717141935048.png)
+
+  然后右键选择connect to the database，就有了游戏数据库中的内容
+
+  ![image-20240717142010200](文明6mod制作-4/image-20240717142010200.png)
+
+  表头也在其中
+
+  ![image-20240717142037421](文明6mod制作-4/image-20240717142037421.png)
+
+  在数据里可以查看到参数名，具体如下（这是刚刚金字塔的参数AMOUNT）
+
+  <img src="文明6mod制作-4/image-20240717142213801.png" alt="image-20240717142213801" style="zoom:200%;" />
+
+​       
+
+- https://www.bilibili.com/read/cv1743674/ B站大佬的MOD辅助工具
+
+  进入自定义修改器
+
+  ![image-20240717142335766](文明6mod制作-4/image-20240717142335766.png)
+
+  上面那个纪念碑的例子可以这样用，点击生成即可一键生成代码
+
+  ![image-20240717142820474](文明6mod制作-4/image-20240717142820474.png)
+
+  其中的RunOnce等三个选项具体作用如下：
+
+  ![image-20240717142944437](文明6mod制作-4/image-20240717142944437.png)
+
+​         
+
+####  添加约束条件
+
+下图一个是对所有者的约束，一个是对被影响者的约束
+
+![image-20240717143234968](文明6mod制作-4/image-20240717143234968.png)
+
+
+
+修改器的生效条件如下，即一个或以上的子条件必须包含在条件集中才能被传到Modifiers里生效
+
+![image-20240717143335788](文明6mod制作-4/image-20240717143335788.png)
+
+<img src="文明6mod制作-4/image-20240717143521118.png" alt="image-20240717143521118" style="zoom:200%;" />
+
+- 接下来举例说明
+
+  ![image-20240717143557090](文明6mod制作-4/image-20240717143557090.png)
+
+  根据上面的结构图，一个单独的条件有两个步骤
+
+  ①先往Requirements这个表中添加两个内容，其中RequirementId是自己取的名字，RequirementType是游戏自带的的（可以用辅助工具）
+
+  ②第二个表RequirementArguments里面填相对应的参数，同样包含参数名和参数值
+
+  实例的子条件代码如下：
+
+  ```
+  INSERT INTO Requirements (RequirementId, RequirementType) VALUES
+  ("Has_Tech", "REQUIREMENT_PLAYER_HAS_TECHNOLOGY"),
+  ("Is_Human", "REQUIREMENT_PLAYER_IS_HUMAN");
+  
+  INSERT INTO RequirementArguments (RequirementId, Name, Value) VALUES
+  ("Has_Tech", "TechnologyType", "TECH_POTTERY")
+  ```
+
+  接下来打包这两个子条件
+
+  先在RequirementSets表里面创建一个条件集
+
+  ```
+  INSERT INTO RequirementSets (RequirementSetId, RequirementSetType) VALUES
+  ("ReqSet", "REQUIREMENTSET_TEST_ALL");
+  ```
+
+  其中第二项是决定两个子条件是全都符合还是全不符合，具体数值如下：
+
+  ![image-20240717145003311](文明6mod制作-4/image-20240717145003311.png)
+
+  然后在RequirementSetRequirements这个表中往里面加入条件集和子条件的名字，把所有子条件集合起来，有多少个子条件就写多少行：
+
+  ```
+  INSERT INTO RequirementSetRequirements (RequirementSetId, RequirementId) VALUES
+  ("ReqSet", "Has_Tech"),
+  ("ReqSet", "Is_Human");
+  ```
+
+  总结代码如下：
+
+  <img src="文明6mod制作-4/image-20240717145310973.png" alt="image-20240717145310973" style="zoom:200%;" />
+
+  ​    
+
+  用B站大佬的工具能**节省难度和时间**：
+
+  先设置条件集的名称
+
+  ![image-20240717145411722](文明6mod制作-4/image-20240717145411722.png)
+
+  再加入两个子条件：
+
+  ![image-20240717145502660](文明6mod制作-4/image-20240717145502660.png)
+
+  每个条件都取名字、设置类型、设置参数即可
+
+  ![image-20240717145544179](文明6mod制作-4/image-20240717145544179.png)
+
+  做好后建议放在Components或者InGame Actions里面，开始游玩后才加载
+
+  ![image-20240717145810969](文明6mod制作-4/image-20240717145810969.png)]]></content>
+      <categories>
+        <category>mod制作</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>文明6mod制作(6)：模型制作</title>
+    <url>/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-6/</url>
+    <content><![CDATA[
+#### 前言
+
+本教程使用游戏自带的模型制作，若是自己建模请移步mod制作（7）
+
+#### 改良设施模型
+
+先打开ModBuddy新建一个空白模板，再新建一个xml文件，可以用最新发布的辅助工具来帮忙，点击创建新文明
+
+![image-20240717163948993](文明6mod制作-6/image-20240717163948993.png)
+
+右上角选择新建改良设施
+
+![image-20240717164012740](文明6mod制作-6/image-20240717164012740.png)
+
+在里面编辑了基本的参数后生成xml文件，全部复制，粘贴到刚刚ModBuddy生成的xml文件里面
+
+![image-20240717164141735](文明6mod制作-6/image-20240717164141735.png)
+
+在这个项目里面创建一个Artdefs文件夹
+
+![image-20240717164208568](文明6mod制作-6/image-20240717164208568.png)
+
+接着打开AssetEditor，新建一个artdef文件，模板选择改良设施（Improvements)，在Improvements添加一个元素（相当于添加一个改良设施），Name设为改良设施的变量名
+
+![image-20240717164352157](文明6mod制作-6/image-20240717164352157.png)
+
+- strategic view是战略视图（包括正常状态和被掠夺的状态）
+
+  ![image-20240717164849808](文明6mod制作-6/image-20240717164849808.png)
+
+  如果没有数据包那么XrefName是空的，可以去游戏根目录\Base\ArtDefs\Improvements.artdef，进入文件后记得全部折叠方便看，在RootCollections里可以看到两个Element，一个是所有的改良设施，一个是建造状态。展开第一个Element，其中包含的Element每一个都对应了一种改良设施
+
+  ![image-20240717165010445](文明6mod制作-6/image-20240717165010445.png)
+
+  展开其中一个Element后，可以看到几个内容，展开战略视图后看到两个Element，需要的就是这两个，可以作为外部引用名
+
+  ![image-20240717165226487](文明6mod制作-6/image-20240717165226487.png)
+
+- landmark是模型的定义，添加一个element，名字随便取，这里有一个外部引用（Xref），它引用的是Landmark.artdef文件里包好的模型
+
+  ![image-20240717165459366](文明6mod制作-6/image-20240717165459366.png)选好后保存文件到Artdefs文件夹下，文件名为Improvements.artdef
+
+  导入到ModBuddy项目的Artdefs文件夹中
+
+  值得注意的是，文件中有些地方为空，如果遇到这种问题导致闪退又找不到原因，可以尝试模范（2）的做法，将游戏文件中Element标签整个部分和该文件特定位置替换
+
+**注意每次加入一个artdef或者xlp文件或者在属性里修改名称和ID后，都必须重新生成Mod.Art.xml文件，因为该文件就是用来记录这些信息的**
+
+重新生成的过程可以借助辅助工具
+
+最后来设置加载过程，在In-Game Actions中添加两个步骤，第一个是UpdateArt（模型文件)，第二个是Updatedatabase（数据文件）
+
+![image-20240717170812509](文明6mod制作-6/image-20240717170812509.png)
+
+最后重新构建即可
+
+
+
+#### 人物模型
+
+<img src="文明6mod制作-6/image-20240717173523451.png" alt="image-20240717173523451" style="zoom:200%;" />
+
+在（2）已经做出了一个新的单位的基础上，打开AssetEditor，新建artdef文件，模板选择Units
+
+![image-20240717175008698](文明6mod制作-6/image-20240717175008698.png)
+
+1. 在Units下面新建一个单位，把单位变量名复制到Name里
+
+   Formation是编队的方式（一定要填，对应UnitFormationsTypes里面的内容）
+
+   下面三项同理
+
+   ![image-20240717180315346](文明6mod制作-6/image-20240717180315346.png)
+
+   接下来看Members，需要几个不同的模型就添加几个元素，三个选项分别是缩放规模、数量、模型
+
+   ![image-20240717180440606](文明6mod制作-6/image-20240717180440606.png)
+
+   接下来的Audio可以不用设置，是点击单位时的音效，保存为Units.artdef就完成了第一个节点的制作
+
+2. 自行组装一个新的成员模型，需要在第二个节点，也就是UnitMemberTypes标签里完成
+
+   在UnitMemberTypes下新建一个成员，随便取名，写好前四个对应的
+
+   Movement对应UnitMovementTypes里的内容
+
+   MemberCombat的内容
+
+   两个VFX对应VFX.artdef文件中MaterialTypes里的内容，是视觉特效材质
+
+   ![image-20240717181129766](文明6mod制作-6/image-20240717181129766.png)
+
+   接下来给刚刚创建的元素下面的每一个元素都添加一个子元素，直到无法添加为止，最底下是Bins，引用的就是第三个二级节点中的零部件
+
+   ![image-20240717181342652](文明6mod制作-6/image-20240717181342652.png)
+
+   接下来到第三个二级节点去找一个想要的零部件和它的组名，官方把所有零部件放在了 游戏根目录\Base\ArtDefs\Unit_Bins.artdef，用AssetEditor打开会更清晰
+
+   ![image-20240717181714884](文明6mod制作-6/image-20240717181714884.png)
+
+   现在在Bodies中为该成员添加一个身体，引用方法是零件名＋组名，中间用斜杠隔开
+
+   ![image-20240717181831851](文明6mod制作-6/image-20240717181831851.png)
+
+   接下来给部件取个名字
+
+   ![image-20240717181909266](文明6mod制作-6/image-20240717181909266.png)
+
+   Point指的是接触点，Tint是颜色（对应UnitTintTypes里的内容），常见接触点如下：
+
+   ![image-20240717182021804](文明6mod制作-6/image-20240717182021804.png)
+
+   左边第二个是Cultures，是指定文化，可以设为Any
+
+    接下来将设置好的这个成员送到第一个节点的Members中：
+
+   ![image-20240717182420292](文明6mod制作-6/image-20240717182420292.png)
+
+   接下来来组装剩余部分：
+
+   - 传统方法用AssetEditor打开游戏根目录\Base\ArtDefs\Units.artdef，随便仿照一个成员的官方写法构建这个成员的剩余部分
+
+   - 现在用另一种方式使用零部件，将自带的游戏模型化为己用，保存为自己的ast文件，先在UnitAttachmentBins节点下添加一个新零件，命名为Armor
+
+     ![image-20240717182654071](文明6mod制作-6/image-20240717182654071.png)
+
+     在这个下面连续创建子元素至无法创建为止，最底下的Assets就是外部引用的ast文件
+
+     ![image-20240717182853769](文明6mod制作-6/image-20240717182853769.png)
+
+
+   ​		点击左上角菜单栏上的File，点击Open Entity，选中Asset，搜索栏里输入armor就可以
+
+   ​		找到armor对应的模型，双击打开就能看到预览，如果看不到就在菜单栏Window勾选		Asset Previewer
+
+   ​		![image-20240717183011818](文明6mod制作-6/image-20240717183011818.png)
+
+   ​		预览窗口中用alt+鼠标左键旋转视角，alt+中键拖动视角，鼠标滚轮缩放
+
+   ​		右边是接触点，可以点击右边相应接触点的那个位置，在相应接触点添加零件，但是在这		里面改动都是无效的，只是预览，记住相应的模型后等下就可以添加到成员里面
+
+   ​		<img src="文明6mod制作-6/image-20240717183326664.png" alt="image-20240717183326664" style="zoom:200%;" />
+
+   ​		
+
+   ​		左上角File，保存为自己的ast文件，然后才能修改
+
+   ​		如果觉得不合适，可以自行添加接触点，可以移动，具体如下：
+
+   ![image-20240717183912792](文明6mod制作-6/image-20240717183912792.png)
+
+   ​		单位成员的动画更取决于盔甲，选择左侧Behaviors选项卡，通常有正常行为和死亡行为
+
+   ​		死亡行为如下：
+
+   ![image-20240717184308060](文明6mod制作-6/image-20240717184308060.png)
+
+   ​		 右下角打开Animation动画选项卡，选择一个To State，再点击Play即可查看动画效果
+
+   ![image-20240717184518166](文明6mod制作-6/image-20240717184518166.png)
+
+   ​		正常行为可以随便选择一个单位的行为，但必须检查有没有攻击动作
+
+   ​		保存这个ast文件后，还要用xlp文件导入进来，创建一个xlp文件，PackageName和文件		名一样，XLP Class选择Unit，点击添加，选择刚刚常见的ast文件并且保存
+
+   ![image-20240717185003630](文明6mod制作-6/image-20240717185003630.png)
+
+   ![image-20240717185044210](文明6mod制作-6/image-20240717185044210.png)
+
+   然后就可以在UnitAttachmentBins里面选择它了
+
+   ![image-20240717185140957](文明6mod制作-6/image-20240717185140957.png)
+
+   文化改为Any，Group里面的组名也改一下，在UnitMemberTypes的成员下面添加一个零件，命名为Armor，接触点是Root，把刚才的零件名和组名放到这来即可
+
+   ![image-20240717185348636](文明6mod制作-6/image-20240717185348636.png)
+
+   **至于骑手**要稍微麻烦一点，先把骑手的名称改一下，IsAttachment勾上
+
+   ![image-20240717185522622](文明6mod制作-6/image-20240717185522622.png)
+
+   接着在Variations下面添加一匹马
+
+   ![image-20240717185609623](文明6mod制作-6/image-20240717185609623.png)
+
+   ![image-20240717185650296](文明6mod制作-6/image-20240717185650296.png)
+
+   ![image-20240717185717326](文明6mod制作-6/image-20240717185717326.png)
+
+   还需要加一个骑手，仿照官方写法即可
+
+   ![image-20240717185900991](文明6mod制作-6/image-20240717185900991.png)]]></content>
+      <categories>
+        <category>mod制作</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>文明6mod制作(7)：用Blender制作游戏3D模型</title>
+    <url>/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-7/</url>
+    <content><![CDATA[
+#### 前言
+
+![image-20240717190240369](文明6mod制作-7/image-20240717190240369.png)
+
+​     
+
+#### 模型制作
+
+开始做模型，用到的是Blender，可以去steam上下载，详情参考Blender教程，接下来是基础教程
+
+打开先把场景中的内容删掉，按A全选，按X删除
+
+![image-20240717211330799](文明6mod制作-7/image-20240717211330799.png)
+
+然后修改单位，在右下角属性面板中选择场景选项卡，在单位（Units）折叠框中设置单位系统（Unit System）为公制（Metric），单位缩放（Unit Scale）为0.01
+
+![image-20240717211607306](文明6mod制作-7/image-20240717211607306.png)
+
+然后把鼠标移到3D显示窗口，按N显示侧边栏，点击视图（View）选项卡，把视图截取终点（Clip End）设为100米，在这样的缩放之下游戏中一个六边形格子的宽度大约是6米，而此时Blender场景中	一个方格的宽度是1米
+
+![image-20240717211719984](文明6mod制作-7/image-20240717211719984.png)
+
+创建一个正方体
+
+注意游戏中陆地比水平面稍微高一点，所以生成模型时应该先按G，再按Z沿着数轴向上移动，使其大部分位于水平面以上，此时右上角黄色倒三角就是此时的模型，先改一下名字
+
+![image-20240717212043819](文明6mod制作-7/image-20240717212043819.png)
+
+注意：游戏模型所有的面必须是三角形（这里的面指的是“三点共面”的面，不是正六面体的面，不过这并不重要），所以现在将其三角化
+
+第一步 在**物体模式（Object Mode）**下左键选中立方体，在右下角面板选择修改器（Modifier），点击添加修改器（Add Modifier），点击三角化（Triangulate），再点击应用（Apply），然后按TAB，左上角进入**编辑模式**就可以看到效果
+
+![image-20240717212752531](文明6mod制作-7/image-20240717212752531.png)
+
+第二步 UV展开，在**编辑模式**下按A全选所有顶点，然后按U选择展开（Unwrap），要看效果就点最上面的UV Editing选项卡
+
+![image-20240717213030833](文明6mod制作-7/image-20240717213030833.png)
+
+第三步 设置材质，回到刚才的窗口，在右下角选择材质（Material）选项卡，点New添加材质
+
+![image-20240717213127482](文明6mod制作-7/image-20240717213127482.png)
+
+第四步 绑定骨骼，在**物体模式**下按Shift+A点击Armature，把大小（Radius）设为0.5m，在3D预览界面右上角选择线框视图
+
+![image-20240717213411691](文明6mod制作-7/image-20240717213411691.png)
+
+然后选择方块，再长按Shift点击这根骨头，松开shift点击Ctrl+P选择Armature Deform，这时方块就进入了Amature，效果达到了，最后导出模型，左上角File——Export——导出为FBX格式
+
+![image-20240717213702055](文明6mod制作-7/image-20240717213702055.png)
+
+​		
+
+#### 改良设施
+
+参照之前的做到这一步
+
+<img src="文明6mod制作-7/image-20240717190631803.png" alt="image-20240717190631803" style="zoom:200%;" />
+
+打开AssetEditor，新建ArtDef文件，模板选择Landmarks，Landmarks里面新建地标元素，起个变量名，下面的Eras也新建元素，保存文件到当前工程的Artdefs文件夹下面，文件名为Landmarks.artdef
+
+再新建一个artdef文件，模板选择Improvements，在Improvement下面新建元素，名称改为改良设施名称。下面的Landmark也新建元素，外部引用（Xref）这选择刚才那个文件的地标的变量名，保存为Improvements.artdef（若Xref没有刚刚的变量名，重启就可以选了）
+
+![image-20240717214327392](文明6mod制作-7/image-20240717214327392.png)
+
+现在把自己的模型放进来，点到Landmarks.artdef文件，找到地标文件默认的模型，在下拉菜单中点击那个小箭头
+
+![image-20240717231947825](文明6mod制作-7/image-20240717231947825.png)
+
+![image-20240717232017022](文明6mod制作-7/image-20240717232017022.png)
+
+要导入刚才做完的模型，还需要两个文件，一个ast文件和一个geo文件，关系如下：
+
+![image-20240717232108459](文明6mod制作-7/image-20240717232108459.png)
+
+在AssetEditor左上角选择File——New——Geometry
+
+![image-20240717232320002](文明6mod制作-7/image-20240717232320002.png)
+
+这些空的填法可以参考官方，左上角File选择Open Entity，左边选择Geometry，改良设施的模型一般以IMP开头，找一些比较眼熟的
+
+![image-20240717232425190](文明6mod制作-7/image-20240717232425190.png)
+
+可以看到名字比较随意（大概率是变量名），类名是LandmarkModel，
+
+后面Source File Path选择我们的模型（就是模型制作中保存的fbx文件）
+
+Source Object 选择刚才在Blender里面改的名字，点击保存
+
+![image-20240717232455003](文明6mod制作-7/image-20240717232455003.png)
+
+接下来创建Asset文件，点击新建，选择Asset，不会写还是可以参考原文件，类名是TileBase 
+
+![image-20240717232812250](文明6mod制作-7/image-20240717232812250.png)
+
+点击下面的Geometry选项卡，再点击添加已存在（Add Existing），旁边把除了自己项目以外的√都去掉，就能看到自己的几何文件
+
+![image-20240717232959905](文明6mod制作-7/image-20240717232959905.png)
+
+![image-20240717233020282](文明6mod制作-7/image-20240717233020282.png)
+
+下面是不同状态下的不同贴图，先不考虑贴图，现在用xlp文件把它导入到工程中
+
+左上角新建 选择xlp，PackageName填landmarks/tilebases，XLP Class选Tile Base
+
+然后点添加，选择我们的AST文件
+
+![image-20240717233229655](文明6mod制作-7/image-20240717233229655.png)
+
+![image-20240717233300294](文明6mod制作-7/image-20240717233300294.png)
+
+保存到当前工程的XLPs目录下，文件名为tilebases.xlp
+
+回到landmarks.artdef文件，在Asset这里选择浏览（Browse）
+
+如果刚才没有取名的话就不会出现在这
+
+（记得重新生成Mod.Art.xml文件）
+
+![image-20240717233416108](文明6mod制作-7/image-20240717233416108.png)
+
+![image-20240717233537211](文明6mod制作-7/image-20240717233537211.png)
+
+最后是加载过程，一个是加载模型，另一个是加载数据库，如下：
+
+![image-20240717233619238](文明6mod制作-7/image-20240717233619238.png)
+
+最后重构即可
+
+（值得注意的是，文明6的模型使用基于物理规则的渲染（PBR））
+
+![image-20240717233721842](文明6mod制作-7/image-20240717233721842.png)
+
+添加新贴图办法：
+
+![image-20240717233822762](文明6mod制作-7/image-20240717233822762.png)
+
+![image-20240717233846104](文明6mod制作-7/image-20240717233846104.png)
+
+输入材质文件的名称，在BaseColor右边点击第一个按钮，选择贴图，最后保存即可
+
+**编写人物、资源、区域的模型亦如此**]]></content>
+      <categories>
+        <category>mod制作</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>文明6mod制作(8)：lua写脚步</title>
+    <url>/2024/07/17/%E6%96%87%E6%98%8E6mod%E5%88%B6%E4%BD%9C-8/</url>
+    <content><![CDATA[
+#### 前言
+
+![image-20240717234329169](文明6mod制作-8/image-20240717234329169.png)
+
+​					
+
+#### Gameplay相关部分
+
+先用Lua做一个简单的mod，在文档\My Games\Sid Meier's Civilzation VI\Mods下新建一个文件夹，然后在里面创建一个lua脚本文件（demo.lua）
+
+要编写游戏脚本，首先必须要知道游戏接口（API），官方没有资料，以下是网友总结的：
+
+- 原文件：http://1t.click/bnfV （可能无法访问） 
+
+- Excel版：https://share.weiyun.com/5rZpG55 
+
+- Html版：https://share.weiyun.com/5TGHb3T
+
+在表格底下点击Events切换，文明6的脚步是事件驱动（当某一事件发生时，游戏自动调用我们准备好的函数），我们需要做的就是为事件创建一个函数（function） 
+
+- 例如：事件ResearchCompleted是完成科技，参数包含玩家ID和科技序号
+
+  ![image-20240718131728867](文明6mod制作-8/image-20240718131728867.png)
+
+- 假设要让我们每完成一项科技，都能获得100金币：
+
+  ```lua
+  function OnResearchCompleted(iPlayerID, iTech)
+      local pPlayer = Players[iPlayerID]
+      pPlayer:GetTreasury():ChangeGoldBalance(100)
+      
+  end
+  
+  Events.ResearchCompleted.Add(OnResearchCompleted)
+  ```
+
+  具体可以看表格的Lua Objects部分（难免有错误的地方），所以最好去看官方文件，下面这是一款用来查询游戏自带文件的软件：
+
+  https://www.mythicsoft.com/agentransack/
+
+  具体操作如下，打开软件，在File name这里输入*.lua，表示所有后缀名为lua的文件，在Containing text一栏输入要搜索的字符串，选择搜索目录为文明6的游戏根目录，点击start开始搜索，即可找到游戏源文件中 所有包含该字符串的文件
+
+  ![image-20240718132734074](文明6mod制作-8/image-20240718132734074.png)
+
+  
+
+  脚本写好之后，需要创建modinfo文件来加载
+
+  ![image-20240718133521299](文明6mod制作-8/image-20240718133521299.png)
+
+  前面的写法与其他mod类似
+
+  ![image-20240718133605774](文明6mod制作-8/image-20240718133605774.png)
+
+  接下来是Components部分，添加游戏脚步的操作
+
+  ![image-20240718133752903](文明6mod制作-8/image-20240718133752903.png)
+
+  最后是包含的全部文件，就做完了
+
+  ![image-20240718133848676](文明6mod制作-8/image-20240718133848676.png)
+
+  ​	
+
+  <img src="文明6mod制作-8/image-20240718133920362.png" alt="image-20240718133920362" style="zoom:200%;" />
+
+  
+
+#### 利用官方工具调试
+
+##### 1.初步调试
+
+利用官方提供的工具对代码进行调试，首先在游戏选项里面启用调谐器
+
+![image-20240718134152903](文明6mod制作-8/image-20240718134152903.png)
+
+然后打开官方的开发工具（Development Tools），在启动界面那里选择Fire Tuner（调谐器）
+
+进入游戏后，左上角选择打开面板（Open Pannel）
+
+![image-20240718134354621](文明6mod制作-8/image-20240718134354621.png)
+
+进入Debug文件夹（在游戏根目录\Debug），其中
+
+City.ltp是城市
+
+Map.ltp是地图
+
+Player.ltp是玩家
+
+Unit.ltp是单位
+
+Forge.ltp是界面
+
+![image-20240718134544567](文明6mod制作-8/image-20240718134544567.png)
+
+##### 2.调节玩家数据
+
+选一个和城市有关的举例，在空白的地方选择新的动作（New Action Control）
+
+![image-20240718134638438](文明6mod制作-8/image-20240718134638438.png)
+
+名字随便填，下面Action方框内就是测试代码的地方，输进来后点击测试点OK，如下图的输出结果就表明没有问题
+
+![image-20240718134718766](文明6mod制作-8/image-20240718134718766.png)
+
+最经常操作的lua对象就是以下四种，上面改金币的例子就是第一种
+
+![image-20240718134802521](文明6mod制作-8/image-20240718134802521.png)
+
+很多事件在触发的时候 会把玩家的ID给传递过来，于是就可以根据ID获得指定玩家，有的是获取单位的ID
+
+**可以参考lua手册检索常用功能：**
+
+- https://gitee.com/Hemmelfort/Civ6ModdingNotes/blob/master/%E6%96%87%E6%98%8E6_Lua%E6%89%8B%E5%86%8C.md
+
+##### 3.调节单位数据
+
+接下来对单位进行测试，获取单位根据玩家ID和单位ID，打开Unit文件，单人游戏本地玩家ID都是0，于是在代码框中如下输入即可
+
+![image-20240718140658961](文明6mod制作-8/image-20240718140658961.png)
+
+![image-20240718140739040](文明6mod制作-8/image-20240718140739040.png)
+
+##### 4.调节城市数据
+
+接下来对城市进行测试，获取城市可以根据ID或者坐标，打开City文件，如下操作输出即可 
+
+![image-20240718140854753](文明6mod制作-8/image-20240718140854753.png)
+
+![image-20240718140917905](文明6mod制作-8/image-20240718140917905.png)
+
+- 有一种显示浮动文本的方式如下：第一项填0，第二项是要显示的字符串，最后两个是坐标
+
+  ![image-20240718140946132](文明6mod制作-8/image-20240718140946132.png)
+
+##### 5.调节单元格数据
+
+接下来对单元格进行测试，通过坐标获取，根据格位可以查询上面的地貌资源等
+
+还有常见判断，比如判断是不是平原、海洋等
+
+![image-20240718141226484](文明6mod制作-8/image-20240718141226484.png)
+
+##### 6.其他和实例
+
+除此之外还有3个全局表，它们不是类的实例，所以调用方法用的是点号，而不是冒号，具体写法参考文档
+
+![image-20240718141419454](文明6mod制作-8/image-20240718141419454.png)
+
+- gameinfo是访问数据库用到的，接下来通过例子来介绍
+
+  ![image-20240718141557515](文明6mod制作-8/image-20240718141557515.png)
+
+  由下图可见，当城市建造完成会传递五个参数：
+
+  ![image-20240718141622906](文明6mod制作-8/image-20240718141622906.png)
+
+  第一个就是玩家的ID，根据ID获取所属的玩家，这一步经常要用到（即第二行）：
+
+  ```lua
+  function OnCityProdComp(playerID, cityID, iConstructionType, itemID, bCancelled)
+  	local pPlayer = Players[playerID]
+  
+      
+  end
+  
+  Events.CityProductionCompleted.Add(OnCityProdComp)
+  ```
+
+  为了增强代码的健壮性，建议在这里判断结果是否为空，如果要判断是否是人类玩家的话就用IsHuman() 这个方法（第四行）：
+
+  ```lua
+  function OnCityProdComp(playerID, cityID, iConstructionType, itemID, bCancelled)
+  	local pPlayer = Players[playerID]
+      
+      if pPlayer:IsHuman()
+      
+      end
+  
+  end
+  
+  Events.CityProductionCompleted.Add(OnCityProdComp)
+  ```
+
+  第三个参数iConstructionType是建造的种类，0表示单位，1表示建筑或奇观，2表示区域，3表示项目
+
+  我们来获取刚造好的这个单位，用到的是第四个参数（第四行）：
+
+  ```lua
+  function OnCityProdComp(playerID, cityID, iConstructionType, itemID, bCancelled)
+  	local pPlayer = Players[playerID]
+      
+      if pPlayer:IsHuman() and iConstructionType==0 then
+      
+      end
+  
+  end
+  
+  Events.CityProductionCompleted.Add(OnCityProdComp)
+  ```
+
+  用SQ Lite Studio打开数据库（操作在（4）中有），找到Units这个表，切换到数据选项卡，第四个参数其实就是表中的序号，比如0是开拓者，1是建造者，上面获取的结果相当于表中的第一行，然后通过点号来获取其中的具体内容（如下）
+
+  ![image-20240718142553821](文明6mod制作-8/image-20240718142553821.png)
+
+  ![image-20240718142716573](文明6mod制作-8/image-20240718142716573.png)
+
+  同时此处也建议先判断结果是否存在
+
+  ```lua
+  function OnCityProdComp(playerID, cityID, iConstructionType, itemID, bCancelled)
+  	local pPlayer = Players[playerID]
+      
+      if pPlayer:IsHuman() and iConstructionType==0 then
+          local unit = Gameinfo.Units[itemID]
+          
+          if unit ~= nil then
+              
+          end
+      
+      end
+  
+  end
+  
+  Events.CityProductionCompleted.Add(OnCityProdComp)
+  ```
+
+  现在要确定添加的位置，，正好第二个参数就是城市的ID，接下来获取城市并找出它的坐标值(8-10)，建议用第11行的这种方法来添加单位，它能把新的单位放到指定坐标上，放不下也会放在相邻位置，第一个参数是玩家ID，第二个是单位类型，第三个和第四个是横纵坐标，第五个是单位数量：
+
+  ```lua
+  function OnCityProdComp(playerID, cityID, iConstructionType, itemID, bCancelled)
+  	local pPlayer = Players[playerID]
+      
+      if pPlayer:IsHuman() and iConstructionType==0 then
+          local unit = Gameinfo.Units[itemID]
+          
+          if unit ~= nil then
+              local pCity = CityManager.GetCity(playerID, cityID)
+              local iX = pCity:GetX()
+              local iY = pCity:GetY()
+              UnitManager.InitUnitValidAdjacentHex(playerID, unit.UnitType, iX, iY, 1)
+          end
+      
+      end
+  
+  end
+  
+  Events.CityProductionCompleted.Add(OnCityProdComp)   --只要任意城市完成一项建造就会触发
+  ```
+
+  ]]></content>
+      <categories>
+        <category>mod制作</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Lua基础</title>
+    <url>/2024/07/29/Lua%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[
+#### 1.变量声明
+
+在Lua里只有赋值一个变量就是新建一个变量，如下就声明了两个变量
+
+但Lua声明的变量默认是**全局变量**（第1行），如果只在当前文件区域用可以加一个local（如第2行）
+
+```lua
+a = 1
+local b = 2
+```
+
+除此之外，这个赋值语句其实可以给多个变量赋值，格式如下
+
+```
+a,b = 1,2
+```
+
+​    		
+
+#### 2.nil类型
+
+在lua里没有被声明过的变量都是 nil，nil是一种类型，这种类型只有一个值也就是nil
+
+​			
+
+#### 3.数值类型（number类型）和运算符
+
+- lua与别的语言不同，数字就只有一个类型就是number
+
+- 在lua里支持16进制表示方法（0x开头），还支持科学计数法（例如2e10）
+
+- lua支持加减乘除运算（+，-，^，等等）
+
+- lua5.3后支持左移右移符合（例如1<<3就是1左移三位，输出8）
+
+- lua支持各种运算符如>、<、≥、≤、==、~=（不等于）
+
+- 支持and or not 三个（与或非）
+
+  ​		
+
+#### 4.字符串 
+
+- lua中用双引号""或者单引号''来括住字符都可以
+
+同时支持\n这个转移字符（也就是换行）
+
+```lua
+a = "first line\n second line"
+b = 'second line too'
+print(a,b)
+```
+
+输出结果如下：
+
+**first line**
+
+**second line  second line too**
+
+- 如果需要使用一个多行文本，可以用两个中括号表示，转义字符也不会被转换
+
+```lua
+c = [[thefirstline
+\nwillnotchange
+the third line
+]]
+print (c)
+```
+
+输出如下：
+
+**thefirstline**
+
+**\nwillnotchange**
+
+**thethirdline**
+
+- lua中字符串的连接符号是两个点
+
+```lua
+a = 'abcd'
+b = 'efgh'
+c = a..b
+```
+
+- 将数字转化成字符串用到tostring()，字符串转化成数字用tonumber()
+
+```lua
+c = tostring(10)
+n = tonumber("10")
+```
+
+-   在字符串前面加上一个#，可以获取这个字符串的长度
+
+```lua
+a = "awjdawfawdsa"
+print(#a)
+```
+
+​					
+
+#### 5.函数
+
+- 函数的两种声明方式：
+
+```lua
+function function_name(...)   --function 函数名(参数)
+	...   --函数内容
+end    --函数结尾
+
+function_name = function(...)   --也可以把函数名提前
+	...
+end
+```
+
+- 函数的调用方式：
+
+```lua
+function function_name(a,b)
+    print(a,b)
+end
+
+function_name(1,2) --给a,b赋值1,2将其打印出来
+--注意如果有三个变量但只赋了两个值，那么没被赋的就输出nil
+```
+
+- 可以用return来选择返回什么值
+
+```lua
+function f(a,b)
+    return a
+end
+
+print(f(1,2))
+--输出结果就会是1
+```
+
+```lua
+function f(a,b,c)
+    return a,b
+end
+local i,j = f(1,2)
+print(i)
+print(j)
+```
+
+第二个例子的输出结果为
+
+**1**
+
+**2**
+
+​			
+
+#### 6.table
+
+lua里table有两种下标，分为数字下标和字符串下标
+
+- 数字下标，类似于其他语言的数组，但不同的是这个table可以存数字也可以存字符串，也可以存其他的table或者function，用逗号分开即可
+
+```lua
+a = {1,"ac",{},function() end} 	--用大括号声明
+print(a[2])  	--输出结果为ac
+a[5] = 123 		--给a的第五个下标加一个123元素
+print(#a)		--检测到a的长度为5
+```
+
+​		和其他语言不同，lua的table里第一个元素下标是1，第二个是2，而不从0开始数
+
+​		还可以用lua自带的table接口对这个数组进行操作，用table.insert(数组名,下标,插入元素) 插入元素，用table.remove(数组名,下标)来删除
+
+```lua
+a = {1,"ac",{},function() end} 	
+a[5] = 123 		
+table.insert(a,2,"d")   --在ac前面插入了一个字符d，ac变成了第三个
+print(#a)	  --现在长度为6
+```
+
+​		值得注意的是，table.remove()在移除的同时会返回这个移除的值
+
+```lua
+a = {1,"ac",{},function() end} 	
+a[5] = 123 		
+local s = table.remove(a,2)
+print(s)   --此时打印结果为ac
+```
+
+- 字符串下标，有点像python的字典，需要直接把下标写出来，格式如下
+
+```lua
+a = {
+    a = 1
+    b = "1234"
+    c = function()
+    
+    end,
+    [",;"] = 123  --特殊下标用中括号括起来并且加引号
+}
+
+print(a["a"]) --输出结果为1
+--也可以这样表示print(a.a)，代表打印a中的a下标的元素
+```
+
+可以这样对下标进行赋值
+
+```lua
+a = {
+    a = 1
+}
+a["abc"] = "abcdefg"
+print(a.abc) --打印结果为abcdefg
+```
+
+​			
+
+#### 7.全局表
+
+在lua里有个特殊的table叫做_G，可以用\_G来表示这个table，lua里所有的全局变量都在\_G这个table里面
+
+​			
+
+#### 8.真和假
+
+lua里有一种类型叫做布尔型，值只有true和false两种
+
+```lua
+a = true
+b = false
+print(a and b)   --true and false结果是false
+print(a or b)	 --true和任意值进行or操作都是true
+print(not a)	 --not一个true，结果就为false
+--输出结果分别为false true false
+```
+
+注意：和其他语言不同，lua里只有false和nil代表假，其他的包括0都代表真
+
+也可以用and和or来实现短路求值：
+
+```lua
+a = nil   --假
+b = 0	  --真
+print(b > 10 and "yes" or "no") 
+--判断b>10就返回yes，否则就返回no
+--结果返回了no
+```
+
+​			
+
+#### 9.分支判断
+
+lua里的分支判断语句写法：
+
+```lua
+if 1>10 then
+    print("1>10")
+elseif 1 < 10 then
+    print("1<10")
+else
+    print("no")
+end
+```
+
+​			
+
+#### 10.循环
+
+- for循环，第一行给变量定义一个初值和一个结束值和步长（步长可以倒序设置成-1），这个变量出了这个代码块就没有意义了，同时for循环中不允许对i值进行修改
+
+```lua
+for i=1,10,2 do    --从1开始到10，步长为2
+    print(i)
+    if i == 5 then break end   --i值到5结束循环
+end
+```
+
+- while循环，当判断依据满足要求则循环继续，不满足则循环结束
+
+```lua
+local n = 10
+while n > 1 do
+    print(n)
+    n = n - 1
+end
+```
+
+]]></content>
+      <categories>
+        <category>Lua语言学习</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>网安-基础课程</title>
+    <url>/2024/08/05/%E5%9F%BA%E7%A1%80%E8%AF%BE%E7%A8%8B/</url>
+    <content><![CDATA[
+### 一.名词解释
+
+#### 1.POC、EXP、Payload与Shellcode
+
+- **POC**：全称 ' Proof of Concept '，中文 ' 概念验证 ' ，常指一段漏洞证明的代码。
+- **EXP**：全称 ' Exploit '，中文 ' 利用 '，指利用系统漏洞进行攻击的动作。
+- **Payload**：中文 ' 有效载荷 '，指成功exploit之后，真正在目标系统执行的代码或指令。
+- **Shellcode**：简单翻译 ' shell代码 '，是Payload的一种，由于其建立正向/反向shell而得名。
+
+**注意：**POC是用来证明漏洞存在的，EXP是用来利用漏洞的，两者通常不是一类，或者说，PoC通常是无害的，Exp通常是有害的，有了POC，才有EXP。
+
+Payload有很多种，它可以是Shellcode，也可以直接是一段系统命令。同一个Payload可以用于多个漏洞，但每个漏洞都有其自己的EXP，也就是说不存在通用的EXP。
+
+Shellcode也有很多种，包括正向的，反向的，甚至meterpreter。
+
+Shellcode与Shellshcok不是一个，Shellshock特指14年发现的Shellshock漏洞。
+
+​				
+
+#### 2.后门
+
+后门是一个统称，例如网站后门就是Webshell
+
+​			
+
+#### 3.木马和病毒
+
+木马一般针对控制电脑，对电脑进行一些操作，窃取电脑的东西
+
+病毒则是破坏性程序
+
+​					
+
+#### 4.其他
+
+- 反弹：将权限反弹回来，将权限反弹到其他地方再来控制
+
+- 跳板：中介，通过这个中介访问另外一个服务器
+
+- 黑白盒测试：黑盒测试指没有源代码，只有一个目标；白盒测试指知道目标，各种信息都知道
+
+- 暴力破解
+
+- 社会工程学：利用人为弱点攻击
+
+- 撞库：社会工程学经常使用的一种手段，网上流传出来的一些数据库进行收集形成社工库，以此寻找信息
+
+- 更多名词可以参考文章：[渗透测试常用术语总结 - 11阳光 - 博客园 (cnblogs.com)](https://www.cnblogs.com/sunny11/p/13583083.html)
+
+  ​					
+
+### 二.操作系统
+
+#### 1.个人计算机和服务器用机
+
+​					
+
+#### 2.Windows&Linux常见命令
+
+- 常见cmd命令：[Windows下常用的100个CMD指令以及常见的操作 - 岁月长河 - 博客园 (cnblogs.com)](https://www.cnblogs.com/air-of-code/p/6015590.html)
+
+- 常见Linux命令：[超全的 Linux 机器的渗透测试命令备忘表-CSDN博客](https://blog.csdn.net/liangpingguo/article/details/79140780)
+
+- 对于powershell：[Powershell攻击指南黑客后渗透之道系列——基础篇-安全客 - 安全资讯平台 (anquanke.com)](https://www.anquanke.com/post/id/87976)
+
+  [Powershell攻击指南黑客后渗透之道系列——进阶利用-安全客 - 安全资讯平台 (anquanke.com)](https://www.anquanke.com/post/id/88851)
+
+  [Powershell攻击指南黑客后渗透之道系列——实战篇-安全客 - 安全资讯平台 (anquanke.com)](https://www.anquanke.com/post/id/89362)
+
+  ​	
+
+#### 3.权限和用户组
+
+通过提权来获得实现相关目标的权限
+
+windows最高权限是system，下面是administrator，再下面是user
+
+​					  
+
+#### 4.自带防火墙出站入站
+
+默认自带的防火墙策略是允许网站协议的通讯，它的主要就是组织相关协议和入站出站两种情况（入站出站就是进来和出去，别人想连接你的电脑就是入站，主动出去找别人就是出站），通过规则来限制出入站
+
+入站严格，出站宽松
+
+​					   
+
+### 三. 文件上传下载：解决无图形化&解决数据传输
+
+Linux：wget curl python ruby perl java等
+
+Windows：Powershell Certutil Bitsadmin msiexec mshta rundll32等
+
+- 一个知识库和知识工具的网站：[[~\]#棱角 ::Edge.Forum* (ywhack.com)](https://forum.ywhack.com/index.php)
+
+可以用上面网站的工具，一般渗透过程中需要自己创建一个下载地址，然后用这些命令去下载到目标电脑里
+
+​					  
+
+### 四.反弹shell命令：解决数据回显&解决数据通讯
+
+数据回显：有数据的回显才知道这个命令有没有执行成功
+
+交互式问答：你输入命令才能执行下一步，否则啥也不能干
+
+
+
+### 五.实战案例
+
+#### 案例一：防火墙绕过-正反向连接&内网服务器
+
+![image-20240805172243335](基础课程/image-20240805172243335.png)
+
+用nc这个数据工具测试，nc被称为瑞士军刀，是一款老款网络测评工具，下面的命令将本地的cmd权限移交给这个IP地址的5577端口
+
+![image-20240805172440341](基础课程/image-20240805172440341.png)
+
+同时在服务器上监听这个5577端口，就会得到反馈
+
+![image-20240805172608745](基础课程/image-20240805172608745.png)
+
+对于两台外网服务器，接下来将linux主机反弹shell给另一台win10主机，在windows10主机监听的同时，linux利用nc将命令执行窗口（也就是这个/bin/bash）反弹给win10的5566端口，再去win10的监听窗口poweshell输入ls就可以查看文件、输入命令了，上述操作如果有防火墙就无效了
+
+此时可以反向连接
+
+![image-20240805173709931](基础课程/image-20240805173709931.png)
+
+#### 案例二：Fofa拿下Pikachu服务器
+
+![image-20240805195508029](基础课程/image-20240805195508029.png)
+
+![image-20240805195553046](基础课程/image-20240805195553046.png)
+
+![image-20240805195732689](基础课程/image-20240805195732689.png)]]></content>
+      <categories>
+        <category>网络安全</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>02基础入门-Web应用&amp;架构搭建&amp;漏洞&amp;Http数据包&amp;代理服务器</title>
+    <url>/2024/08/05/%E7%BD%91%E5%AE%89-Web%E5%BA%94%E7%94%A8-%E6%9E%B6%E6%9E%84%E6%90%AD%E5%BB%BA-%E6%BC%8F%E6%B4%9E-Http%E6%95%B0%E6%8D%AE%E5%8C%85-%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    <content><![CDATA[
+### 一.网站搭建前置知识
+
+域名，子域名，DNS，HTTP/HTTPS，证书等
+
+### 二.WEB 应用环境架构类
+
+- **开发语言**：asp, php, aspx, jsp, java, python, ruby, go, html, javascript 等
+
+- **程序源码**：根据开发语言分类；应用类型分类；开源 CMS 分类；开发框架分类等；
+
+  源码的作用不同分了类，网站的源码有名字，开源出来能公开下载或商用就称之为CMS；将网站功能封装到一个程序内就叫框架
+
+- **中间件容器**：IIS, Apache, Nginx, Tomcat, Weblogic, Jboos, glasshfish 等；
+
+  中间件容器就是支撑网站运行的东西，针对不同的源码有更优秀的选择
+
+- **数据库类型**：Access, Mysql, Mssql, Oracle, db2, Sybase, Redis, MongoDB 等；
+
+  一般用于存储网站相关数据
+
+- **服务器操作系统**：Windows 系列，Linux 系列，Mac 系列等
+
+- **第三方软件**：phpmyadmin, vs-ftpd, VNC, ELK, Openssh 等
+
+  ​								 
+
+### 三.WEB 应用安全漏洞分类
+
+SQL 注入，文件安全，RCE 执行，XSS 跨站，CSRF/SSRF/CRLF，
+
+反序列化，逻辑越权，未授权访问，XXE/XML，弱口令安全等
+
+要先搞清楚漏洞产生在哪个层面（程序源码、中间件容器等）才能去看存不存在
+
+​					 
+
+### 四.WEB 请求返回过程数据包参考
+
+请求数据包，请求方法，请求体，响应包，响应头，状态码，代理服务器等
+
+Request,Response,User-Agent,Cookie,Server,Content-Length 等
+
+Http协议数据包简单总结：[HTTP协议数据包简单总结 - cherry_cui - 博客园 (cnblogs.com)](https://www.cnblogs.com/cherrycui/p/10815465.html)
+
+[WEB请求处理一：浏览器请求发起处理 - 简书 (jianshu.com)](https://www.jianshu.com/p/558455228c43)
+
+![image-20240806114632412](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806114632412.png)
+
+![image-20240806114641580](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806114641580.png)
+
+![image-20240806114716427](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806114716427.png)
+
+​				 
+
+### 五.实际案例
+
+#### 1.请求包-新闻回帖点赞-重放数据包
+
+在新浪新闻点赞后，右键点检查来查看点赞的数据包，具体解读可以看四的链接
+
+<img src="网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806124430992.png" alt="image-20240806124430992" style="zoom:150%;" />
+
+现在用发送相同数据包的方式实现继续点赞同一个评论，用burp
+
+![image-20240806124712657](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806124712657.png)
+
+![image-20240806124739368](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806124739368.png)
+
+下面192.168.1.9是IP地址，可以在cmd里面ipconfig查看
+
+![image-20240806130536348](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806130536348.png)
+
+抓个包
+
+![image-20240806124821083](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806124821083.png)
+
+![image-20240806124907990](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806124907990.png)
+
+点赞一个评论抓到包
+
+![image-20240806124935881](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806124935881.png)
+
+然后重复发送包就可以实现点赞了
+
+![image-20240806125031834](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806125031834.png)
+
+​				
+
+#### 2.请求包-移动端&PC 访问-自定义 UA 头（burp原理） 
+
+- **burpsuit原理解释（重要）：**
+
+  软件代理设置原理：工具设置监听127.0.0.1 8888也就是本地地址，浏览器也设置的127.0.0.1 8888，二者的网络出口都是本地，所以可以通讯，相当于数据包先到工具，然后工具拦截数据包，选择性地丢弃或放行
+
+  至于设置192.168.1.9 8888：虚拟机虽然在本机上面，但虚拟机是一个单独的系统，在设置里面有一个WiFi就是一个虚拟的地址，如果要监听模拟器的数据包的话，就要监听本地IP地址192.168.x.x（可以ipconfig查看），给模拟器的网络切上代理
+
+  如果代理写127的话，那么指向的是模拟器的本地，在模拟器的本地没有burp所以抓不到，要通过192来找到burp来抓
+
+  ![image-20240806143851263](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806143851263.png)
+
+  burp相当于一个代理，操作浏览器发送数据包给网络服务器的路上要经过这个代理（浏览器→代理→服务器），burp作为代理会拦截这个数据包，此时来对这个包进行操作，打开下图中的Intercept is on按钮就是开始监听，然后监听到数据包后按Forward放行/按Drop丢弃
+
+  ![image-20240806144153121](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806144153121.png)
+
+  ​		 
+
+对于访问的浏览器，PC端和手机端访问的界面会有所不同，这和数据包的UA头有关，做手机端安全测试时要用电脑，就可以通过burpsuit更改数据包内识别电脑操作系统的字段来实现在电脑上查看手机页面，用burp抓取访问360搜索的数据包分别如下，在拦截数据包的时候调整即可
+
+![image-20240806144527651](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806144527651.png)
+
+![image-20240806144551745](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806144551745.png)
+
+​				
+
+#### 3.返回包-网站文件目录扫描-返回状态码（网络扫描工具）
+
+返回状态码：判断文件是否存在
+
+举个例子，访问一张图片的地址，如果是200就是存在，如果是404就是不存在
+
+![image-20240806145441755](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806145441755.png)
+
+![image-20240806145455453](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806145455453.png)
+
+如果判断的是文件夹，如下403代表存在，404代表不存在
+
+![image-20240806145605633](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806145605633.png)
+
+![image-20240806145652181](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806145652181.png)
+
+- 目录扫描工具
+
+  用于扫描网站的敏感文件和敏感目录，原理就和上面一样利用返回状态码判断
+
+  ![image-20240806145848708](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806145848708.png)
+
+  其他返回码判断参考四的文章
+
+  **3XX表示跳转（处置过程，判断可有可无），5XX表示内部错误（服务器问题，文件判断可有可无）**
+
+接下来可以用burp试着扫描2019目录下面有哪些目录，操作如下（不需要会）
+
+![image-20240806150657152](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806150657152.png)
+
+![image-20240806150731815](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806150731815.png)
+
+设置一个1
+
+<img src="网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806150818330.png" alt="image-20240806150818330" style="zoom:200%;" />
+
+![image-20240806150853024](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806150853024.png)
+
+![image-20240806150910118](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806150910118.png)
+
+![image-20240806151003652](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806151003652.png)
+
+结果可观
+
+![image-20240806151028581](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806151028581.png)
+
+
+
+#### 4.数据包-WAF 文件目录扫描-代理服务器
+
+上面说的是本地代理，接下来说的是远程代理，去买一个代理使用，这样被某某拉黑IP后就可以使用新的IP访问，就可以防止被封IP后无法访问
+
+![image-20240806151708207](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806151708207.png)
+
+设置白名单
+
+![image-20240806151933665](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806151933665.png)
+
+在浏览器配置代理
+
+![image-20240806152022728](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806152022728.png)
+
+​					
+
+#### 5.搭建一个网站
+
+1. 先购买一个域名
+
+![image-20240806153501938](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806153501938.png)
+
+2. 然后购买一个服务器，国内要备案，非大陆地区的服务器例如港澳的不需要备案
+
+![image-20240806153711910](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806153711910.png)
+
+选择镜像，新手一般选windows
+
+![image-20240806153731814](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806153731814.png)
+
+然后选安全组，有多台服务器分到一个组方便管理
+
+![image-20240806153838676](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806153838676.png)
+
+然后配置带宽计费模式，一般按使用流量计费，然后确认付款就可以了
+
+![image-20240806153915316](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806153915316.png)
+
+然后到云服务器实例里面看自己的服务器
+
+![image-20240806154229274](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806154229274.png)
+
+用这个IP地址，用xshell或者本地的远程桌面连接访问
+
+3. 下载一个宝塔，宝塔是一个集成软件，将搭建网站需要的东西集成在一起方便下载使用，在服务器上安装
+
+![image-20240806154413691](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806154413691.png)
+
+复制地址访问，输入账号密码
+
+![image-20240806154435095](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806154435095.png)
+
+安装插件
+
+![image-20240806154500806](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806154500806.png)
+
+可以在软件商店里面安装插件
+
+<img src="网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806154537323.png" alt="image-20240806154537323" style="zoom:200%;" />
+
+在域名管理里面点解析
+
+![image-20240806154800378](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806154800378.png)
+
+然后解析到刚刚买的那个服务器的IP地址
+
+![image-20240806154903473](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806154903473.png)
+
+在宝塔部署（以Zblog博客为例），填上刚刚的域名
+
+![image-20240806154958254](网安-Web应用-架构搭建-漏洞-Http数据包-代理服务器/image-20240806154958254.png)
+
+然后就有了
+
+​				
+
+### 本节课知识点：
+
+明白网站基础知识
+
+了解Web应用架构
+
+了解Web应用安全漏洞分类
+
+明白Web请求返回过程
+
+学会利用burp截取数据包，修改数据包发送数据包
+
+学会用返回状态码判断目录是否存在
+
+学会用burp扫描目录
+
+学会搭建网站]]></content>
+      <categories>
+        <category>网络安全</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>03基础入门-抓包&amp;封包&amp;协议&amp;APP&amp;小程序&amp;PC应用&amp;WEB应用</title>
+    <url>/2024/08/06/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-%E6%8A%93%E5%8C%85-%E5%B0%81%E5%8C%85-%E5%8D%8F%E8%AE%AE-APP-%E5%B0%8F%E7%A8%8B%E5%BA%8F-PC%E5%BA%94%E7%94%A8-WEB%E5%BA%94%E7%94%A8/</url>
+    <content><![CDATA[
+### 一.基础知识点
+
+总结点：学会不同对象采用不同抓包封包抓取技术分析
+
+#### 1、抓包技术应用意义
+
+抓包就是来抓取相关应用的数据，测试的时候不给目标只给应用，要抓应用的信息进行安全测试
+
+#### 2、抓包技术应用对象
+
+手机应用APP、小程序、电脑应用等
+
+#### 3、抓包技术应用协议
+
+看看是WEB协议还是其他协议
+
+#### 4、抓包技术应用支持
+
+参考：
+
+- Fiddler：
+
+  是一个 http 协议调试代理工具，它能够记录并检查所有你的电脑和互联网之间的 http 通讯，设置断点，查看所有的“进出”Fiddler 的数据（指 cookie,html,js,css 等文件）。 Fiddler 要比其他的网络调试器要更加简单，因为它不仅仅暴露 http 通讯还提供了一个用户友好的格式。
+
+- Charles：
+
+  是一个 HTTP 代理服务器,HTTP 监视器,反转代理服务器，当浏览器连接 Charles 的代理访问互联网时，Charles 可以监控浏览器发送和接收的所有数据。它允许一个开发者查看所有连接互联网的 HTTP 通信，这些包括 request, response 和 HTTP headers （包含 cookies 与 caching 信息）。
+
+- TCPDump：是可以将网络中传送的数据包完全截获下来提供分析。它支持针对网络层、协议、主机、网络或端口的过滤，并提供 and、or、not 等逻辑语句来帮助你去掉无用的信息。
+
+- BurpSuite：是用于攻击 web 应用程序的集成平台，包含了许多工具。Burp Suite 为这些工具设计了
+
+  许多接口，以加快攻击应用程序的过程。所有工具都共享一个请求，并能处理对应的 HTTP 消息、持久性、认证、代理、日志、警报。
+
+- Wireshark：是一个网络封包分析软件。网络封包分析软件的功能是截取网络封包，并尽可能显示出
+
+  最为详细的网络封包资料。Wireshark 使用 WinPCAP 作为接口，直接与网卡进行数据报文交换。
+
+  科来网络分析系统：是一款由科来软件全自主研发，并拥有全部知识产品的网络分析产品。该系统具有行业领先的专家分析技术，通过捕获并分析网络中传输的底层数据包，对网络故障、网络安全以及网络性能进行全面分析，从而快速排查网络中出现或潜在的故障、安全及性能问题。
+
+- WPE&封包分析：是强大的网络封包编辑器，wpe 可以截取网络上的信息，修改封包数据，是外挂制作的常用工具。一般在安全测试中可用来调试数据通讯地址。
+
+#### 5、封包技术应用意义
+
+​				
+
+### 二.实际案例
+
+#### 1.APP&小程序&PC 抓包 HTTP/S 数据——Charles&Fiddler&Burpsuite
+
+- 工具相关证书安装指南，使用前一定要安装
+
+  Charles
+
+  https://blog.csdn.net/weixin_45459427/article/details/108393878
+
+  Fidder
+
+  https://blog.csdn.net/weixin_45043349/article/details/120088449
+
+  BurpSuite
+
+  https://blog.csdn.net/qq_36658099/article/details/81487491
+
+监听安卓APP：
+
+**Charles**
+
+在模拟器上设置代理，在茶杯上设置代理
+
+![image-20240806204456777](基础入门-抓包-封包-协议-APP-小程序-PC应用-WEB应用/image-20240806204456777.png)
+
+![image-20240806204420724](基础入门-抓包-封包-协议-APP-小程序-PC应用-WEB应用/image-20240806204420724.png)
+
+![image-20240806204656273](基础入门-抓包-封包-协议-APP-小程序-PC应用-WEB应用/image-20240806204656273.png)
+
+​				
+
+**Fiddler**
+
+![image-20240806205414829](基础入门-抓包-封包-协议-APP-小程序-PC应用-WEB应用/image-20240806205414829.png)
+
+![image-20240806205603576](基础入门-抓包-封包-协议-APP-小程序-PC应用-WEB应用/image-20240806205603576.png)
+
+​						
+
+**Burpsuit**（最好用）
+
+![image-20240806205718594](基础入门-抓包-封包-协议-APP-小程序-PC应用-WEB应用/image-20240806205718594.png)
+
+![image-20240806205738229](基础入门-抓包-封包-协议-APP-小程序-PC应用-WEB应用/image-20240806205738229.png)
+
+查看历史：
+
+![image-20240806205844566](基础入门-抓包-封包-协议-APP-小程序-PC应用-WEB应用/image-20240806205844566.png)
+
+​						 
+
+小程序：
+
+**Charles**
+
+![image-20240806210427223](基础入门-抓包-封包-协议-APP-小程序-PC应用-WEB应用/image-20240806210427223.png)
+
+**Fiddler**
+
+![image-20240806210556180](基础入门-抓包-封包-协议-APP-小程序-PC应用-WEB应用/image-20240806210556180.png)
+
+​				 
+
+#### 2.程序进程&网络接口&其他协议抓包-WireShark&科来网络分析系统
+
+打开wireshark，设置上网网卡（具体使用移步教学）
+
+![image-20240806211039511](基础入门-抓包-封包-协议-APP-小程序-PC应用-WEB应用/image-20240806211039511.png)
+
+![image-20240806211446708](基础入门-抓包-封包-协议-APP-小程序-PC应用-WEB应用/image-20240806211446708.png)
+
+接下来用科来，对新手比较友好，选择网卡后点击开始
+
+![image-20240806211734101](基础入门-抓包-封包-协议-APP-小程序-PC应用-WEB应用/image-20240806211734101.png)
+
+打开有道登录
+
+![image-20240806211902543](基础入门-抓包-封包-协议-APP-小程序-PC应用-WEB应用/image-20240806211902543.png)
+
+​					 
+
+#### 3.通讯类应用封包分析发送接收-WPE 四件套封包&科来网络分析系统
+
+用科来发现游戏主要数据包（走路时数据一直在动的那个）
+
+![image-20240806214106116](基础入门-抓包-封包-协议-APP-小程序-PC应用-WEB应用/image-20240806214106116.png)
+
+接下来用WPE封包监听工具，监听回城功能，开始抓包后点击回城，获得以下封包数据
+
+![image-20240806214914554](基础入门-抓包-封包-协议-APP-小程序-PC应用-WEB应用/image-20240806214914554.png)
+
+测试发送其中几个类型为“发送”的数据包，会发现当发送到一个数据包时，游戏角色回城了（这只是一个案例，可以类比实现其他功能）
+
+区别：用科来抓到的数据包是零散的，回城的时候所有的数据都在那个数据包里；而用封包监听工具，回城的时候就可以以一个个封包的形式展现出来操作
+
+​			 
+
+**如果有些封包抓不到，用老实的办法，可以先装一个代理机器人，再用CCproxy，原理就是代理机器人把模拟器的流量转发到CCproxy里，再用工具监听流量**
+
+把代理机器人安装在模拟器里，解除模拟器的应用代理，打开CCproxy设置
+
+![image-20240806220213037](基础入门-抓包-封包-协议-APP-小程序-PC应用-WEB应用/image-20240806220213037.png)
+
+![image-20240806220249919](基础入门-抓包-封包-协议-APP-小程序-PC应用-WEB应用/image-20240806220249919.png)
+
+![image-20240806220320485](基础入门-抓包-封包-协议-APP-小程序-PC应用-WEB应用/image-20240806220320485.png)
+
+![image-20240806220332284](基础入门-抓包-封包-协议-APP-小程序-PC应用-WEB应用/image-20240806220332284.png)
+
+端口改一致
+
+![image-20240806220629116](基础入门-抓包-封包-协议-APP-小程序-PC应用-WEB应用/image-20240806220629116.png)
+
+![image-20240806220659388](基础入门-抓包-封包-协议-APP-小程序-PC应用-WEB应用/image-20240806220659388.png)
+
+接下来打开WPE，目标进程选CCproxy
+
+![image-20240806220815739](基础入门-抓包-封包-协议-APP-小程序-PC应用-WEB应用/image-20240806220815739.png)
+
+几个区别：
+
+![image-20240806220534161](基础入门-抓包-封包-协议-APP-小程序-PC应用-WEB应用/image-20240806220534161.png)
+
+​			
+
+### 课后梳理：
+
+- 为什么要抓包 ？
+
+- 抓包对象有哪些？
+
+- 学会抓包基础操作，协议区别：有部分应用不走HTTP/S，需要用全局抓包
+
+- 理解封包和抓包的不同之处：零散和整体的区别，封包能精确到操作的数据包]]></content>
+      <categories>
+        <category>网络安全</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>04基础入门-30余种加密编码进制&amp;Web&amp;数据库&amp;系统&amp;代码&amp;参数值</title>
+    <url>/2024/08/07/04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6-Web-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81-%E5%8F%82%E6%95%B0%E5%80%BC/</url>
+    <content><![CDATA[
+### 一.存储密码加密-Web&数据库&系统
+
+MD5 SHA1 NTLM AES DES RC4
+
+- MD5 值是 32 或 16 位位由数字"0-9"和字母"a-f"所组成的字符串，大小写不敏感，不可逆，解密采用枚举碰撞（尝试生成很多的加密或对应明文的字符去枚举）
+
+  md5在线解密平台：https://cmd5.com/
+
+- SHA1 这种加密的密文特征跟 MD5 差不多，只不过位数是 40
+
+- NTLM 这种加密是 Windows 的哈希密码，标准通讯安全协议
+
+- AES,DES,RC4 这些都是非对称性加密算法，引入密钥，密文特征与 Base64 类似
+
+应用场景：各类应用密文，自定义算法，代码分析，CTF 安全比赛等
+
+**识别算法编码类型（只是大概猜）：**
+
+**1.看位数**
+
+**2.看密文的特征（数字，字母，大小写，符号等）**
+
+**3.看当前密文存在的地方（WEB，数据库，操作系统等应用）**
+
+​							
+
+### 二.传输数据编码
+
+BASE64 URL HEX ASCII
+
+- BASE64 值是由数字"0-9"和字母"a-f"所组成的字符串,大小写敏感,**结尾通常有符号=**
+
+- URL 编码是由数字"0-9"和字母"a-f"所组成的字符串,大小写敏感,**通常以%数字字母间隔**
+
+- HEX 编码是计算机中数据的一种表示方法,将数据进行十六进制转换,它由 0-9,A-F,组成
+
+- ASCII 编码是将 128 个字符进行进制数来表示,常见 ASCII 码表大小规则：0~9<A~Z<a~z
+
+举例：
+
+个人博客-URL 解码
+
+国外 WEB-BASE64 解码
+
+搜狐视频-BASE64 解码
+
+应用场景：参数传递(如注入影响)，后期 WAF 绕过干扰写法应用，视频地址还原等
+
+​							
+
+### 三.代码特性加密-JS&PHP&NET&JAVA
+
+#### 1.JS 前端代码加密
+
+JS 颜文字 jother JSFUCK
+
+- 颜文字特征：一堆颜文字构成的 js 代码，在 F12 中可直接解密执行
+
+- jother 特征：只用! + ( ) [ ] { }这八个字符就能完成对任意字符串的编码。也可在 F12 中解密执行
+
+- JSFUCK 特征：与 jother 很像，只是少了{ }
+
+  ​				
+
+#### 2.后端代码加密
+
+PHP .NET JAVA
+
+- PHP：乱码，头部有信息
+
+- .NET：DLL 封装代码文件
+
+- JAVA：JAR&CLASS 文件
+
+举例：Zend ILSpy IDEA
+
+应用场景：版权代码加密，开发特性，CTF 比赛，绕过waf等
+
+​				
+
+#### 3.数据库密文加密
+
+MYSQL MSSQL 等
+
+​					
+
+### 四.数据显示编码-字符串数据显示编码
+
+数据显示编码：
+
+UTF-8 GBK2312 等
+
+识别算法编码类型：
+
+看密文位数
+
+2、看密文的特征（数字，字母，大小写，符号等）
+
+3、看当前密文存在的地方（Web，数据库，操作系统等应用）
+
+​										
+
+### 五.实际案例
+
+#### 1.Web-ZZCMS-密文-MD5
+
+注册一个账号，看看密码的加密，可以看到是32位而且是应用在WEB上，大致猜测是MD5
+
+<img src="04基础入门-30余种加密编码进制-Web-数据库-系统-代码-参数值/image-20240807142924769.png" alt="image-20240807142924769" style="zoom:200%;" />
+
+​					
+
+#### 2.Web-Discuz-密文-MD5&Salt
+
+discuz的加密是MD5和Salt值结合
+
+![image-20240807144118832](04基础入门-30余种加密编码进制-Web-数据库-系统-代码-参数值/image-20240807144118832.png)
+
+这种MD5和Salt结合的，解密在密文后面加冒号:然后跟上盐值，如图
+
+<img src="04基础入门-30余种加密编码进制-Web-数据库-系统-代码-参数值/image-20240807144157714.png" alt="image-20240807144157714" style="zoom:200%;" />
+
+​					
+
+#### 3.系统-Windows-密文-NTLM&HASH
+
+![image-20240807144933377](04基础入门-30余种加密编码进制-Web-数据库-系统-代码-参数值/image-20240807144933377.png)
+
+![image-20240807145033828](04基础入门-30余种加密编码进制-Web-数据库-系统-代码-参数值/image-20240807145033828.png)
+
+​					
+
+#### 4.综合-参数-密文传输-AES&BASE64
+
+![image-20240807150409199](04基础入门-30余种加密编码进制-Web-数据库-系统-代码-参数值/image-20240807150409199.png)
+
+下图可见mcrypt_module_open，百度上搜索知道这个函数是AES加密，里面函数值128对应数据块，后面CBC对应AES加密模式，下面mcrypt_generic_init函数里面的第二个值是密码，第三个数值是偏移量（不知道的就上网搜），下面有两个base64_decode，也就是进行了两次base64解码
+
+<img src="04基础入门-30余种加密编码进制-Web-数据库-系统-代码-参数值/image-20240807150431806.png" alt="image-20240807150431806" style="zoom:200%;" />
+
+![image-20240807150528757](04基础入门-30余种加密编码进制-Web-数据库-系统-代码-参数值/image-20240807150528757.png)
+
+所以，要解码两次，具体操作：
+
+![image-20240807150924861](04基础入门-30余种加密编码进制-Web-数据库-系统-代码-参数值/image-20240807150924861.png)
+
+<img src="04基础入门-30余种加密编码进制-Web-数据库-系统-代码-参数值/image-20240807150939764.png" alt="image-20240807150939764" style="zoom:200%;" />
+
+​							
+
+#### 5. 代码-解密-解密反编译-Zend&Dll&Ja
+
+可以用IlSpy来解密dll
+
+![image-20240807162851585](04基础入门-30余种加密编码进制-Web-数据库-系统-代码-参数值/image-20240807162851585.png)
+
+​							
+
+#### 6.CTF 赛题-buuoj-single dog-JS 颜文字
+
+下载试题
+
+![image-20240807163106971](04基础入门-30余种加密编码进制-Web-数据库-系统-代码-参数值/image-20240807163106971.png)
+
+解读，找到两个文件
+
+![image-20240807163148213](04基础入门-30余种加密编码进制-Web-数据库-系统-代码-参数值/image-20240807163148213.png)
+
+解压出来，很显然是JS颜文字
+
+![image-20240807163241299](04基础入门-30余种加密编码进制-Web-数据库-系统-代码-参数值/image-20240807163241299.png)
+
+可以这个网站破译：http://www.hiencode.com/
+
+![image-20240807163535937](04基础入门-30余种加密编码进制-Web-数据库-系统-代码-参数值/image-20240807163535937.png)
+
+​					
+
+#### 7.CTF 赛题-xuenixiang-Jsfuck-JSFUCK
+
+略
+
+​							
+
+### 六.补充点和网站
+
+#### \#补充点：
+
+1.常见加密编码进制等算法解析
+
+MD5，SHA，ASC，进制，时间戳，URL，BASE64，Unescape，AES，DES 等
+
+2.常见加密编码形式算法解析
+
+直接加密，带 salt，带密码，带偏移，带位数，带模式，带干扰，自定义组合等
+
+3.常见解密解码方式（针对）
+
+枚举，自定义逆向算法，可逆向
+
+4.常见加密解码算法的特性
+
+长度位数，字符规律，代码分析，搜索获取等
+
+​						
+
+#### \#拓展补充参考资料（重要）：
+
+https://www.cmd5.com     破解加密工具
+
+http://tmxk.org/jother      
+
+http://www.jsfuck.com
+
+http://www.hiencode.com    ctf在线工具
+
+http://tool.chacuo.net/cryptaes
+
+https://utf-8.jp/public/aaencode.html
+
+1.30 余种加密编码类型的密文特征分析（建议收藏）
+
+https://mp.weixin.qq.com/s?__biz=MzAwNDcxMjI2MA==&mid=2247484455&idx=1&sn=e1b4324ddcf7d6123be30d9a5613e17b&chksm=9b26f60cac517f1a920cf3b73b3212a645aeef78882c47957b9f3c2135cb7ce051c73fe77bb2&mpshare=1&scene=23&srcid=1111auAYWmr1N0NAs9Wp2hGz&sharer_sharetime=1605145141579&sharer_shareid=5051b3eddbbe2cb698aedf9452370026#rd
+
+2.CTF 中常见密码题解密网站总结（建议收藏）
+
+https://blog.csdn.net/qq_41638851/article/details/100526839
+
+3.CTF 密码学常见加密解密总结（建议收藏）
+
+https://blog.csdn.net/qq_40837276/article/details/83080460
+
+​						
+
+### 课后梳理：
+
+了解储存密码加密方式、比传输数据编码方式、代码加密方式并能够识别
+
+会在上面的基础上充分利用网站解码
+
+]]></content>
+      <categories>
+        <category>网络安全</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>05基础入门-资产架构&amp;端口&amp;应用&amp;CDN&amp;WAF&amp;站库分离&amp;负载均衡</title>
+    <url>/2024/08/07/05%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-%E8%B5%84%E4%BA%A7%E6%9E%B6%E6%9E%84-%E7%AB%AF%E5%8F%A3-%E5%BA%94%E7%94%A8-CDN-WAF-%E7%AB%99%E5%BA%93%E5%88%86%E7%A6%BB-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/</url>
+    <content><![CDATA[
+### 一.资产架构-端口&目录&插件接口&多站点&多应用
+
+- WEB 单个源码指向安全
+
+- WEB 多个目录源码安全
+
+  ​	bbs.xiaodi8.com 是个dz论坛
+
+  ​	bbs.xiaodi8.com/blog 是个wp程序
+
+  ​	一个网站，两个程序，任何一个程序出现漏洞，都可以进入安全测试
+
+- WEB 多个端口源码安全
+
+  ​	bbs.xiaodi8.com dz论坛
+
+  ​	bbs.xiaodi8.com:8081 zblog程序
+
+  ​	一个网站，两个程序，任何一个程序出现漏洞，都可以进入安全测试
+
+  ​	与上面相似，一个是采用目录搭建了两个，一个是端口型搭建了两个
+
+- 服务器架设多个站点安全
+
+  ​	例如：有bbs.xiaodi8.com和edu.xiaodi8.com都指向47.242.117.23
+
+  ​	给到目标bbs.xiaodi8.com ，那么可以尝试对edu.xiaodi8.com进行安全测试
+
+- 架设第三方插件接口安全
+
+- 服务器架设多个应用安全
+
+  ​								
+
+### 二.番外安全-域名&服务器本身&服务厂商&管理人员
+
+- 基于域名解析安全
+
+- 基于服务器本身安全
+
+- 基于服务商信息安全
+
+- 基于管理个人的安全
+
+  ​									
+
+### 三.考虑阻碍-站库分离&CDN&WAF&负载均衡&主机防护
+
+- 阻碍-站库分离
+
+  ​	数据库和网站不在一个地方，网站会调用远程数据库，导致攻下其一没有另外一个
+
+- 阻碍-CDN 加速服务
+
+  ​	相当于一个节点缓存，有可能不能找到真实IP，只能拿下缓存服务器的权限
+
+- 阻碍-负载均衡服务
+
+  ​	![image-20240808100346861](05基础入门-资产架构-端口-应用-CDN-WAF-站库分离-负载均衡/image-20240808100346861.png)
+
+  ​	将工作负载分给多个服务器，存在备用机，有可能拿下的备用机没有想要的信息
+
+- 阻碍-WAF 应用防火墙
+
+- 阻碍-主机防护防火墙]]></content>
+      <categories>
+        <category>网络安全</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>06信息打点-Web 架构篇&amp;域名&amp;语言&amp;中间件&amp;数据库&amp;系统&amp;源码获取</title>
+    <url>/2024/08/09/06%E4%BF%A1%E6%81%AF%E6%89%93%E7%82%B9-Web-%E6%9E%B6%E6%9E%84%E7%AF%87-%E5%9F%9F%E5%90%8D-%E8%AF%AD%E8%A8%80-%E4%B8%AD%E9%97%B4%E4%BB%B6-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E6%BA%90%E7%A0%81%E8%8E%B7%E5%8F%96/</url>
+    <content><![CDATA[
+### 一.基础知识总结
+
+#### 1、打点-Web 架构-语言&中间件&数据库&系统等
+
+- 通过浏览器开发人员工具（F12)，有时候可以看到源码程序、语言、中间件等
+
+- 利用大小写敏感机制：浏览器地址Id=改成ID=没有影响就可能是windows（因为windows大小写不敏感），有影响很大可能是Linux（这种方法不一定）
+
+- 根据ping命令判断，直接ping这个网站，通过返回的TTL值判断（也不一定，看值离哪个判断值更近）
+
+- 通过端口扫描、搭建组合，可以判断数据库（每个数据库开放的端口不一样，可以上网查，可以用mapscan scanf）			
+
+- 通过浏览器搜索，例如在搜索栏输入：site:wangyuan.com php    来查找wangyuan.com有没有.php页面
+
+  ​					
+
+2、打点-Web 源码-CMS 开源&闭源售卖&自主研发等
+
+- 找源码，可以走一些黑色领域源码，要搜去google或者bing上搜，不能去百度等国内的搜索引擎，也可以去黑暗引擎搜
+
+  互站：https://www.huzhan.com/
+
+  ​								
+
+3、打点-Web 源码获取-泄露安全&资源监控&其他等
+
+​							
+
+4、打点-Web 域名-子域名&相似域名&反查域名&旁注等
+
+- 可以查备案，查网站名字
+
+- 变动第二级第三级，可以去查域名注册看哪个被注册了就说明有
+
+- **信息查询集合：**https://forum.ywhack.com/bountytips.php?getinfo					
+
+  ​												
+
+### 二.实际案例
+
+#### 1.信息打点-个人博客-架构&源码
+
+浏览器搜集信息，可以获取到CMS程序，中间件等等信息
+
+![image-20240809112920892](06信息打点-Web-架构篇-域名-语言-中间件-数据库-系统-源码获取/image-20240809112920892.png)
+
+![image-20240809113016513](06信息打点-Web-架构篇-域名-语言-中间件-数据库-系统-源码获取/image-20240809113016513.png)
+
+通过改大小写
+
+![image-20240809113505097](06信息打点-Web-架构篇-域名-语言-中间件-数据库-系统-源码获取/image-20240809113505097.png)
+
+![image-20240809113545450](06信息打点-Web-架构篇-域名-语言-中间件-数据库-系统-源码获取/image-20240809113545450.png)
+
+通过TTL
+
+![image-20240809113747587](06信息打点-Web-架构篇-域名-语言-中间件-数据库-系统-源码获取/image-20240809113747587.png)
+
+端口扫描数据库，可以看到3306开放，用的是mysql
+
+![image-20240809114524528](06信息打点-Web-架构篇-域名-语言-中间件-数据库-系统-源码获取/image-20240809114524528.png)
+
+![image-20240809114937583](06信息打点-Web-架构篇-域名-语言-中间件-数据库-系统-源码获取/image-20240809114937583.png)
+
+得到信息后以后可以：
+
+源码->利用公开的漏洞库尝试安全测试
+
+源码->白盒代码审计->挖漏洞
+
+mysql 漏洞或弱口令等
+
+php 常规的漏洞 如log4j
+
+​						
+
+#### 2.信息打点-某违法 APP-面具约会-架构&源码
+
+​							
+
+#### 3.信息打点-某违法应用-爱心工程-架构&域名	
+
+​						
+
+#### 4.信息打点-某专属 SRC-补天平台-架构&域名
+
+![image-20240809123923238](06信息打点-Web-架构篇-域名-语言-中间件-数据库-系统-源码获取/image-20240809123923238.png)
+
+​				]]></content>
+      <categories>
+        <category>网络安全</category>
+      </categories>
   </entry>
 </search>
