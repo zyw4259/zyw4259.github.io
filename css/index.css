@@ -8011,8 +8011,8 @@ div#banners .bannerText {
   --style-border-hover-always: 1px solid var(--efu-theme);
   --style-border-dashed: 1px dashed var(--efu-theme-op);
   --style-border-forever: 2px solid var(--efu-lighttext);
-  --efu-hl-bg: #1b1c20;
-  --efu-hltools-bg: #21232a;
+  --efu-hl-bg: #1c1e1e;
+  --efu-hltools-bg: #454a50;
 }
 [data-theme=light] {
   --efu-theme: #425aef;
@@ -8059,7 +8059,7 @@ div#banners .bannerText {
   --style-border-forever: 2px solid var(--efu-main);
   --efu-navbg: var(--efu-theme-op);
   --efu-hl-bg: #fff;
-  --efu-hltools-bg: #f7f7f9;
+  --efu-hltools-bg: #e7e7e7;
 }
 @media screen and (max-width: 768px) {
   :root {
@@ -8068,13 +8068,27 @@ div#banners .bannerText {
   }
 }
 figure.highlight .highlight-tools .st-copy-fill {
-  right: 0.7rem;
+  right: 1.7rem;
+}
+figure.highlight .highlight-tools:after {
+  position: absolute;
+  left: 14px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fc625d;
+  -webkit-box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+  box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+  content: ' ';
+}
+figure.highlight .highlight-tools .expand {
+  right: 0;
+}
+figure.highlight .highlight-tools .expand + .code-lang {
+  left: 75px;
 }
 figure.highlight .highlight-tools.closed .expand {
-  transform: rotate(-90deg);
-}
-figure.highlight .expand + .code-lang {
-  left: 1.7rem;
+  transform: rotate(90deg);
 }
 figure.highlight table::-webkit-scrollbar {
   color: var(--efu-secondbg);
@@ -8088,10 +8102,10 @@ figure.highlight .attr,
 figure.highlight .variable,
 figure.highlight .literal,
 figure.highlight .property {
-  color: #00f;
+  color: #ff79c6;
 }
 figure.highlight .number {
-  color: #098658;
+  color: #bd93f9;
 }
 figure.highlight .string {
   color: #a31515;
@@ -8109,21 +8123,21 @@ figure.highlight .emphasis {
 [data-theme=dark] figure.highlight .attr,
 [data-theme=dark] figure.highlight .variable,
 [data-theme=dark] figure.highlight .property {
-  color: #569cd6;
+  color: #ff79c6;
 }
 [data-theme=dark] figure.highlight .number {
-  color: #b5cea8;
+  color: #bd93f9;
 }
 [data-theme=dark] figure.highlight .string {
-  color: #ce9178;
+  color: #f1fa8c;
 }
 [data-theme=dark] figure.highlight .built_in,
 [data-theme=dark] figure.highlight .title,
 [data-theme=dark] figure.highlight .params {
-  color: #dcdcaa;
+  color: #50fa7b;
 }
 [data-theme=dark] figure.highlight .emphasis {
-  color: #6a9955;
+  color: #8be9fd;
 }
 figure pre {
   margin: 0;
