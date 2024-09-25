@@ -221,7 +221,7 @@
 <p>通过格式化字符串自定义显示格式，按照2022-01-01的格式显示日期：<img src="/2024/09/07/Linux04-Linux%E5%AE%9E%E7%94%A8%E6%93%8D%E4%BD%9C/image-20240907212120952.png" class="" title="image-20240907212120952"></p>
 <p>如上，由于中间带有空格，所以使用双引号包围格式化字符串，作为整体。</p>
 <h4 id="date命令进行日期加减"><a href="#date命令进行日期加减" class="headerlink" title="date命令进行日期加减"></a>date命令进行日期加减</h4><p>-d选项，可以按照给定的字符串显示日期，一般用于日期计算</p>
-<style>.fkmygimnphqj{zoom:150%;}</style><img src="/2024/09/07/Linux04-Linux%E5%AE%9E%E7%94%A8%E6%93%8D%E4%BD%9C/image-20240907212205692.png" class="fkmygimnphqj" alt="image-20240907212205692">
+<style>.trswcrujjfow{zoom:150%;}</style><img src="/2024/09/07/Linux04-Linux%E5%AE%9E%E7%94%A8%E6%93%8D%E4%BD%9C/image-20240907212205692.png" class="trswcrujjfow" alt="image-20240907212205692">
 
 <p>其中支持的时间标记为：<img src="/2024/09/07/Linux04-Linux%E5%AE%9E%E7%94%A8%E6%93%8D%E4%BD%9C/image-20240907212228587.png" class="" title="image-20240907212228587"></p>
 <h4 id="修改Linux时区"><a href="#修改Linux时区" class="headerlink" title="修改Linux时区"></a>修改Linux时区</h4><p>通过date查看的日期时间是不准确的，这是因为：系统默认时区非中国的东八区。使用root权限，执行如下命令，修改时区为东八区时区</p>
@@ -281,7 +281,7 @@
 
 <p>现在进行第二步，在Linux系统中修改固定IP：</p>
 <p>使用vim编辑&#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;ifcfg-ens33文件，填入如下内容</p>
-<style>.uygklgmoybgh{zoom:150%;}</style><img src="/2024/09/07/Linux04-Linux%E5%AE%9E%E7%94%A8%E6%93%8D%E4%BD%9C/image-20240911205234420.png" class="uygklgmoybgh" alt="image-20240911205234420">
+<style>.buktxljtqlhz{zoom:150%;}</style><img src="/2024/09/07/Linux04-Linux%E5%AE%9E%E7%94%A8%E6%93%8D%E4%BD%9C/image-20240911205234420.png" class="buktxljtqlhz" alt="image-20240911205234420">
 
 <p>执行：systemctl restart network 重启网卡，执行ifconfig即可看到ip地址固定为192.168.88.130了</p>
 <p>​								</p>
