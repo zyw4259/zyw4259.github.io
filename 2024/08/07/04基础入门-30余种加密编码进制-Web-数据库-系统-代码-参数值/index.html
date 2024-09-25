@@ -195,14 +195,14 @@
 <p>3、看当前密文存在的地方（Web，数据库，操作系统等应用）</p>
 <p>​										</p>
 <h3 id="五-实际案例"><a href="#五-实际案例" class="headerlink" title="五.实际案例"></a>五.实际案例</h3><h4 id="1-Web-ZZCMS-密文-MD5"><a href="#1-Web-ZZCMS-密文-MD5" class="headerlink" title="1.Web-ZZCMS-密文-MD5"></a>1.Web-ZZCMS-密文-MD5</h4><p>注册一个账号，看看密码的加密，可以看到是32位而且是应用在WEB上，大致猜测是MD5</p>
-<style>.iksdpvgmzxiv{zoom:200%;}</style><img src="/2024/08/07/04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6-Web-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81-%E5%8F%82%E6%95%B0%E5%80%BC/image-20240807142924769.png" class="iksdpvgmzxiv" alt="image-20240807142924769">
+<style>.wjfjbxqyijdp{zoom:200%;}</style><img src="/2024/08/07/04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6-Web-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81-%E5%8F%82%E6%95%B0%E5%80%BC/image-20240807142924769.png" class="wjfjbxqyijdp" alt="image-20240807142924769">
 
 <p>​					</p>
 <h4 id="2-Web-Discuz-密文-MD5-Salt"><a href="#2-Web-Discuz-密文-MD5-Salt" class="headerlink" title="2.Web-Discuz-密文-MD5&amp;Salt"></a>2.Web-Discuz-密文-MD5&amp;Salt</h4><p>discuz的加密是MD5和Salt值结合</p>
 <img src="/2024/08/07/04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6-Web-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81-%E5%8F%82%E6%95%B0%E5%80%BC/image-20240807144118832.png" class="" title="image-20240807144118832">
 
 <p>这种MD5和Salt结合的，解密在密文后面加冒号:然后跟上盐值，如图</p>
-<style>.mqrsrobedjbk{zoom:200%;}</style><img src="/2024/08/07/04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6-Web-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81-%E5%8F%82%E6%95%B0%E5%80%BC/image-20240807144157714.png" class="mqrsrobedjbk" alt="image-20240807144157714">
+<style>.tpwjabecefon{zoom:200%;}</style><img src="/2024/08/07/04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6-Web-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81-%E5%8F%82%E6%95%B0%E5%80%BC/image-20240807144157714.png" class="tpwjabecefon" alt="image-20240807144157714">
 
 <p>​					</p>
 <h4 id="3-系统-Windows-密文-NTLM-HASH"><a href="#3-系统-Windows-密文-NTLM-HASH" class="headerlink" title="3.系统-Windows-密文-NTLM&amp;HASH"></a>3.系统-Windows-密文-NTLM&amp;HASH</h4><img src="/2024/08/07/04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6-Web-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81-%E5%8F%82%E6%95%B0%E5%80%BC/image-20240807144933377.png" class="" title="image-20240807144933377">
@@ -213,14 +213,14 @@
 <h4 id="4-综合-参数-密文传输-AES-BASE64"><a href="#4-综合-参数-密文传输-AES-BASE64" class="headerlink" title="4.综合-参数-密文传输-AES&amp;BASE64"></a>4.综合-参数-密文传输-AES&amp;BASE64</h4><img src="/2024/08/07/04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6-Web-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81-%E5%8F%82%E6%95%B0%E5%80%BC/image-20240807150409199.png" class="" title="image-20240807150409199">
 
 <p>下图可见mcrypt_module_open，百度上搜索知道这个函数是AES加密，里面函数值128对应数据块，后面CBC对应AES加密模式，下面mcrypt_generic_init函数里面的第二个值是密码，第三个数值是偏移量（不知道的就上网搜），下面有两个base64_decode，也就是进行了两次base64解码</p>
-<style>.yykpstdbjurd{zoom:200%;}</style><img src="/2024/08/07/04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6-Web-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81-%E5%8F%82%E6%95%B0%E5%80%BC/image-20240807150431806.png" class="yykpstdbjurd" alt="image-20240807150431806">
+<style>.czfdnaqlgmic{zoom:200%;}</style><img src="/2024/08/07/04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6-Web-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81-%E5%8F%82%E6%95%B0%E5%80%BC/image-20240807150431806.png" class="czfdnaqlgmic" alt="image-20240807150431806">
 
 <img src="/2024/08/07/04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6-Web-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81-%E5%8F%82%E6%95%B0%E5%80%BC/image-20240807150528757.png" class="" title="image-20240807150528757">
 
 <p>所以，要解码两次，具体操作：</p>
 <img src="/2024/08/07/04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6-Web-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81-%E5%8F%82%E6%95%B0%E5%80%BC/image-20240807150924861.png" class="" title="image-20240807150924861">
 
-<style>.ewugdoeopikf{zoom:200%;}</style><img src="/2024/08/07/04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6-Web-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81-%E5%8F%82%E6%95%B0%E5%80%BC/image-20240807150939764.png" class="ewugdoeopikf" alt="image-20240807150939764">
+<style>.tfyphyfdpbwe{zoom:200%;}</style><img src="/2024/08/07/04%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8-30%E4%BD%99%E7%A7%8D%E5%8A%A0%E5%AF%86%E7%BC%96%E7%A0%81%E8%BF%9B%E5%88%B6-Web-%E6%95%B0%E6%8D%AE%E5%BA%93-%E7%B3%BB%E7%BB%9F-%E4%BB%A3%E7%A0%81-%E5%8F%82%E6%95%B0%E5%80%BC/image-20240807150939764.png" class="tfyphyfdpbwe" alt="image-20240807150939764">
 
 <p>​							</p>
 <h4 id="5-代码-解密-解密反编译-Zend-Dll-Ja"><a href="#5-代码-解密-解密反编译-Zend-Dll-Ja" class="headerlink" title="5. 代码-解密-解密反编译-Zend&amp;Dll&amp;Ja"></a>5. 代码-解密-解密反编译-Zend&amp;Dll&amp;Ja</h4><p>可以用IlSpy来解密dll</p>
